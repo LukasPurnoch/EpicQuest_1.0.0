@@ -5,8 +5,20 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:EpicQuest_0._1._0"
         mc:Ignorable="d"
-        Title="MainWindow" Height="600" Width="800">
-    <Grid>
-         
+        xmlns:gif="http://wpfanimatedgif.codeplex.com"
+        Title="MainWindow" Height="720" Width="1280">
+    <Grid Margin="0,0,0,0" Height="720" Width="1280">
+        <Grid.Background>
+            <ImageBrush ImageSource="pack://application:,,,/Backgrounds/GreenTheme.jpg"/>
+        </Grid.Background>
+
+        <Image gif:ImageBehavior.AnimatedSource="pack://application:,,,/Gifs/EpiQuest_GIF.gif" Margin="44,53,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="480" Height="316"/>
+
+        <Button x:Name="Exit" Content="EXIT" HorizontalAlignment="Right" Margin="0,0,0,74" VerticalAlignment="Bottom" Width="453" Height="88" Background="{x:Null}" FontSize="48" FontFamily="Segoe UI Black" BorderBrush="{x:Null}" Foreground="White"/>
+        <Button x:Name="Load" Content="LOAD GAME" HorizontalAlignment="Right" Margin="0,0,0,162" VerticalAlignment="Bottom" Width="453" Height="88" Background="{x:Null}" FontSize="48" FontFamily="Segoe UI Black" BorderBrush="{x:Null}" Foreground="White" Click="Load_Click"/>
+        <Button x:Name="New" Content="NEW GAME" HorizontalAlignment="Right" Margin="0,0,0,250" VerticalAlignment="Bottom" Width="453" Height="88" Background="{x:Null}" FontSize="48" FontFamily="Segoe UI Black" BorderBrush="{x:Null}" Foreground="White" Click="New_Click"/>
+
+        <Frame x:Name="Game"/>
+
     </Grid>
 </Window>

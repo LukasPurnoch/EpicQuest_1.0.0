@@ -48,6 +48,9 @@
     <Reference Include="WindowsBase" />
     <Reference Include="PresentationCore" />
     <Reference Include="PresentationFramework" />
+    <Reference Include="WpfAnimatedGif, Version=1.4.15.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\WpfAnimatedGif.1.4.15\lib\net\WpfAnimatedGif.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -62,12 +65,34 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\Timer.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\Dungeon.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Map.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Story_1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\Dungeon.xaml.cs">
+      <DependentUpon>Dungeon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Map.xaml.cs">
+      <DependentUpon>Map.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Story_1.xaml.cs">
+      <DependentUpon>Story_1.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -85,6 +110,7 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <None Include="packages.config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -92,6 +118,57 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Characters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Backgrounds\DarkTheme.jpg" />
+    <Resource Include="Backgrounds\GreenTheme.jpg" />
+    <Resource Include="Backgrounds\Map.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Enemies\Arachne.png" />
+    <Resource Include="Enemies\Behemoth.png" />
+    <Resource Include="Enemies\Black_Knight.png" />
+    <Resource Include="Enemies\Blood_Flower.png" />
+    <Resource Include="Enemies\Brachioraidos.png" />
+    <Resource Include="Enemies\Catoblepas.png" />
+    <Resource Include="Enemies\Chimera.png" />
+    <Resource Include="Enemies\Death_Flower.png" />
+    <Resource Include="Enemies\Death_Puppet.png" />
+    <Resource Include="Enemies\Eukaryote.png" />
+    <Resource Include="Enemies\Fiery_Hound.png" />
+    <Resource Include="Enemies\Flying_Eyes.png" />
+    <Resource Include="Enemies\Ghost_Knight.png" />
+    <Resource Include="Enemies\Ghoul.png" />
+    <Resource Include="Enemies\Gigantoad.png" />
+    <Resource Include="Enemies\Gorgon.png" />
+    <Resource Include="Enemies\Great_Malboro.png" />
+    <Resource Include="Enemies\Hundlegs.png" />
+    <Resource Include="Enemies\Hydra.png" />
+    <Resource Include="Enemies\Lilith.png" />
+    <Resource Include="Enemies\Magic_Dragon.png" />
+    <Resource Include="Enemies\Red_Dragon.png" />
+    <Resource Include="Enemies\Stone_Golem.png" />
+    <Resource Include="Enemies\Trap_Door.png" />
+    <Resource Include="Enemies\Wicked_Mask.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Gifs\EpiQuest_GIF.gif" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Backgrounds\Eden_Damaged.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Levels\Catacombs.png" />
+    <Resource Include="Levels\Cave.png" />
+    <Resource Include="Levels\Depths.png" />
+    <Resource Include="Levels\Dungeon.png" />
+    <Resource Include="Levels\Forest.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Textures\Stone_texture.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

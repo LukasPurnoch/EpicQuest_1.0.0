@@ -1,5 +1,4 @@
-﻿using EpicQuest_0._1._0.Pages;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,28 +13,19 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace EpicQuest_0._1._0
+namespace EpicQuest_0._1._0.Pages
 {
     /// <summary>
-    /// Interakční logika pro MainWindow.xaml
+    /// Interakční logika pro Dungeon.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class Dungeon : Page
     {
-        public MainWindow()
+        public Dungeon()
         {
             InitializeComponent();
-
-            
         }
 
-        private void New_Click(object sender, RoutedEventArgs e)
-        {
-            Game.Content = new Story_1();
-        }
 
-        private void Load_Click(object sender, RoutedEventArgs e)
-        {
-            Game.Content = new Map();
-        }
+
     }
 }
