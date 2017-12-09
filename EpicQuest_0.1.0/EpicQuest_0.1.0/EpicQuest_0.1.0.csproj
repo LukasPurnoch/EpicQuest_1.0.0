@@ -119,9 +119,7 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Characters\" />
-  </ItemGroup>
+  <ItemGroup />
   <ItemGroup>
     <Resource Include="Backgrounds\DarkTheme.jpg" />
     <Resource Include="Backgrounds\GreenTheme.jpg" />
@@ -169,6 +167,12 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Textures\Stone_texture.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Addons\Coin.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Characters\Cecil.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
