@@ -45,7 +45,9 @@
         <Image Source="pack://application:,,,/Characters/Cecil.png" Margin="150,260,978,324" Stretch="Fill"/>
 
         <Image x:Name="Position1" Source="pack://application:,,,/Enemies/Behemoth.png" Margin="684,98,330,384" Stretch="Fill"/>
+        <Label x:Name="Position1HP" Content="100" Foreground="Red" FontSize="48" Margin="507,203,596,442"/>
         <Image x:Name="Position2" Source="pack://application:,,,/Enemies/Trap_Door.png" Margin="912,215,102,267" Stretch="Fill"/>
+        <Label x:Name="Position2HP" Content="100" Foreground="Red" FontSize="48" Margin="716,378,387,267"/>
 
         <Label x:Name="DMGPos1" Content="DAMAGE1" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="716,33,364,627"/>
         <Label x:Name="DMGPos2" Content="DAMAGE2" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="955,115,125,545"/>
