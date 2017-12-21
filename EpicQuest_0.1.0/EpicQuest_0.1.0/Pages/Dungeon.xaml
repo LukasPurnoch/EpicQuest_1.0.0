@@ -40,7 +40,7 @@
         <Button x:Name="NormalAtt" Content="Normal Attack" Margin="458,640,498,19" FontSize="36" Background="#00000000" Foreground="White" FontWeight="Bold" FontStyle="Italic" BorderBrush="Black"/>
 
         <Button x:Name="Enemy1" Margin="853,508,41,127" Content="Enemy 1" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Background="#00000000" BorderBrush="Black"/>
-        <Button x:Name="Enemy1_Copy" Margin="853,607,41,28" Content="Enemy 1" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Background="#00000000" BorderBrush="Black"/>
+        <Button x:Name="Enemy2" Margin="853,607,41,28" Content="Enemy 2" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Background="#00000000" BorderBrush="Black"/>
 
         <Image Source="pack://application:,,,/Characters/Cecil.png" Margin="150,260,978,324" Stretch="Fill"/>
 

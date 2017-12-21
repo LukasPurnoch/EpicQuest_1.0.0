@@ -23,9 +23,16 @@ namespace EpicQuest_0._1._0.Pages
         public Dungeon()
         {
             InitializeComponent();
+
+            Level();
+
         }
 
-
+        private void Level()
+        {
+            Classes.Enemy_Generator gen = new Classes.Enemy_Generator();
+            gen.EnemyGen(1, Position1, Position2, Position1HP, Position2HP);
+        }
 
     }
 }

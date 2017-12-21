@@ -15,29 +15,33 @@ using System.Windows.Shapes;
 
 namespace EpicQuest_0._1._0.Classes
 {
-    class Enemy_Generator : Pages.Dungeon
+    public class Enemy_Generator : Pages.Dungeon
     {
-        public void EnemyGen(int cavetype, Label Position1, Label Position2, Label Position1HP, Label Position2HP) // 1-Dungeon, 2-Forest, 3-Catacombs, 4-Depths, 5-Cave, 6-All
+        public void EnemyGen(int cavetype, Image Position1, Image Position2, Label Position1HP, Label Position2HP) // 1-Dungeon, 2-Forest, 3-Catacombs, 4-Depths, 5-Cave, 6-All
         {
+
+            //EnemyType.Next(1, 6)
+
+            Random EnemyType = new Random();
+            int enemytype1 = 1;
+            int enemytype2 = 1;
+
             if (cavetype == 1)
             {
-                Random EnemyType = new Random();
-                int enemytype1 = EnemyType.Next(1, 6);
-                int enemytype2 = EnemyType.Next(1, 6);
-
                 if (enemytype1 == 1)
                 {
-                    //Source
-                    //Position
+                    Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Behemoth.png"));
+                    //Position?
 
-                    //HP Set
+                    Position1HP.Content = "90";
                 }
+
                 if (enemytype2 == 1)
                 {
-                    //Source
-                    //Position
+                    Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Behemoth.png"));
+                    //Position?
 
-                    //HP Set
+                    Position2HP.Content = "90";
                 }
             }
 
