@@ -75,6 +75,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Forest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Map.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -87,6 +91,9 @@
   <ItemGroup>
     <Compile Include="Pages\Dungeon.xaml.cs">
       <DependentUpon>Dungeon.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Forest.xaml.cs">
+      <DependentUpon>Forest.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Map.xaml.cs">
       <DependentUpon>Map.xaml</DependentUpon>

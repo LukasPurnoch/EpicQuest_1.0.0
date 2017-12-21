@@ -16,24 +16,21 @@ using System.Windows.Shapes;
 namespace EpicQuest_0._1._0.Pages
 {
     /// <summary>
-    /// Interakční logika pro Map.xaml
+    /// Interakční logika pro Forest.xaml
     /// </summary>
-    public partial class Map : Page
+    public partial class Forest : Page
     {
-        public Map()
+        public Forest()
         {
             InitializeComponent();
+
+            Level();
         }
 
-        private void DungeonLvl_Click(object sender, RoutedEventArgs e)
+        private void Level()
         {
-            FromMapLevel.Content = new Dungeon();
+            Classes.Enemy_Generator gen = new Classes.Enemy_Generator();
+            gen.EnemyGen(2, Position1, Position2, Position1HP, Position2HP, Enemy1, Enemy2);
         }
-
-        private void ForestLvl_Click(object sender, RoutedEventArgs e)
-        {
-            FromMapLevel.Content = new Forest();
-        }
-        
     }
 }
