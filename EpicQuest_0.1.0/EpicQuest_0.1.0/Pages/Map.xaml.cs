@@ -34,6 +34,20 @@ namespace EpicQuest_0._1._0.Pages
         {
             FromMapLevel.Content = new Forest();
         }
-        
+
+        private void CaveLvl_Click(object sender, RoutedEventArgs e)
+        {
+            FromMapLevel.Content = new Cave();
+        }
+
+        private void DepthsLvl_Click(object sender, RoutedEventArgs e)
+        {
+            FromMapLevel.Content = new Depths();
+        }
+
+        private void CatacombsLvl_Click(object sender, RoutedEventArgs e)
+        {
+            FromMapLevel.Content = new Catacombs();
+        }
     }
 }

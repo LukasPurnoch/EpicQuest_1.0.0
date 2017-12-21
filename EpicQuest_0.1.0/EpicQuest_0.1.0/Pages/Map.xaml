@@ -14,10 +14,10 @@
         </Grid.Background>
 
         <Button x:Name="DungeonLvl" Margin="130,266,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="62" Width="132" BorderBrush="{x:Null}" Background="Transparent" Click="DungeonLvl_Click" Foreground="{x:Null}" />
-        <Button x:Name="CaveLvl" Margin="484,245,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="62" Width="132" BorderBrush="{x:Null}" Background="#00000000" />
+        <Button x:Name="CaveLvl" Margin="484,245,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="62" Width="132" BorderBrush="{x:Null}" Background="#00000000" Click="CaveLvl_Click" />
         <Button x:Name="ForestLvl" Margin="931,192,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="62" Width="132" BorderBrush="{x:Null}" Background="#00000000" Click="ForestLvl_Click" />
-        <Button x:Name="DepthsLvl" Margin="954,353,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="62" Width="132" BorderBrush="#00000000" Background="{x:Null}" />
-        <Button x:Name="CatacombsLvl" Margin="616,532,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="62" Width="132" BorderBrush="{x:Null}" Background="#00000000" />
+        <Button x:Name="DepthsLvl" Margin="954,353,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="62" Width="132" BorderBrush="#00000000" Background="{x:Null}" Click="DepthsLvl_Click" />
+        <Button x:Name="CatacombsLvl" Margin="616,532,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="62" Width="132" BorderBrush="{x:Null}" Background="#00000000" Click="CatacombsLvl_Click" />
 
         <Frame x:Name="FromMapLevel"/>
 

@@ -71,6 +71,18 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Pages\Catacombs.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Cave.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Depths.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Dungeon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -89,6 +101,15 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Pages\Catacombs.xaml.cs">
+      <DependentUpon>Catacombs.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Cave.xaml.cs">
+      <DependentUpon>Cave.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Depths.xaml.cs">
+      <DependentUpon>Depths.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Dungeon.xaml.cs">
       <DependentUpon>Dungeon.xaml</DependentUpon>
     </Compile>
