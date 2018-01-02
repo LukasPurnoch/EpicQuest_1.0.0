@@ -103,13 +103,17 @@ namespace EpicQuest_0._1._0.Classes
                         Position4.Source = new BitmapImage(new Uri("pack://application:,,,/Characters/Cecil.png"));
                     }
 
-                    if (fastHitchance1 >= 80)
+                    if (fastHitchance1 <= 80)
                     {
                         double HPS = HP_Bar.Value;
                         DMGArdyn.Content = "-" + fastDamage1;
 
                         HPS -= fastDamage1;
-                    }                    
+                    }
+                    else
+                    {
+                        DMGEnemy.Content = "MISS";
+                    }
                 }
             }
 
@@ -181,12 +185,16 @@ namespace EpicQuest_0._1._0.Classes
                         Position4.Source = new BitmapImage(new Uri("pack://application:,,,/Characters/Cecil.png"));
                     }
 
-                    if (fastHitchance2 >= 80)
+                    if (fastHitchance2 <= 80)
                     {
                         double HPS = HP_Bar.Value;
                         DMGArdyn.Content = "-" + fastDamage2;
 
                         HPS -= fastDamage2;
+                    }
+                    else
+                    {
+                        DMGEnemy.Content = "MISS";
                     }
 
                     TimeStart(0);
