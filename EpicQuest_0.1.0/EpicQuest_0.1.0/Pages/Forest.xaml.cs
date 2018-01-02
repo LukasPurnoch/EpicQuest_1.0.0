@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace EpicQuest_0._1._0.Pages
 {
@@ -21,6 +22,7 @@ namespace EpicQuest_0._1._0.Pages
     public partial class Forest : Page
     {
         public int vyber;
+        public int increment;
 
         public Forest()
         {
@@ -28,6 +30,9 @@ namespace EpicQuest_0._1._0.Pages
 
             Level();
             Attacks();
+
+            TimeStart();
+            
         }
 
         private void Level()
@@ -40,7 +45,29 @@ namespace EpicQuest_0._1._0.Pages
         {
             Classes.Attack_From_Enemy att = new Classes.Attack_From_Enemy();
 
-            att.LightFromEnemy(1, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4);
+            //att.LightFromEnemy(1, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4);
+        }
+
+        public void Time_Tick(object sender, EventArgs e)
+        {
+            increment++;
+
+            DMGArdyn.Content = increment;
+
+            if (increment % 3 == 0)
+            {
+                Position4.Source = null;
+                Cecil.Visibility = Visibility.Visible;
+            }
+        }
+
+        public void TimeStart()
+        {
+            DispatcherTimer Time = new DispatcherTimer();
+            Time.Interval = TimeSpan.FromSeconds(1);
+            Time.Tick += Time_Tick;
+            Time.Start();
+            
         }
 
         private void Enemy1_Click(object sender, RoutedEventArgs e)
@@ -56,7 +83,8 @@ namespace EpicQuest_0._1._0.Pages
         private void StrongAtt_Click(object sender, RoutedEventArgs e)
         {
             Classes.Ardyn_Attack ArdAtt = new Classes.Ardyn_Attack();
-            ArdAtt.StrongAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar);
+            ArdAtt.StrongAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, Position4, Cecil);
+            increment = 0;
         }
 
         private void FastAtt_Click(object sender, RoutedEventArgs e)

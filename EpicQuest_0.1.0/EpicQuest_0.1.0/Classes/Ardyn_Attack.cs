@@ -12,12 +12,14 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Threading;
 
 namespace EpicQuest_0._1._0.Classes
 {
     class Ardyn_Attack
     {
-        public void StrongAttack(int vyber, Label DMGEnemy, Label Position1HP, Label Position2HP, ProgressBar AP_Bar)
+
+        public void StrongAttack(int vyber, Label DMGEnemy, Label Position1HP, Label Position2HP, ProgressBar AP_Bar, Image Position4, Image Cecil)
         {
             Random StrongHitchance = new Random(); // Fast Attack -> 80% Chance, 8-13 DMG
             Random StrongDamage = new Random();
@@ -36,10 +38,16 @@ namespace EpicQuest_0._1._0.Classes
                         DMGEnemy.Content = "-" + strongDamage1;
                         Position1HP_P -= strongDamage1;
                         Position1HP.Content = Position1HP_P;
+                                                
+                        Position4.Source = new BitmapImage(new Uri("pack://application:,,,/Characters/Cecil.png"));
+                        Cecil.Visibility = Visibility.Hidden;
                     }
                     else
                     {
                         DMGEnemy.Content = "MISS";
+                                                
+                        Position4.Source = new BitmapImage(new Uri("pack://application:,,,/Characters/Cecil.png"));
+                        Cecil.Visibility = Visibility.Hidden;
                     }
                 }   
             }

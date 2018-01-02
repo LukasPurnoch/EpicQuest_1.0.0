@@ -41,7 +41,10 @@ namespace EpicQuest_0._1._0.Classes
             }
         }
 
-        public void LightFromEnemy(int vyber, Button Enemy1, Button Enemy2, Label Position1HP, Label Position2HP, Label DMGArdyn, Label DMGEnemy, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Image Position4)
+
+
+
+        public void LightFromEnemy1(int vyber, Button Enemy1, Button Enemy2, Label Position1HP, Label Position2HP, Label DMGArdyn, Label DMGEnemy, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Image Position4)
         {
             string enemy1 = Enemy1.Content.ToString();
             string enemy2 = Enemy2.Content.ToString();
@@ -58,157 +61,7 @@ namespace EpicQuest_0._1._0.Classes
 
                 if (Position1HP_P > 0)
                 {
-                    switch (enemy1)
-                    {
-                        case "Gigantoad":
-                            Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Gigantoad.png"));
-                            Position1.Visibility = Visibility.Hidden;
-                            break;
-                        case "Flying Eyes":
-                            Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Flying_Eyes.png"));
-                            Position1.Visibility = Visibility.Hidden;
-                            break;
-                        case "Arachne":
-                            Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Arachne.png"));
-                            Position1.Visibility = Visibility.Hidden;
-                            break;
-                        case "Chimera":
-                            Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Chimera.png"));
-                            Position1.Visibility = Visibility.Hidden;
-                            break;
-                        case "Great Malboro":
-                            Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Great_Malboro.png"));
-                            Position1.Visibility = Visibility.Hidden;
-                            break;
-                        case "Magic Dragon":
-                            Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Magic_Dragon.png"));
-                            Position1.Visibility = Visibility.Hidden;
-                            break;
-                        case "Brachioraidos":
-                            Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Brachioraidos.png"));
-                            Position1.Visibility = Visibility.Hidden;
-                            break;
-                        case "Eukaryote":
-                            Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Eukaryote.png"));
-                            Position1.Visibility = Visibility.Hidden;
-                            break;
-                        case "Catoblepas":
-                            Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Catoblepas.png"));
-                            Position1.Visibility = Visibility.Hidden;
-                            break;
-                    }
-
-                    if (vyber == 1)
-                    {
-                        Position4.Source = new BitmapImage(new Uri("pack://application:,,,/Characters/Cecil.png"));
-                    }
-
-                    if (fastHitchance1 <= 80)
-                    {
-                        double HPS = HP_Bar.Value;
-                        DMGArdyn.Content = "-" + fastDamage1;
-
-                        HPS -= fastDamage1;
-                    }
-                    else
-                    {
-                        DMGEnemy.Content = "MISS";
-                    }
-                }
-            }
-
-            TimeStart(0);
-
-            if (increment % 4 == 0)
-            {
-                Position3.Source = null;
-                Position4.Source = null;
-                DMGArdyn.Content = null;
-                DMGEnemy.Content = null;
-                TimeStart(1);
-            }
-
-            Random FastHitchance2 = new Random(); // Fast Attack -> 80% Chance, 8-13 DMG
-            Random FastDamage2 = new Random();
-
-            int fastHitchance2 = FastHitchance2.Next(1, 80);
-            int fastDamage2 = FastDamage2.Next(8, 13);
-
-            if (enemy2 == "Gigantoad" || enemy2 == "Flying Eyes" || enemy2 == "Arachne" || enemy2 == "Chimera" || enemy2 == "Great Malboro" || enemy2 == "Magic Dragon" || enemy2 == "Brachioraidos" || enemy2 == "Eukaryote" || enemy2 == "Catoblepas")
-            {
-                int.TryParse(Position2HP.Content.ToString(), out int Position2HP_P);
-
-                if (Position2HP_P > 0)
-                {
-                    switch (enemy2)
-                    {
-                        case "Gigantoad":
-                            Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Gigantoad.png"));
-                            Position2.Visibility = Visibility.Hidden;
-                            break;
-                        case "Flying Eyes":
-                            Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Flying_Eyes.png"));
-                            Position2.Visibility = Visibility.Hidden;
-                            break;
-                        case "Arachne":
-                            Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Arachne.png"));
-                            Position2.Visibility = Visibility.Hidden;
-                            break;
-                        case "Chimera":
-                            Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Chimera.png"));
-                            Position2.Visibility = Visibility.Hidden;
-                            break;
-                        case "Great Malboro":
-                            Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Great_Malboro.png"));
-                            Position2.Visibility = Visibility.Hidden;
-                            break;
-                        case "Magic Dragon":
-                            Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Magic_Dragon.png"));
-                            Position2.Visibility = Visibility.Hidden;
-                            break;
-                        case "Brachioraidos":
-                            Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Brachioraidos.png"));
-                            Position2.Visibility = Visibility.Hidden;
-                            break;
-                        case "Eukaryote":
-                            Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Eukaryote.png"));
-                            Position2.Visibility = Visibility.Hidden;
-                            break;
-                        case "Catoblepas":
-                            Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Catoblepas.png"));
-                            Position2.Visibility = Visibility.Hidden;
-                            break;
-                    }
-
-                    if (vyber == 1)
-                    {
-                        Position4.Source = new BitmapImage(new Uri("pack://application:,,,/Characters/Cecil.png"));
-                    }
-
-                    if (fastHitchance2 <= 80)
-                    {
-                        double HPS = HP_Bar.Value;
-                        DMGArdyn.Content = "-" + fastDamage2;
-
-                        HPS -= fastDamage2;
-                    }
-                    else
-                    {
-                        DMGEnemy.Content = "MISS";
-                    }
-
-                    TimeStart(0);
-
-                    if (increment % 4 == 0)
-                    {
-                        Position3.Source = null;
-                        Position4.Source = null;
-                        DMGArdyn.Content = null;
-                        DMGEnemy.Content = null;
-
-                        TimeStart(1);
-                    }
-
+                    
                 }
             }
 
