@@ -29,8 +29,6 @@ namespace EpicQuest_0._1._0.Pages
             InitializeComponent();
 
             Level();
-            Attacks();
-
             TimeStart();
             
         }
@@ -41,23 +39,17 @@ namespace EpicQuest_0._1._0.Pages
             gen.EnemyGen(2, Position1, Position2, Position1HP, Position2HP, Enemy1, Enemy2);
         }
 
-        private void Attacks()
-        {
-            Classes.Attack_From_Enemy att = new Classes.Attack_From_Enemy();
-
-            //att.LightFromEnemy(1, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4);
-        }
-
         public void Time_Tick(object sender, EventArgs e)
         {
             increment++;
 
-            DMGArdyn.Content = increment;
-
             if (increment % 3 == 0)
             {
                 Position4.Source = null;
-                Cecil.Visibility = Visibility.Visible;
+                Position3.Source = null;
+                Ardyn.Visibility = Visibility.Visible;
+                Position1.Visibility = Visibility.Visible;
+                Position2.Visibility = Visibility.Visible;
             }
         }
 
@@ -83,20 +75,22 @@ namespace EpicQuest_0._1._0.Pages
         private void StrongAtt_Click(object sender, RoutedEventArgs e)
         {
             Classes.Ardyn_Attack ArdAtt = new Classes.Ardyn_Attack();
-            ArdAtt.StrongAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, Position4, Cecil);
+            ArdAtt.StrongAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, HP_Bar, Position1, Position2, Position3);
             increment = 0;
         }
 
         private void FastAtt_Click(object sender, RoutedEventArgs e)
         {
             Classes.Ardyn_Attack ArdAtt = new Classes.Ardyn_Attack();
-            ArdAtt.FastAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar);
+            ArdAtt.FastAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, HP_Bar, Position1, Position2, Position3);
+            increment = 0;
         }
 
         private void NormalAtt_Click(object sender, RoutedEventArgs e)
         {
             Classes.Ardyn_Attack ArdAtt = new Classes.Ardyn_Attack();
-            ArdAtt.NormalAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar);
+            ArdAtt.NormalAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, HP_Bar, Position1, Position2, Position3);
+            increment = 0;
         }
     }
 }

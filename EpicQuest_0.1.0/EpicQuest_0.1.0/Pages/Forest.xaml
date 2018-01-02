@@ -42,7 +42,7 @@
         <Button x:Name="Enemy1" Margin="853,508,41,127" Content="Enemy 1" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Background="#00000000" BorderBrush="Black" Click="Enemy1_Click"/>
         <Button x:Name="Enemy2" Margin="853,607,41,28" Content="Enemy 2" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Background="#00000000" BorderBrush="Black" Click="Enemy2_Click"/>
 
-        <Image x:Name="Cecil" Source="pack://application:,,,/Characters/Cecil.png" Margin="150,260,978,324" Stretch="Fill"/>
+        <Image x:Name="Ardyn" Source="pack://application:,,,/Characters/Cecil.png" Margin="150,260,978,324" Stretch="Fill"/>
         <Image x:Name="Position4" Margin="458,260,670,324" Stretch="Fill"/>
 
         <Image x:Name="Position1" Source="pack://application:,,,/Enemies/Death_Flower.png" Margin="758,98,256,347" Stretch="Fill"/>
