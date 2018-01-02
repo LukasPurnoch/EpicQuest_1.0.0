@@ -18,7 +18,7 @@
         <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="0,0,978,670" Stretch="Fill"/>
         <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="978,0,0,670" Stretch="Fill"/>
 
-        <Label x:Name="Money" Content="80" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="116,-9,978,670"/>
+        <Label x:Name="Money" Content="0" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="116,-9,978,670"/>
         <Label x:Name="LevelLabel" Content="Forest" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="1094,-5,0,666"/>
         <Image Source="pack://application:,,,/Addons/Coin.png" Margin="10,-5,1106,666" Stretch="Fill"/>
 

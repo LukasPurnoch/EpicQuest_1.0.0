@@ -33,14 +33,17 @@ namespace EpicQuest_0._1._0.Classes
             {
                 int.TryParse(Position1HP.Content.ToString(), out int Position1HP_P);
 
+                if (Position1HP_P <= 0)
+                {
+                    Position1.Source = null;
+                }
+
                 if (Position1HP_P > 0)
                 {
                     if (fastHitchance1 <= 80)
                     {
-                        double HPS = HP_Bar.Value;
+                        HP_Bar.Value -= fastDamage1;
                         DMGArdyn.Content = "-" + fastDamage1;
-
-                        HPS -= fastDamage1;
 
                         switch (enemy1)
                         {
@@ -126,7 +129,7 @@ namespace EpicQuest_0._1._0.Classes
                                 break;
                         }
                     }
-                }
+                }                
             }
         }
         public void LightFromEnemy2(int vyber, Button Enemy1, Button Enemy2, Label Position1HP, Label Position2HP, Label DMGArdyn, Label DMGEnemy, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Image Position4)
@@ -144,14 +147,17 @@ namespace EpicQuest_0._1._0.Classes
             {
                 int.TryParse(Position2HP.Content.ToString(), out int Position2HP_P);
 
+                if (Position2HP_P <= 0)
+                {
+                    Position2.Source = null;
+                }
+
                 if (Position2HP_P > 0)
                 {
                     if (fastHitchance2 <= 80)
                     {
-                        double HPS = HP_Bar.Value;
+                        HP_Bar.Value -= fastDamage2;
                         DMGArdyn.Content = "-" + fastDamage2;
-
-                        HPS -= fastDamage2;
 
                         switch (enemy2)
                         {
@@ -256,14 +262,17 @@ namespace EpicQuest_0._1._0.Classes
             {
                 int.TryParse(Position1HP.Content.ToString(), out int Position1HP_P);
 
+                if (Position1HP_P <= 0)
+                {
+                    Position1.Source = null;
+                }
+
                 if (Position1HP_P > 0)
                 {
                     if (normalHitchance1 <= 80)
                     {
-                        double HPS = HP_Bar.Value;
+                        HP_Bar.Value -= normalDamage1;
                         DMGArdyn.Content = "-" + normalDamage1;
-
-                        HPS -= normalDamage1;
 
                         switch (enemy1)
                         {
@@ -367,14 +376,17 @@ namespace EpicQuest_0._1._0.Classes
             {
                 int.TryParse(Position2HP.Content.ToString(), out int Position2HP_P);
 
+                if (Position2HP_P <= 0)
+                {
+                    Position2.Source = null;
+                }
+
                 if (Position2HP_P > 0)
                 {
                     if (normalHitchance2 <= 80)
                     {
-                        double HPS = HP_Bar.Value;
+                        HP_Bar.Value -= normalDamage2;
                         DMGArdyn.Content = "-" + normalDamage2;
-
-                        HPS -= normalDamage2;
 
                         switch (enemy2)
                         {
@@ -479,14 +491,17 @@ namespace EpicQuest_0._1._0.Classes
             {
                 int.TryParse(Position1HP.Content.ToString(), out int Position1HP_P);
 
+                if (Position1HP_P <= 0)
+                {
+                    Position1.Source = null;
+                }
+
                 if (Position1HP_P > 0)
                 {
                     if (strongHitchance1 <= 30)
                     {
-                        double HPS = HP_Bar.Value;
+                        HP_Bar.Value -= strongDamage1;
                         DMGArdyn.Content = "-" + strongDamage1;
-
-                        HPS -= strongDamage1;
 
                         switch (enemy1)
                         {
@@ -574,14 +589,17 @@ namespace EpicQuest_0._1._0.Classes
             {
                 int.TryParse(Position2HP.Content.ToString(), out int Position2HP_P);
 
+                if (Position2HP_P <= 0)
+                {
+                    Position2.Source = null;
+                }
+
                 if (Position2HP_P > 0)
                 {
                     if (strongHitchance2 <= 30)
                     {
-                        double HPS = HP_Bar.Value;
+                        HP_Bar.Value -= strongDamage2;
                         DMGArdyn.Content = "-" + strongDamage2;
-
-                        HPS -= strongDamage2;
 
                         switch (enemy2)
                         {
