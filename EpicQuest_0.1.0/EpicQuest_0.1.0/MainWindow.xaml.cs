@@ -25,7 +25,7 @@ namespace EpicQuest_0._1._0
         {
             InitializeComponent();
 
-            
+            //MenuMusic.Play();
         }
 
         private void New_Click(object sender, RoutedEventArgs e)
@@ -37,5 +37,6 @@ namespace EpicQuest_0._1._0
         {
             Game.Content = new Map();
         }
+
     }
 }

@@ -44,7 +44,7 @@
 
         <Image Source="pack://application:,,,/Characters/Cecil.png" Margin="150,260,978,324" Stretch="Fill"/>
 
-        <Image x:Name="Position1" Source="pack://application:,,,/Enemies/Death_Puppet.png" Margin="684,98,330,384" Stretch="Fill"/>
+        <Image x:Name="Position1" Source="pack://application:,,,/Enemies/Death_Puppet.png" Margin="689,98,330,347" Stretch="Fill"/>
         <Label x:Name="Position1HP" Content="100" Foreground="Red" FontSize="48" Margin="507,203,596,442"/>
         <Image x:Name="Position2" Source="pack://application:,,,/Enemies/Eukaryote.png" Margin="912,215,102,267" Stretch="Fill"/>
         <Label x:Name="Position2HP" Content="100" Foreground="Red" FontSize="48" Margin="716,378,387,267"/>

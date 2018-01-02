@@ -43,15 +43,16 @@
         <Button x:Name="Enemy2" Margin="853,607,41,28" Content="Enemy 2" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Background="#00000000" BorderBrush="Black"/>
 
         <Image Source="pack://application:,,,/Characters/Cecil.png" Margin="150,260,978,324" Stretch="Fill"/>
+        <Image x:Name="Position4" Source="pack://application:,,,/Characters/Cecil.png" Margin="458,260,670,324" Stretch="Fill"/>
 
-        <Image x:Name="Position1" Source="pack://application:,,,/Enemies/Death_Flower.png" Margin="684,98,330,384" Stretch="Fill"/>
-        <Label x:Name="Position1HP" Content="100" Foreground="Red" FontSize="48" Margin="507,203,596,442"/>
-        <Image x:Name="Position2" Source="pack://application:,,,/Enemies/Hundlegs.png" Margin="912,215,102,267" Stretch="Fill"/>
-        <Label x:Name="Position2HP" Content="100" Foreground="Red" FontSize="48" Margin="716,378,387,267"/>
+        <Image x:Name="Position1" Source="pack://application:,,,/Enemies/Death_Flower.png" Margin="758,98,256,347" Stretch="Fill"/>
+        <Label x:Name="Position1HP" Content="100" Foreground="Red" FontSize="48" Margin="675,241,428,404"/>
+        <Image x:Name="Position2" Source="pack://application:,,,/Enemies/Hundlegs.png" Margin="955,206,59,241" Stretch="Fill"/>
+        <Image x:Name="Position3" Source="pack://application:,,,/Enemies/Hundlegs.png" Margin="622,144,392,303" Stretch="Fill"/>
+        <Label x:Name="Position2HP" Content="100" Foreground="Red" FontSize="48" Margin="847,378,256,267"/>
 
-        <Label x:Name="DMGPos1" Content="DAMAGE1" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="716,33,364,627"/>
-        <Label x:Name="DMGPos2" Content="DAMAGE2" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="955,115,125,545"/>
-        <Label x:Name="DMGArdyn" Content="DAMAGE" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="116,171,964,489"/>
+        <Label x:Name="DMGEnemy" Content="DAMAGE1" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="652,33,428,627"/>
+        <Label x:Name="DMGArdyn" Content="DAMAGE" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="410,33,670,627"/>
 
     </Grid>
 </Page>

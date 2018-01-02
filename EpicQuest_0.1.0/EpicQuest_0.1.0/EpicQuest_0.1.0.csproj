@@ -65,6 +65,8 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="Classes\Ardyn_Attack.cs" />
+    <Compile Include="Classes\Attack_From_Enemy.cs" />
     <Compile Include="Classes\Enemy_Generator.cs" />
     <Compile Include="Classes\Timer.cs" />
     <Compile Include="MainWindow.xaml.cs">
@@ -148,7 +150,11 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Sounds\Audiomachine - Akkadian Empire.mp3">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
   <ItemGroup>
     <Resource Include="Backgrounds\DarkTheme.jpg" />
     <Resource Include="Backgrounds\GreenTheme.jpg" />
