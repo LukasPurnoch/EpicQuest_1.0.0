@@ -26,7 +26,7 @@ namespace EpicQuest_0._1._0.Classes
             Random FastHitchance1 = new Random(); // Fast Attack -> 80% Chance, 8-13 DMG
             Random FastDamage1 = new Random();
 
-            int fastHitchance1 = FastHitchance1.Next(1, 80);
+            int fastHitchance1 = FastHitchance1.Next(1, 81);
             int fastDamage1 = FastDamage1.Next(8, 13);
 
             if (enemy1 == "Gigantoad" || enemy1 == "Flying Eyes" || enemy1 == "Arachne" || enemy1 == "Chimera" || enemy1 == "Great Malboro" || enemy1 == "Magic Dragon" || enemy1 == "Brachioraidos" || enemy1 == "Eukaryote" || enemy1 == "Catoblepas")
@@ -137,7 +137,7 @@ namespace EpicQuest_0._1._0.Classes
             Random FastHitchance2 = new Random(); // Fast Attack -> 80% Chance, 8-13 DMG
             Random FastDamage2 = new Random();
 
-            int fastHitchance2 = FastHitchance2.Next(1, 80);
+            int fastHitchance2 = FastHitchance2.Next(1, 81);
             int fastDamage2 = FastDamage2.Next(8, 13);
 
             if (enemy2 == "Gigantoad" || enemy2 == "Flying Eyes" || enemy2 == "Arachne" || enemy2 == "Chimera" || enemy2 == "Great Malboro" || enemy2 == "Magic Dragon" || enemy2 == "Brachioraidos" || enemy2 == "Eukaryote" || enemy2 == "Catoblepas")
@@ -249,7 +249,7 @@ namespace EpicQuest_0._1._0.Classes
             Random NormalHitchance1 = new Random(); // Normal Attack -> 60% Chance, 14-19 DMG
             Random NormalDamage1 = new Random();
 
-            int normalHitchance1 = NormalHitchance1.Next(1, 80);
+            int normalHitchance1 = NormalHitchance1.Next(1, 61);
             int normalDamage1 = NormalDamage1.Next(14, 20);
 
             if (enemy1 == "Death Flower" || enemy1 == "Lilith" || enemy1 == "Hydra" || enemy1 == "Ghost Knight" || enemy1 == "Fiery Hound" || enemy1 == "Behemoth" || enemy1 == "Red Dragon" || enemy1 == "Death Puppet" || enemy1 == "Gorgon")
@@ -360,7 +360,7 @@ namespace EpicQuest_0._1._0.Classes
             Random NormalHitchance2 = new Random(); // Normal Attack -> 60% Chance, 14-19 DMG
             Random NormalDamage2 = new Random();
 
-            int normalHitchance2 = NormalHitchance2.Next(1, 80);
+            int normalHitchance2 = NormalHitchance2.Next(1, 61);
             int normalDamage2 = NormalDamage2.Next(14, 20);
 
             if (enemy2 == "Death Flower" || enemy2 == "Lilith" || enemy2 == "Hydra" || enemy2 == "Ghost Knight" || enemy2 == "Fiery Hound" || enemy2 == "Behemoth" || enemy2 == "Red Dragon" || enemy2 == "Death Puppet" || enemy2 == "Gorgon")
@@ -469,11 +469,11 @@ namespace EpicQuest_0._1._0.Classes
             string enemy1 = Enemy1.Content.ToString();
             string enemy2 = Enemy2.Content.ToString();
 
-            Random StrongHitchance1 = new Random(); // Normal Attack -> 60% Chance, 14-19 DMG
+            Random StrongHitchance1 = new Random(); // Normal Attack -> 30% Chance, 25-30 DMG
             Random StrongDamage1 = new Random();
 
-            int strongHitchance1 = StrongHitchance1.Next(1, 80);
-            int strongDamage1 = StrongDamage1.Next(14, 20);
+            int strongHitchance1 = StrongHitchance1.Next(1, 30);
+            int strongDamage1 = StrongDamage1.Next(25, 31);
 
             if (enemy1 == "Hundlegs" || enemy1 == "Blood Flower" || enemy1 == "Ghoul" || enemy1 == "Stone Golem" || enemy1 == "Wicked Mask" || enemy1 == "Trap Door" || enemy1 == "Black Knigh")
             {
@@ -481,7 +481,7 @@ namespace EpicQuest_0._1._0.Classes
 
                 if (Position1HP_P > 0)
                 {
-                    if (strongHitchance1 <= 80)
+                    if (strongHitchance1 <= 30)
                     {
                         double HPS = HP_Bar.Value;
                         DMGArdyn.Content = "-" + strongDamage1;
@@ -491,31 +491,31 @@ namespace EpicQuest_0._1._0.Classes
                         switch (enemy1)
                         {
                             case "Hundlegs":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Gigantoad.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Hundlegs.png"));
                                 Position1.Visibility = Visibility.Hidden;
                                 break;
                             case "Blood Flower":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Flying_Eyes.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Blood_Flower.png"));
                                 Position1.Visibility = Visibility.Hidden;
                                 break;
                             case "Ghoul":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Arachne.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Ghoul.png"));
                                 Position1.Visibility = Visibility.Hidden;
                                 break;
                             case "Stone Golem":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Chimera.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Stone_Golem.png"));
                                 Position1.Visibility = Visibility.Hidden;
                                 break;
                             case "Wicked Mask":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Great_Malboro.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Wicked_Mask.png"));
                                 Position1.Visibility = Visibility.Hidden;
                                 break;
                             case "Trap Door":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Magic_Dragon.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Trap_Door.png"));
                                 Position1.Visibility = Visibility.Hidden;
                                 break;
                             case "Black Knigh":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Brachioraidos.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Black_Knight.png"));
                                 Position1.Visibility = Visibility.Hidden;
                                 break;                            
                         }
@@ -527,31 +527,31 @@ namespace EpicQuest_0._1._0.Classes
                         switch (enemy1)
                         {
                             case "Hundlegs":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Gigantoad.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Hundlegs.png"));
                                 Position1.Visibility = Visibility.Hidden;
                                 break;
                             case "Blood Flower":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Flying_Eyes.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Blood_Flower.png"));
                                 Position1.Visibility = Visibility.Hidden;
                                 break;
                             case "Ghoul":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Arachne.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Ghoul.png"));
                                 Position1.Visibility = Visibility.Hidden;
                                 break;
                             case "Stone Golem":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Chimera.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Stone_Golem.png"));
                                 Position1.Visibility = Visibility.Hidden;
                                 break;
                             case "Wicked Mask":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Great_Malboro.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Wicked_Mask.png"));
                                 Position1.Visibility = Visibility.Hidden;
                                 break;
                             case "Trap Door":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Magic_Dragon.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Trap_Door.png"));
                                 Position1.Visibility = Visibility.Hidden;
                                 break;
                             case "Black Knigh":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Brachioraidos.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Black_Knight.png"));
                                 Position1.Visibility = Visibility.Hidden;
                                 break;
                         }
@@ -564,11 +564,11 @@ namespace EpicQuest_0._1._0.Classes
             string enemy1 = Enemy1.Content.ToString();
             string enemy2 = Enemy2.Content.ToString();
 
-            Random StrongHitchance2 = new Random(); // Normal Attack -> 60% Chance, 14-19 DMG
+            Random StrongHitchance2 = new Random(); // Normal Attack -> 30% Chance, 25-30 DMG
             Random StrongDamage2 = new Random();
 
-            int strongHitchance2 = StrongHitchance2.Next(1, 80);
-            int strongDamage2 = StrongDamage2.Next(14, 20);
+            int strongHitchance2 = StrongHitchance2.Next(1, 30);
+            int strongDamage2 = StrongDamage2.Next(25, 31);
 
             if (enemy2 == "Hundlegs" || enemy2 == "Blood Flower" || enemy2 == "Ghoul" || enemy2 == "Stone Golem" || enemy2 == "Wicked Mask" || enemy2 == "Trap Door" || enemy2 == "Black Knigh")
             {
@@ -576,7 +576,7 @@ namespace EpicQuest_0._1._0.Classes
 
                 if (Position2HP_P > 0)
                 {
-                    if (strongHitchance2 <= 80)
+                    if (strongHitchance2 <= 30)
                     {
                         double HPS = HP_Bar.Value;
                         DMGArdyn.Content = "-" + strongDamage2;
@@ -586,31 +586,31 @@ namespace EpicQuest_0._1._0.Classes
                         switch (enemy2)
                         {
                             case "Hundlegs":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Gigantoad.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Hundlegs.png"));
                                 Position2.Visibility = Visibility.Hidden;
                                 break;
                             case "Blood Flower":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Flying_Eyes.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Blood_Flower.png"));
                                 Position2.Visibility = Visibility.Hidden;
                                 break;
                             case "Ghoul":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Arachne.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Ghoul.png"));
                                 Position2.Visibility = Visibility.Hidden;
                                 break;
                             case "Stone Golem":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Chimera.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Stone_Golem.png"));
                                 Position2.Visibility = Visibility.Hidden;
                                 break;
                             case "Wicked Mask":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Great_Malboro.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Wicked_Mask.png"));
                                 Position2.Visibility = Visibility.Hidden;
                                 break;
                             case "Trap Door":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Magic_Dragon.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Trap_Door.png"));
                                 Position2.Visibility = Visibility.Hidden;
                                 break;
                             case "Black Knigh":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Brachioraidos.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Black_Knight.png"));
                                 Position2.Visibility = Visibility.Hidden;
                                 break;
                         }
@@ -622,31 +622,31 @@ namespace EpicQuest_0._1._0.Classes
                         switch (enemy2)
                         {
                             case "Hundlegs":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Gigantoad.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Hundlegs.png"));
                                 Position2.Visibility = Visibility.Hidden;
                                 break;
                             case "Blood Flower":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Flying_Eyes.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Blood_Flower.png"));
                                 Position2.Visibility = Visibility.Hidden;
                                 break;
                             case "Ghoul":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Arachne.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Ghoul.png"));
                                 Position2.Visibility = Visibility.Hidden;
                                 break;
                             case "Stone Golem":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Chimera.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Stone_Golem.png"));
                                 Position2.Visibility = Visibility.Hidden;
                                 break;
                             case "Wicked Mask":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Great_Malboro.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Wicked_Mask.png"));
                                 Position2.Visibility = Visibility.Hidden;
                                 break;
                             case "Trap Door":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Magic_Dragon.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Trap_Door.png"));
                                 Position2.Visibility = Visibility.Hidden;
                                 break;
                             case "Black Knigh":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Brachioraidos.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Black_Knight.png"));
                                 Position2.Visibility = Visibility.Hidden;
                                 break;
                         }

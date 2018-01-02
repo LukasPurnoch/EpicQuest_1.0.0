@@ -48,6 +48,7 @@ namespace EpicQuest_0._1._0.Pages
                 Position4.Source = null;
                 Position3.Source = null;
                 Ardyn.Visibility = Visibility.Visible;
+
                 Position1.Visibility = Visibility.Visible;
                 Position2.Visibility = Visibility.Visible;
             }
