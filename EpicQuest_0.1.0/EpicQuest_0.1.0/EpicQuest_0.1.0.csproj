@@ -68,6 +68,7 @@
     <Compile Include="Classes\Ardyn_Attack.cs" />
     <Compile Include="Classes\Attack_From_Enemy.cs" />
     <Compile Include="Classes\Enemy_Generator.cs" />
+    <Compile Include="Classes\MoneyDrop.cs" />
     <Compile Include="Classes\Timer.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>

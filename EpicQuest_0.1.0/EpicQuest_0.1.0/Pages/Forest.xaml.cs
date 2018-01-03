@@ -76,21 +76,33 @@ namespace EpicQuest_0._1._0.Pages
         private void StrongAtt_Click(object sender, RoutedEventArgs e)
         {
             Classes.Ardyn_Attack ArdAtt = new Classes.Ardyn_Attack();
-            ArdAtt.StrongAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, HP_Bar, Position1, Position2, Position3);
+            ArdAtt.StrongAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, HP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, Position1, Position2, Position3, Money);
+
+            Classes.MoneyDrop MDrop = new Classes.MoneyDrop();
+            MDrop.DropMoney(Enemy1, Enemy2, Money, Position1HP, Position2HP);
+
             increment = 0;
         }
 
         private void FastAtt_Click(object sender, RoutedEventArgs e)
         {
             Classes.Ardyn_Attack ArdAtt = new Classes.Ardyn_Attack();
-            ArdAtt.FastAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, HP_Bar, Position1, Position2, Position3);
+            ArdAtt.FastAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, HP_Bar, Position1, Position2, Position3, Money);
+
+            Classes.MoneyDrop MDrop = new Classes.MoneyDrop();
+            MDrop.DropMoney(Enemy1, Enemy2, Money, Position1HP, Position2HP);
+
             increment = 0;
         }
 
         private void NormalAtt_Click(object sender, RoutedEventArgs e)
         {
             Classes.Ardyn_Attack ArdAtt = new Classes.Ardyn_Attack();
-            ArdAtt.NormalAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, HP_Bar, Position1, Position2, Position3);
+            ArdAtt.NormalAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, HP_Bar, Position1, Position2, Position3, Money);
+
+            Classes.MoneyDrop MDrop = new Classes.MoneyDrop();
+            MDrop.DropMoney(Enemy1, Enemy2, Money, Position1HP, Position2HP);
+
             increment = 0;
         }
     }
