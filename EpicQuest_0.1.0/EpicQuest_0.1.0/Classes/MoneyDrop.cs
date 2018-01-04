@@ -18,8 +18,8 @@ namespace EpicQuest_0._1._0.Classes
 {
     class MoneyDrop
     {
-        public int earned1 = 0;
-        public int earned2 = 0;
+        int earned1 = 1;
+        int earned2 = 1;
 
         public void DropMoney(Button Enemy1, Button Enemy2, Label Money, Label Position1HP, Label Position2HP) {
 
@@ -33,9 +33,9 @@ namespace EpicQuest_0._1._0.Classes
 
             if (Position1HP_M <= 0)
             {
-                if (earned1 == 0)
+                if (earned1 == 1)
                 {
-                    earned1 = 1;
+                    earned1 = 2;
 
                     switch (enemy1)
                     {
@@ -122,9 +122,9 @@ namespace EpicQuest_0._1._0.Classes
 
             if (Position2HP_M <= 0)
             {
-                if (earned2 == 0)
+                if (earned2 == 1)
                 {
-                    earned2 = 1;
+                    earned2 = 2;
 
                     switch (enemy2)
                     {

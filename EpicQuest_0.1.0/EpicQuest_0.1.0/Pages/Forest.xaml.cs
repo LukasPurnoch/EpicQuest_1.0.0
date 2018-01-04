@@ -31,6 +31,7 @@ namespace EpicQuest_0._1._0.Pages
             Level();
             TimeStart();
             
+            Classes.MoneyDrop MDrop = new Classes.MoneyDrop();
         }
 
         private void Level()
