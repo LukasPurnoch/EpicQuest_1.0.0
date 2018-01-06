@@ -13,16 +13,47 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using FileHelpers;
 
 namespace EpicQuest_0._1._0.Classes
 {
     class MoneyDrop
     {
-        int earned1 = 1;
-        int earned2 = 1;
+        List<SmallSave> earnList = new List<SmallSave>();
+        List<int> readList = new List<int>();
+
+        int earned1 = 3;
+        int earned2 = 3;
+
+        public void CSVWrite()
+        {
+            var engine = new FileHelperEngine<SmallSave>();
+            engine.WriteFile("SmallSaveFile.csv", earnList);
+        }
+
+        public void CSVRead()
+        {
+            var engine = new FileHelperEngine<SmallSave>();
+            var result = engine.ReadFile("SmallSaveFile.csv");
+
+            foreach (SmallSave SmSave in result)
+            {
+                readList.Add(SmSave.eearned1);
+                readList.Add(SmSave.eearned2);
+            }
+        }
 
         public void DropMoney(Button Enemy1, Button Enemy2, Label Money, Label Position1HP, Label Position2HP) {
 
+            SmallSave SS = new SmallSave();
+            CSVRead();
+
+            //SS.eearned1 = 1;
+            //SS.eearned2 = 1;
+            //earnList.Add(SS);
+
+            CSVWrite();
+            
             int.TryParse(Position1HP.Content.ToString(), out int Position1HP_M);
             int.TryParse(Position2HP.Content.ToString(), out int Position2HP_M);
 
@@ -35,7 +66,6 @@ namespace EpicQuest_0._1._0.Classes
             {
                 if (earned1 == 1)
                 {
-                    earned1 = 2;
 
                     switch (enemy1)
                     {
