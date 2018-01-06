@@ -12,5 +12,6 @@ namespace EpicQuest_0._1._0.Classes
     {
         public int eearned1;
         public int eearned2;
+        //public int savepom;
     }
 }
