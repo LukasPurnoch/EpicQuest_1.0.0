@@ -18,6 +18,13 @@ namespace EpicQuest_0._1._0.Classes
 {
     class Ardyn_Attack
     {
+        public int strongDamage;
+        public int fastDamage;
+        public int normalDamage;
+
+        public int strongHitchance = 30;
+        public int fastHitchance = 80;
+        public int normalHitchance = 60;
 
         public void StrongAttack(int vyber, Label DMGEnemy, Label Position1HP, Label Position2HP, ProgressBar AP_Bar, ProgressBar HP_Bar, Image Position4, Image Ardyn, Button Enemy1, Button Enemy2, Label DMGArdyn, Image Position1, Image Position2, Image Position3, Label Money)
         {
@@ -38,7 +45,7 @@ namespace EpicQuest_0._1._0.Classes
 
                     if (Position1HP_P > 0)
                     {
-                        if (strongHitchance1 <= 30)
+                        if (strongHitchance1 <= strongHitchance)
                         {
                             DMGEnemy.Content = "-" + strongDamage1;
                             Position1HP_P -= strongDamage1;
@@ -73,7 +80,7 @@ namespace EpicQuest_0._1._0.Classes
 
                     if (Position2HP_P > 0)
                     {
-                        if (strongHitchance1 <= 30)
+                        if (strongHitchance1 <= strongHitchance)
                         {
                             DMGEnemy.Content = "-" + strongDamage1;
                             Position2HP_P -= strongDamage1;
@@ -124,7 +131,7 @@ namespace EpicQuest_0._1._0.Classes
 
                     if (Position1HP_P > 0)
                     {
-                        if (fastHitchance1 <= 80)
+                        if (fastHitchance1 <= fastHitchance)
                         {
                             DMGEnemy.Content = "-" + fastDamage1;
                             Position1HP_P -= fastDamage1;
@@ -159,7 +166,7 @@ namespace EpicQuest_0._1._0.Classes
 
                     if (Position2HP_P > 0)
                     {
-                        if (fastHitchance1 <= 80)
+                        if (fastHitchance1 <= fastHitchance)
                         {
                             DMGEnemy.Content = "-" + fastDamage1;
                             Position2HP_P -= fastDamage1;
@@ -210,7 +217,7 @@ namespace EpicQuest_0._1._0.Classes
 
                     if (Position1HP_P > 0)
                     {
-                        if (normalHitchance1 <= 60)
+                        if (normalHitchance1 <= normalHitchance)
                         {
                             DMGEnemy.Content = "-" + normalDamage1;
                             Position1HP_P -= normalDamage1;
@@ -245,7 +252,7 @@ namespace EpicQuest_0._1._0.Classes
 
                     if (Position2HP_P > 0)
                     {
-                        if (normalHitchance1 <= 60)
+                        if (normalHitchance1 <= normalHitchance)
                         {
                             DMGEnemy.Content = "-" + normalDamage1;
                             Position2HP_P -= normalDamage1;

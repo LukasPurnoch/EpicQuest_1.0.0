@@ -26,6 +26,8 @@ namespace EpicQuest_0._1._0.Pages
 
         private int earned1 = 1;
         private int earned2 = 1;
+        private int exp1 = 1;
+        private int exp2 = 1;
 
         public Forest()
         {
@@ -81,6 +83,7 @@ namespace EpicQuest_0._1._0.Pages
             ArdAtt.StrongAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, HP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, Position1, Position2, Position3, Money);
 
             Classes.MoneyDrop MDrop = new Classes.MoneyDrop();
+            Classes.EXPGain EGain = new Classes.EXPGain();
 
             increment = 0;
 
@@ -91,6 +94,7 @@ namespace EpicQuest_0._1._0.Pages
             {
                 if (earned1 == 1)
                 {
+                    EGain.EXPGain1(Enemy1, EXP_Bar, LEVEL);
                     MDrop.DropMoney1(Enemy1, Money);
                     earned1 = 2;
                 }
@@ -100,6 +104,7 @@ namespace EpicQuest_0._1._0.Pages
             {
                 if (earned2 == 1)
                 {
+                    //EGain.EXPGain2(Enemy2, EXP_Bar, LEVEL);
                     MDrop.DropMoney2(Enemy2, Money);
                     earned2 = 2;
                 }
@@ -120,6 +125,7 @@ namespace EpicQuest_0._1._0.Pages
             ArdAtt.FastAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, HP_Bar, Position1, Position2, Position3, Money);
 
             Classes.MoneyDrop MDrop = new Classes.MoneyDrop();
+            Classes.EXPGain EGain = new Classes.EXPGain();
 
             increment = 0;
 
@@ -130,6 +136,7 @@ namespace EpicQuest_0._1._0.Pages
             {
                 if (earned1 == 1)
                 {
+                    EGain.EXPGain1(Enemy1, EXP_Bar, LEVEL);
                     MDrop.DropMoney1(Enemy1, Money);
                     earned1 = 2;
                 }
@@ -139,6 +146,7 @@ namespace EpicQuest_0._1._0.Pages
             {
                 if (earned2 == 1)
                 {
+                    //EGain.EXPGain2(Enemy2, EXP_Bar, LEVEL);
                     MDrop.DropMoney2(Enemy2, Money);
                     earned2 = 2;
                 }
@@ -159,6 +167,7 @@ namespace EpicQuest_0._1._0.Pages
             ArdAtt.NormalAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, HP_Bar, Position1, Position2, Position3, Money);
 
             Classes.MoneyDrop MDrop = new Classes.MoneyDrop();
+            Classes.EXPGain EGain = new Classes.EXPGain();
 
             increment = 0;
 
@@ -169,6 +178,7 @@ namespace EpicQuest_0._1._0.Pages
             {
                 if (earned1 == 1)
                 {
+                    EGain.EXPGain1(Enemy1, EXP_Bar, LEVEL);
                     MDrop.DropMoney1(Enemy1, Money);
                     earned1 = 2;
                 }
@@ -178,6 +188,7 @@ namespace EpicQuest_0._1._0.Pages
             {
                 if (earned2 == 1)
                 {
+                    //EGain.EXPGain2(Enemy2, EXP_Bar, LEVEL);
                     MDrop.DropMoney2(Enemy2, Money);
                     earned2 = 2;
                 }

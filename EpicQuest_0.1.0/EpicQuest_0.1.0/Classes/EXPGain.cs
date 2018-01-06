@@ -16,93 +16,114 @@ using System.Windows.Threading;
 
 namespace EpicQuest_0._1._0.Classes
 {
-    class MoneyDrop
+    class EXPGain
     {
-        public void DropMoney1(Button Enemy1, Label Money) {
+        Ardyn_Attack AA = new Ardyn_Attack();
 
+        public void EXPGain1(Button Enemy1, ProgressBar EXP_Bar, Label LEVEL)
+        {
+            int max_lvl = 30;
             string enemy1 = Enemy1.Content.ToString();
 
-            int.TryParse(Money.Content.ToString(), out int money);
-
+            double exp = EXP_Bar.Value;
+            double max_exp = EXP_Bar.Maximum;
+            
             switch (enemy1)
             {
                 case "Hundlegs":
-                    money += 15;
+                    exp += 10;
                     break;
                 case "Gigantoad":
-                    money += 10;
+                    exp += 5;
                     break;
                 case "Death Flower":
-                    money += 10;
+                    exp += 5;
                     break;
                 case "Blood Flower":
-                    money += 10;
+                    exp += 5;
                     break;
                 case "Flying Eyes":
-                    money += 10;
+                    exp += 5;
                     break;
                 case "Ghoul":
-                    money += 20;
+                    exp += 15;
                     break;
                 case "Lilith":
-                    money += 15;
+                    exp += 10;
                     break;
                 case "Hydra":
-                    money += 15;
+                    exp += 10;
                     break;
                 case "Stone Golem":
-                    money += 20;
+                    exp += 15;
                     break;
                 case "Arachne":
-                    money += 15;
+                    exp += 10;
                     break;
                 case "Ghost Knight":
-                    money += 20;
+                    exp += 15;
                     break;
                 case "Chimera":
-                    money += 15;
+                    exp += 10;
                     break;
                 case "Great Malboro":
-                    money += 20;
+                    exp += 15;
                     break;
                 case "Fiery Hound":
-                    money += 20;
+                    exp += 15;
                     break;
                 case "Wicked Mask":
-                    money += 20;
+                    exp += 15;
                     break;
                 case "Behemoth":
-                    money += 15;
+                    exp += 10;
                     break;
                 case "Magic Dragon":
-                    money += 10;
+                    exp += 5;
                     break;
                 case "Brachioraidos":
-                    money += 10;
+                    exp += 5;
                     break;
                 case "Red Dragon":
-                    money += 15;
+                    exp += 10;
                     break;
                 case "Trap Door":
-                    money += 20;
+                    exp += 15;
                     break;
                 case "Death Puppet":
-                    money += 20;
+                    exp += 15;
                     break;
                 case "Eukaryote":
-                    money += 10;
+                    exp += 5;
                     break;
                 case "Gorgon":
-                    money += 15;
+                    exp += 10;
                     break;
                 case "Black Knight":
-                    money += 20;
+                    exp += 15;
                     break;
                 case "Catoblepas":
-                    money += 10;
+                    exp += 5;
                     break;
             }
-            Money.Content = money;
+
+            EXP_Bar.Value = exp;
+
+            if (exp >= max_lvl) // 60 >= 50 => exp 10 => max_lvl 55
+            {
+                double expNumbers = exp - max_lvl;
+
+                EXP_Bar.Value = exp;
+
+                max_lvl += 5;
+                max_exp = max_lvl;
+
+                AA.fastHitchance += 1;
+                AA.normalHitchance += 2;
+                AA.strongHitchance += 3;
+
+
+            }
         }
 
         public void DropMoney2(Button Enemy2, Label Money)

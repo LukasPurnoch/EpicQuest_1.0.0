@@ -71,6 +71,7 @@
     <Compile Include="Classes\Ardyn_Attack.cs" />
     <Compile Include="Classes\Attack_From_Enemy.cs" />
     <Compile Include="Classes\Enemy_Generator.cs" />
+    <Compile Include="Classes\EXPGain.cs" />
     <Compile Include="Classes\MoneyDrop.cs" />
     <Compile Include="Classes\SmallSave.cs" />
     <Compile Include="Classes\Timer.cs" />
