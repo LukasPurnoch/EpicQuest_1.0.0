@@ -22,7 +22,7 @@
         <Label x:Name="LevelLabel" Content="Forest" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="1094,-5,0,666"/>
         <Image Source="pack://application:,,,/Addons/Coin.png" Margin="10,-5,1106,666" Stretch="Fill"/>
 
-        <Label x:Name="LEVEL" Content="1." Margin="84,484,1153,182" FontSize="40" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
+        <Label x:Name="LEVEL" Content="1" Margin="84,484,1153,182" FontSize="40" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
         <Label Content="LVL" Margin="10,493,1196,173" FontSize="30" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
         <Label x:Name="NameOfHero" Content="A R D Y N" Margin="203,493,898,173" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
         <Label x:Name="HP" Content="H P" Margin="10,543,1166,123" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
@@ -30,13 +30,19 @@
         <Label x:Name="EXP" Content="E X P" Margin="10,651,1166,15" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
 
         <ProgressBar x:Name="HP_Bar" Margin="119,553,861,123" Minimum="0" Maximum="1000" Value="1000" Foreground="#FF8F0000"/>
-        <ProgressBar x:Name="AP_Bar" Margin="119,607,861,69" Minimum="0" Maximum="100" Value="100" Foreground="#FF0047C3"/>
-        <ProgressBar x:Name="EXP_Bar" Margin="119,661,861,15" Minimum="0" Maximum="30" Value="0" Foreground="#FFABB400"/>
+        <ProgressBar x:Name="AP_Bar" Margin="119,607,861,69" Minimum="0" Maximum="130" Value="130" Foreground="#FF0047C3"/>
+        <ProgressBar x:Name="EXP_Bar" Margin="119,661,861,15" Minimum="0" Maximum="15" Value="0" Foreground="#FFABB400"/>
 
-        <TextBlock Text="{Binding ElementName=HP_Bar, Path=Value, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="45" Margin="240,552,926,123" Width="114" FontSize="36" />
-        <TextBlock Text="{Binding ElementName=AP_Bar, Path=Value, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="45" Margin="240,607,934,68" Width="106" FontSize="36" />
-        <TextBlock Text="{Binding ElementName=EXP_Bar, Path=Value, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="45" Margin="240,661,926,14" Width="114" FontSize="36" />
-
+        <TextBlock Text="{Binding ElementName=HP_Bar, Path=Value, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="45" Margin="134,552,1069,123" Width="77" FontSize="36" />
+        <Label Content="/" HorizontalAlignment="Center" VerticalAlignment="Center" Height="54" Margin="257,543,995,123" Width="28" FontSize="36"/>
+        <Label x:Name="MaxHP" Content="400" HorizontalAlignment="Center" VerticalAlignment="Center" Height="54" Margin="323,544,870,122" Width="87" FontSize="36" />
+        <TextBlock Text="{Binding ElementName=AP_Bar, Path=Value, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="45" Margin="134,606,1069,69" Width="77" FontSize="36" />
+        <Label Content="/" HorizontalAlignment="Center" VerticalAlignment="Center" Height="54" Margin="257,597,995,69" Width="28" FontSize="36"/>
+        <Label x:Name="MaxAP" Content="130" HorizontalAlignment="Center" VerticalAlignment="Center" Height="54" Margin="323,601,870,65" Width="87" FontSize="36" />
+        <TextBlock Text="{Binding ElementName=EXP_Bar, Path=Value, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="45" Margin="134,662,1069,13" Width="77" FontSize="36" />
+        <Label Content="/" HorizontalAlignment="Center" VerticalAlignment="Center" Height="54" Margin="257,653,995,13" Width="28" FontSize="36"/>
+        <Label x:Name="MaxEXP" Content="{Binding ElementName=EXP_Bar, Path=Maximum, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="54" Margin="323,653,870,13" Width="87" FontSize="36" />
+        
         <Button x:Name="StrongAtt" Content="Strong Attack" Margin="458,508,498,151" FontSize="36" FontWeight="Bold" FontStyle="Italic" Background="#00000000" Foreground="White" BorderBrush="Black" Click="StrongAtt_Click"/>
         <Button x:Name="FastAtt" Content="Fast Attack" Margin="458,574,498,85" FontSize="36" Background="#00000000" Foreground="White" FontWeight="Bold" FontStyle="Italic" BorderBrush="Black" Click="FastAtt_Click"/>
         <Button x:Name="NormalAtt" Content="Normal Attack" Margin="458,640,498,19" FontSize="36" Background="#00000000" Foreground="White" FontWeight="Bold" FontStyle="Italic" BorderBrush="Black" Click="NormalAtt_Click"/>
@@ -56,5 +62,8 @@
         <Label x:Name="DMGEnemy" Content="DAMAGE1" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="652,33,428,627"/>
         <Label x:Name="DMGArdyn" Content="DAMAGE" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="410,33,670,627"/>
 
+        <Label x:Name="StrongDMG" Content="30" Visibility="Hidden"/>
+        <Label x:Name="FastDMG" Content="80" Visibility="Hidden"/>
+        <Label x:Name="NormalDMG" Content="60" Visibility="Hidden"/>
     </Grid>
 </Page>
