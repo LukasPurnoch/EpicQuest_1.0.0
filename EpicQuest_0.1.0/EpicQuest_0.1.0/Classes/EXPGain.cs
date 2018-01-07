@@ -19,11 +19,11 @@ namespace EpicQuest_0._1._0.Classes
     class EXPGain
     {
         Ardyn_Attack AA = new Ardyn_Attack();
-
-        public int max_lvl = 15;
-
-        public void EXPGain1(Button Enemy1, ProgressBar EXP_Bar, ProgressBar HP_Bar, Label LEVEL, Label MaxHP, Label NameOfHero)
+        
+        public void EXPGain1(Button Enemy1, ProgressBar EXP_Bar, ProgressBar HP_Bar, Label LEVEL, Label MaxHP, Label NameOfHero, Label StrongHC, Label NormalHC, Label FastHC)
         {
+            double max_lvl = EXP_Bar.Maximum;
+            
             string enemy1 = Enemy1.Content.ToString();
 
             double exp = EXP_Bar.Value;
@@ -112,13 +112,43 @@ namespace EpicQuest_0._1._0.Classes
 
             if (exp >= max_lvl)
             {
-                
+                max_lvl += 5;
+                EXP_Bar.Maximum = max_lvl;
+
+                double currentExp = exp - max_lvl;
+                EXP_Bar.Value = currentExp;
+
+                int.TryParse(LEVEL.Content.ToString(), out int currentLvl);
+                currentLvl += 1;
+                LEVEL.Content = currentLvl;
+
+                double maxHP_E = HP_Bar.Maximum;
+                double hpUpgrade = ((maxHP_E / 5) / currentLvl) + 10;
+                HP_Bar.Maximum = hpUpgrade + maxHP_E;
+
+                int.TryParse(StrongHC.Content.ToString(), out int strongHC);
+                int.TryParse(NormalHC.Content.ToString(), out int normalHC);
+                int.TryParse(FastHC.Content.ToString(), out int fastHC);
+
+                strongHC += 3;
+                StrongHC.Content = strongHC;
+                AA.strongHitchance += 3;
+
+                fastHC += 1;
+                FastHC.Content = fastHC;
+                AA.fastHitchance += 1;
+
+                normalHC += 2;
+                NormalHC.Content = normalHC;
+                AA.normalHitchance += 2;
+
             }
         }
 
-        public void EXPGain2(Button Enemy2, ProgressBar EXP_Bar, Label LEVEL)
+        public void EXPGain2(Button Enemy2, ProgressBar EXP_Bar, ProgressBar HP_Bar, Label LEVEL, Label MaxHP, Label NameOfHero, Label StrongHC, Label NormalHC, Label FastHC)
         {
-            int max_lvl = 30;
+            double max_lvl = EXP_Bar.Maximum;
+
             string enemy2 = Enemy2.Content.ToString();
 
             double exp = EXP_Bar.Value;
@@ -205,18 +235,37 @@ namespace EpicQuest_0._1._0.Classes
 
             EXP_Bar.Value = exp;
 
-            if (exp >= max_lvl) // 60 >= 50 => exp 10 => max_lvl 55
+            if (exp >= max_lvl)
             {
-                double expNumbers = exp - max_lvl;
-
-                EXP_Bar.Value = exp;
-
                 max_lvl += 5;
-                max_exp = max_lvl;
+                EXP_Bar.Maximum = max_lvl;
 
-                AA.fastHitchance += 1;
-                AA.normalHitchance += 2;
+                double currentExp = exp - max_lvl;
+                EXP_Bar.Value = currentExp;
+
+                int.TryParse(LEVEL.Content.ToString(), out int currentLvl);
+                currentLvl += 1;
+                LEVEL.Content = currentLvl;
+
+                double maxHP_E = HP_Bar.Maximum;
+                double hpUpgrade = ((maxHP_E / 5) / currentLvl) + 10;
+                HP_Bar.Maximum = hpUpgrade + maxHP_E;
+
+                int.TryParse(StrongHC.Content.ToString(), out int strongHC);
+                int.TryParse(NormalHC.Content.ToString(), out int normalHC);
+                int.TryParse(FastHC.Content.ToString(), out int fastHC);
+
+                strongHC += 3;
+                StrongHC.Content = strongHC;
                 AA.strongHitchance += 3;
+
+                fastHC += 1;
+                FastHC.Content = fastHC;
+                AA.fastHitchance += 1;
+
+                normalHC += 2;
+                NormalHC.Content = normalHC;
+                AA.normalHitchance += 2;
 
             }
         }
