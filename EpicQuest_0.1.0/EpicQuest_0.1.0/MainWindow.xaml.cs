@@ -25,16 +25,28 @@ namespace EpicQuest_0._1._0
         {
             InitializeComponent();
 
-            //MenuMusic.Play();
+            MediaPlayer.Source = new Uri(@"C:\Users\bfoty\Source\Repos\EpicQuest_1.0.0\EpicQuest_0.1.0\EpicQuest_0.1.0\Sounds\Maintheme1.mp3");
+            MediaPlayer.Play();
+            
+        }
+
+        private void Reapeatable()
+        {
+            /*if ()
+            {
+
+            }*/
         }
 
         private void New_Click(object sender, RoutedEventArgs e)
         {
+            MediaPlayer.Stop();
             Game.Content = new Story_1();
         }
 
         private void Load_Click(object sender, RoutedEventArgs e)
         {
+            MediaPlayer.Stop();
             Game.Content = new Map();
         }
 

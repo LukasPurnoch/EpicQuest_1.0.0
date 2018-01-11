@@ -157,7 +157,9 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Sounds\Audiomachine - Akkadian Empire.mp3">
+    <Resource Include="Gifs\Background.gif" />
+    <Content Include="Sounds\Maintheme1.mp3" />
+    <Content Include="Sounds\Maintheme.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
   </ItemGroup>

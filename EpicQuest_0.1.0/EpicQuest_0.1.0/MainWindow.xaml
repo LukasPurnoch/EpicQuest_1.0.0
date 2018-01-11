@@ -6,20 +6,18 @@
         xmlns:local="clr-namespace:EpicQuest_0._1._0"
         mc:Ignorable="d"
         xmlns:gif="http://wpfanimatedgif.codeplex.com"
-        Title="MainWindow" Height="720" Width="1280">
-    <Grid Margin="0,0,0,0" Height="720" Width="1280">
-        
-        <Grid.Background>
-            <ImageBrush ImageSource="pack://application:,,,/Backgrounds/GreenTheme.jpg"/>
-        </Grid.Background>
+        Title="MainWindow" Height="800" Width="1280">
+    <Grid Margin="0,0,0,0" Height="800" Width="1280">
 
-        <MediaElement x:Name="MenuMusic" Source="pack://application:,,,/Sounds/Audiomachine - Akkadian Empire.mp3" Volume="1" Margin="-216,0,1313,601" RenderTransformOrigin="0.5,0.5"/>
-        
-        <Image gif:ImageBehavior.AnimatedSource="pack://application:,,,/Gifs/EpiQuest_GIF.gif" Margin="44,53,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="480" Height="316"/>
+        <MediaElement x:Name="MediaPlayer" Volume="1" Margin="-216,0,1313,601" RenderTransformOrigin="0.5,0.5" LoadedBehavior="Manual"/>
 
-        <Button x:Name="Exit" Content="EXIT" HorizontalAlignment="Right" Margin="0,0,0,74" VerticalAlignment="Bottom" Width="453" Height="88" Background="{x:Null}" FontSize="48" FontFamily="Segoe UI Black" BorderBrush="{x:Null}" Foreground="White"/>
-        <Button x:Name="Load" Content="LOAD GAME" HorizontalAlignment="Right" Margin="0,0,0,162" VerticalAlignment="Bottom" Width="453" Height="88" Background="{x:Null}" FontSize="48" FontFamily="Segoe UI Black" BorderBrush="{x:Null}" Foreground="White" Click="Load_Click"/>
-        <Button x:Name="New" Content="NEW GAME" HorizontalAlignment="Right" Margin="0,0,0,250" VerticalAlignment="Bottom" Width="453" Height="88" Background="{x:Null}" FontSize="48" FontFamily="Segoe UI Black" BorderBrush="{x:Null}" Foreground="White" Click="New_Click"/>
+        <Image gif:ImageBehavior.AnimatedSource="pack://application:,,,/Gifs/Background.gif" Margin="-33,-24,-60,10"/>
+
+        <Image gif:ImageBehavior.AnimatedSource="pack://application:,,,/Gifs/EpiQuest_GIF.gif" Margin="872,60,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="359" Height="236"/>
+
+        <Button x:Name="Exit" Content="EXIT" HorizontalAlignment="Right" Margin="0,0,10,144" VerticalAlignment="Bottom" Width="453" Height="88" Background="{x:Null}" FontSize="48" FontFamily="Segoe UI Black" BorderBrush="{x:Null}" Foreground="White"/>
+        <Button x:Name="Load" Content="LOAD GAME" HorizontalAlignment="Right" Margin="0,0,10,232" VerticalAlignment="Bottom" Width="453" Height="88" Background="{x:Null}" FontSize="48" FontFamily="Segoe UI Black" BorderBrush="{x:Null}" Foreground="White" Click="Load_Click"/>
+        <Button x:Name="New" Content="NEW GAME" HorizontalAlignment="Right" Margin="0,0,10,320" VerticalAlignment="Bottom" Width="453" Height="88" Background="{x:Null}" FontSize="48" FontFamily="Segoe UI Black" BorderBrush="{x:Null}" Foreground="White" Click="New_Click"/>
 
         <Frame x:Name="Game"/>
 
