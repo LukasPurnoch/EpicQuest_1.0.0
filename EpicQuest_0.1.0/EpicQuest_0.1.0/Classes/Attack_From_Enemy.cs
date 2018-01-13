@@ -37,16 +37,15 @@ namespace EpicQuest_0._1._0.Classes
                 if (Position1HP_P <= 0)
                 {
                     Position1.Source = null;
-
-
+                    Enemy1.Visibility = Visibility.Hidden;
                 }
 
                 if (Position1HP_P > 0)
                 {
                     if (fastHitchance1 <= 80)
                     {
-                        HP_Bar.Value -= fastDamage1;
-                        DMGArdyn.Content = "-" + fastDamage1;
+                        HP_Bar.Value -= (fastDamage1/2);
+                        DMGArdyn.Content = "-" + (fastDamage1 / 2);
 
                         switch (enemy1)
                         {
@@ -153,14 +152,15 @@ namespace EpicQuest_0._1._0.Classes
                 if (Position2HP_P <= 0)
                 {
                     Position2.Source = null;
+                    Enemy2.Visibility = Visibility.Hidden;
                 }
 
                 if (Position2HP_P > 0)
                 {
                     if (fastHitchance2 <= 80)
                     {
-                        HP_Bar.Value -= fastDamage2;
-                        DMGArdyn.Content = "-" + fastDamage2;
+                        HP_Bar.Value -= (fastDamage2 / 2);
+                        DMGArdyn.Content = "-" + (fastDamage2 / 2);
 
                         switch (enemy2)
                         {
@@ -268,14 +268,15 @@ namespace EpicQuest_0._1._0.Classes
                 if (Position1HP_P <= 0)
                 {
                     Position1.Source = null;
+                    Enemy1.Visibility = Visibility.Hidden;
                 }
 
                 if (Position1HP_P > 0)
                 {
                     if (normalHitchance1 <= 80)
                     {
-                        HP_Bar.Value -= normalDamage1;
-                        DMGArdyn.Content = "-" + normalDamage1;
+                        HP_Bar.Value -= (normalDamage1/2);
+                        DMGArdyn.Content = "-" + (normalDamage1/2);
 
                         switch (enemy1)
                         {
@@ -382,14 +383,15 @@ namespace EpicQuest_0._1._0.Classes
                 if (Position2HP_P <= 0)
                 {
                     Position2.Source = null;
+                    Enemy2.Visibility = Visibility.Hidden;
                 }
 
                 if (Position2HP_P > 0)
                 {
                     if (normalHitchance2 <= 80)
                     {
-                        HP_Bar.Value -= normalDamage2;
-                        DMGArdyn.Content = "-" + normalDamage2;
+                        HP_Bar.Value -= (normalDamage2/2);
+                        DMGArdyn.Content = "-" + (normalDamage2/2);
 
                         switch (enemy2)
                         {
@@ -497,14 +499,15 @@ namespace EpicQuest_0._1._0.Classes
                 if (Position1HP_P <= 0)
                 {
                     Position1.Source = null;
+                    Enemy1.Visibility = Visibility.Hidden;
                 }
 
                 if (Position1HP_P > 0)
                 {
                     if (strongHitchance1 <= 30)
                     {
-                        HP_Bar.Value -= strongDamage1;
-                        DMGArdyn.Content = "-" + strongDamage1;
+                        HP_Bar.Value -= (strongDamage1/2);
+                        DMGArdyn.Content = "-" + (strongDamage1/2);
 
                         switch (enemy1)
                         {
@@ -595,14 +598,15 @@ namespace EpicQuest_0._1._0.Classes
                 if (Position2HP_P <= 0)
                 {
                     Position2.Source = null;
+                    Enemy2.Visibility = Visibility.Hidden;
                 }
 
                 if (Position2HP_P > 0)
                 {
                     if (strongHitchance2 <= 30)
                     {
-                        HP_Bar.Value -= strongDamage2;
-                        DMGArdyn.Content = "-" + strongDamage2;
+                        HP_Bar.Value -= (strongDamage2/2);
+                        DMGArdyn.Content = "-" + (strongDamage2/2);
 
                         switch (enemy2)
                         {

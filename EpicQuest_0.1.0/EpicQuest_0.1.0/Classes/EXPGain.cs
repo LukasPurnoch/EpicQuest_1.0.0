@@ -141,7 +141,7 @@ namespace EpicQuest_0._1._0.Classes
                 normalHC += 2;
                 NormalHC.Content = normalHC;
                 AA.normalHitchance += 2;
-
+                
             }
         }
 
@@ -266,7 +266,7 @@ namespace EpicQuest_0._1._0.Classes
                 normalHC += 2;
                 NormalHC.Content = normalHC;
                 AA.normalHitchance += 2;
-
+                
             }
         }
     }

@@ -5,19 +5,19 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:EpicQuest_0._1._0.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="720" d:DesignWidth="1280"
+      d:DesignHeight="800" d:DesignWidth="1280"
       Title="Map">
 
-    <Grid Height="720" Width="1280">
+    <Grid Height="800" Width="1280">
         <Grid.Background>
             <ImageBrush ImageSource="pack://application:,,,/Backgrounds/Map.png"/>
         </Grid.Background>
 
-        <Button x:Name="DungeonLvl" Margin="130,266,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="62" Width="132" BorderBrush="{x:Null}" Background="Transparent" Click="DungeonLvl_Click" Foreground="{x:Null}" />
-        <Button x:Name="CaveLvl" Margin="484,245,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="62" Width="132" BorderBrush="{x:Null}" Background="#00000000" Click="CaveLvl_Click" />
-        <Button x:Name="ForestLvl" Margin="931,192,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="62" Width="132" BorderBrush="{x:Null}" Background="#00000000" Click="ForestLvl_Click" />
-        <Button x:Name="DepthsLvl" Margin="954,353,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="62" Width="132" BorderBrush="#00000000" Background="{x:Null}" Click="DepthsLvl_Click" />
-        <Button x:Name="CatacombsLvl" Margin="616,532,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="62" Width="132" BorderBrush="{x:Null}" Background="#00000000" Click="CatacombsLvl_Click" />
+        <Button x:Name="DungeonLvl" Margin="131,299,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="62" Width="132" BorderBrush="{x:Null}" Background="Transparent" Click="DungeonLvl_Click" Foreground="{x:Null}" />
+        <Button x:Name="CaveLvl" Margin="481,276,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="62" Width="132" BorderBrush="{x:Null}" Background="#00000000" Click="CaveLvl_Click" />
+        <Button x:Name="ForestLvl" Margin="933,216,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="62" Width="132" BorderBrush="{x:Null}" Background="#00000000" Click="ForestLvl_Click" />
+        <Button x:Name="DepthsLvl" Margin="954,392,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="62" Width="132" BorderBrush="#00000000" Background="{x:Null}" Click="DepthsLvl_Click" />
+        <Button x:Name="CatacombsLvl" Margin="614,594,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Height="62" Width="132" BorderBrush="{x:Null}" Background="#00000000" Click="CatacombsLvl_Click" />
 
         <Frame x:Name="FromMapLevel"/>
 

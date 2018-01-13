@@ -25,8 +25,8 @@ namespace EpicQuest_0._1._0
         {
             InitializeComponent();
 
-            MediaPlayer.Source = new Uri(@"C:\Users\bfoty\Source\Repos\EpicQuest_1.0.0\EpicQuest_0.1.0\EpicQuest_0.1.0\Sounds\Maintheme1.mp3");
-            MediaPlayer.Play();
+            //MediaPlayer.Source = new Uri(@"C:\Users\bfoty\Source\Repos\EpicQuest_1.0.0\EpicQuest_0.1.0\EpicQuest_0.1.0\Sounds\Maintheme1.mp3");
+            //MediaPlayer.Play();
             
         }
 

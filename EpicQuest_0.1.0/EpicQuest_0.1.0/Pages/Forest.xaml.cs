@@ -26,21 +26,35 @@ namespace EpicQuest_0._1._0.Pages
 
         private int earned1 = 1;
         private int earned2 = 1;
-        private int exp1 = 1;
-        private int exp2 = 1;
+
+        private int counter;
 
         public Forest()
         {
             InitializeComponent();
-
+            
             Level();
-            TimeStart();                        
+            TimeStart();
         }
 
         private void Level()
         {
-            Classes.Enemy_Generator gen = new Classes.Enemy_Generator();
-            gen.EnemyGen(2, Position1, Position2, Position1HP, Position2HP, Enemy1, Enemy2);
+            if (counter >= 10)
+            {
+
+            }
+            else
+            {
+                Enemy1.Visibility = Visibility.Visible;
+                Enemy2.Visibility = Visibility.Visible;
+
+                Classes.Enemy_Generator gen = new Classes.Enemy_Generator();
+                gen.EnemyGen(10, 2, Position1, Position2, Position1HP, Position2HP, Enemy1, Enemy2);
+
+                counter += 1;
+
+                Levelcounter.Content = counter;
+            }
         }
 
         public void Time_Tick(object sender, EventArgs e)

@@ -17,8 +17,10 @@ namespace EpicQuest_0._1._0.Classes
 {
     public class Enemy_Generator
     {
-        public void EnemyGen(int cavetype, Image Position1, Image Position2, Label Position1HP, Label Position2HP, Button Enemy1, Button Enemy2) // 1-Dungeon, 2-Forest, 3-Catacombs, 4-Depths, 5-Cave
+        public void EnemyGen(int variable, int cavetype, Image Position1, Image Position2, Label Position1HP, Label Position2HP, Button Enemy1, Button Enemy2) // 1-Dungeon, 2-Forest, 3-Catacombs, 4-Depths, 5-Cave
         {
+            int health1;
+            int health2;
 
             Random EnemyType = new Random();
             int enemytype1 = EnemyType.Next(1, 6);
@@ -30,7 +32,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Behemoth.png"));
 
-                    Position1HP.Content = "90";
+                    health1 = 90 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Behemoth";
                 }
 
@@ -38,7 +41,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Behemoth.png"));
 
-                    Position2HP.Content = "90";
+                    health2 = 90 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Behemoth";
                 }
 
@@ -46,7 +50,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Magic_Dragon.png"));
 
-                    Position1HP.Content = "65";
+                    health1 = 65 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Magic Dragon";
                 }
 
@@ -54,14 +59,16 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Magic_Dragon.png"));
 
-                    Position2HP.Content = "65";
+                    health2 = 65 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Magic Dragon";
                 }
                 if (enemytype1 == 3)
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Brachioraidos.png"));
 
-                    Position1HP.Content = "95";
+                    health1 = 95 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Brachioraidos";
                 }
 
@@ -69,7 +76,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Brachioraidos.png"));
 
-                    Position2HP.Content = "95";
+                    health2 = 95 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Brachioraidos";
                 }
 
@@ -77,7 +85,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Red_Dragon.png"));
 
-                    Position1HP.Content = "80";
+                    health1 = 80 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Red Dragon";
                 }
 
@@ -85,7 +94,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Red_Dragon.png"));
 
-                    Position2HP.Content = "80";
+                    health2 = 80 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Red Dragon";
                 }
 
@@ -93,7 +103,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Trap_Door.png"));
 
-                    Position1HP.Content = "100";
+                    health1 = 100 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Trap Door";
                 }
 
@@ -101,7 +112,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Trap_Door.png"));
 
-                    Position2HP.Content = "100";
+                    health2 = 100 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Trap Door";
                 }
             }
@@ -112,7 +124,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Hundlegs.png"));
 
-                    Position1HP.Content = "75";
+                    health1 = 75 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Hundlegs";
                 }
 
@@ -120,7 +133,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Hundlegs.png"));
 
-                    Position2HP.Content = "75";
+                    health2 = 75 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Hundlegs";
                 }
 
@@ -128,7 +142,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Gigantoad.png"));
 
-                    Position1HP.Content = "65";
+                    health1 = 65 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Gigantoad";
                 }
 
@@ -136,14 +151,16 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Gigantoad.png"));
 
-                    Position2HP.Content = "65";
+                    health2 = 65 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Gigantoad";
                 }
                 if (enemytype1 == 3)
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Death_Flower.png"));
 
-                    Position1HP.Content = "75";
+                    health1 = 75 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Death Flower";
                 }
 
@@ -151,7 +168,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Death_Flower.png"));
 
-                    Position2HP.Content = "75";
+                    health2 = 75 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Death Flower";
                 }
 
@@ -159,7 +177,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Blood_Flower.png"));
 
-                    Position1HP.Content = "80";
+                    health1 = 80 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Blood Flower";
                 }
 
@@ -167,7 +186,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Blood_Flower.png"));
 
-                    Position2HP.Content = "80";
+                    health2 = 80 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Blood Flower";
                 }
 
@@ -175,7 +195,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Flying_Eyes.png"));
 
-                    Position1HP.Content = "60";
+                    health1 = 60 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Flying Eyes";
                 }
 
@@ -183,7 +204,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Flying_Eyes.png"));
 
-                    Position2HP.Content = "60";
+                    health2 = 60 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Flying Eyes";
                 }
             }
@@ -194,7 +216,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Ghost_Knight.png"));
 
-                    Position1HP.Content = "75";
+                    health1 = 75 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Ghost Knight";
                 }
 
@@ -202,7 +225,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Ghost_Knight.png"));
 
-                    Position2HP.Content = "75";
+                    health2 = 75 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Ghost Knight";
                 }
 
@@ -210,7 +234,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Chimera.png"));
 
-                    Position1HP.Content = "90";
+                    health1 = 90 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Chimera";
                 }
 
@@ -218,14 +243,16 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Chimera.png"));
 
-                    Position2HP.Content = "90";
+                    health2 = 90 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Chimera";
                 }
                 if (enemytype1 == 3)
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Great_Malboro.png"));
 
-                    Position1HP.Content = "70";
+                    health1 = 70 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Great Malboro";
                 }
 
@@ -233,7 +260,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Great_Malboro.png"));
 
-                    Position2HP.Content = "70";
+                    health2 = 70 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Great Malboro";
                 }
 
@@ -241,7 +269,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Fiery_Hound.png"));
 
-                    Position1HP.Content = "60";
+                    health1 = 60 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Fiery Hound";
                 }
 
@@ -249,7 +278,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Fiery_Hound.png"));
 
-                    Position2HP.Content = "60";
+                    health2 = 60 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Fiery Hound";
                 }
 
@@ -257,7 +287,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Wicked_Mask.png"));
 
-                    Position1HP.Content = "95";
+                    health1 = 95 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Wicked Mask";
                 }
 
@@ -265,7 +296,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Wicked_Mask.png"));
 
-                    Position2HP.Content = "95";
+                    health2 = 95 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Wicked Mask";
                 }
             }
@@ -276,7 +308,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Death_Puppet.png"));
 
-                    Position1HP.Content = "80";
+                    health1 = 80 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Death Puppet";
                 }
 
@@ -284,7 +317,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Death_Puppet.png"));
 
-                    Position2HP.Content = "80";
+                    health2 = 80 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Death Puppet";
                 }
 
@@ -292,7 +326,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Eukaryote.png"));
 
-                    Position1HP.Content = "55";
+                    health1 = 55 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Eukaryote";
                 }
 
@@ -300,14 +335,16 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Eukaryote.png"));
 
-                    Position2HP.Content = "55";
+                    health2 = 55 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Eukaryote";
                 }
                 if (enemytype1 == 3)
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Gorgon.png"));
 
-                    Position1HP.Content = "50";
+                    health1 = 50 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Gorgon";
                 }
 
@@ -315,7 +352,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Gorgon.png"));
 
-                    Position2HP.Content = "50";
+                    health2 = 50 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Gorgon";
                 }
 
@@ -323,7 +361,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Black_Knigh.png"));
 
-                    Position1HP.Content = "85";
+                    health1 = 85 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Black Knigh";
                 }
 
@@ -331,7 +370,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Black_Knigh.png"));
 
-                    Position2HP.Content = "85";
+                    health2 = 85 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Black Knigh";
                 }
 
@@ -339,7 +379,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Catoblepas.png"));
 
-                    Position1HP.Content = "75";
+                    health1 = 75 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Catoblepas";
                 }
 
@@ -347,7 +388,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Catoblepas.png"));
 
-                    Position2HP.Content = "75";
+                    health2 = 75 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Catoblepas";
                 }
             }
@@ -358,7 +400,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Ghoul.png"));
 
-                    Position1HP.Content = "80";
+                    health1 = 80 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Ghoul";
                 }
 
@@ -366,7 +409,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Ghoul.png"));
 
-                    Position2HP.Content = "80";
+                    health2 = 80 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Ghoul";
                 }
 
@@ -374,7 +418,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Lilith.png"));
 
-                    Position1HP.Content = "75";
+                    health1 = 75 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Lilith";
                 }
 
@@ -382,14 +427,16 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Lilith.png"));
 
-                    Position2HP.Content = "75";
+                    health2 = 75 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Lilith";
                 }
                 if (enemytype1 == 3)
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Hydra.png"));
 
-                    Position1HP.Content = "80";
+                    health1 = 80 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Hydra";
                 }
 
@@ -397,7 +444,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Hydra.png"));
 
-                    Position2HP.Content = "80";
+                    health2 = 80 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Hydra";
                 }
 
@@ -405,7 +453,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Stone_Golem.png"));
 
-                    Position1HP.Content = "80";
+                    health1 = 80 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Stone Golem";
                 }
 
@@ -413,7 +462,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Stone_Golem.png"));
 
-                    Position2HP.Content = "80";
+                    health2 = 80 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Stone Golem";
                 }
 
@@ -421,7 +471,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Arachne.png"));
 
-                    Position1HP.Content = "70";
+                    health1 = 70 + variable;
+                    Position1HP.Content = health1;
                     Enemy1.Content = "Arachne";
                 }
 
@@ -429,7 +480,8 @@ namespace EpicQuest_0._1._0.Classes
                 {
                     Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Arachne.png"));
 
-                    Position2HP.Content = "70";
+                    health2 = 70 + variable;
+                    Position2HP.Content = health2;
                     Enemy2.Content = "Arachne";
                 }
             }

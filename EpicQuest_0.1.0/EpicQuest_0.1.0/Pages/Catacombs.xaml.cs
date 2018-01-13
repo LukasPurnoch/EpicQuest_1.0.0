@@ -30,7 +30,7 @@ namespace EpicQuest_0._1._0.Pages
         private void Level()
         {
             Classes.Enemy_Generator gen = new Classes.Enemy_Generator();
-            gen.EnemyGen(3, Position1, Position2, Position1HP, Position2HP, Enemy1, Enemy2);
+            gen.EnemyGen(30, 3, Position1, Position2, Position1HP, Position2HP, Enemy1, Enemy2);
         }
     }
 }
