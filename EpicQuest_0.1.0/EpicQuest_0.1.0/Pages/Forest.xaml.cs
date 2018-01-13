@@ -27,7 +27,7 @@ namespace EpicQuest_0._1._0.Pages
         private int earned1 = 1;
         private int earned2 = 1;
 
-        private int counter;
+        private int counter = 0;
 
         public Forest()
         {
@@ -35,24 +35,44 @@ namespace EpicQuest_0._1._0.Pages
             
             Level();
             TimeStart();
+            HideBag();
+        }
+        public void HideBag()
+        {
+            InventoryBG.Visibility = Visibility.Hidden;
+            InventoryHP.Visibility = Visibility.Hidden;
+            InventoryHPCounter.Visibility = Visibility.Hidden;
+            InventoryAP.Visibility = Visibility.Hidden;
+            InventoryAPCounter.Visibility = Visibility.Hidden;
         }
 
-        private void Level()
+        public void Level()
         {
-            if (counter >= 10)
-            {
+            counter += 1;
 
+            if (counter == 10)
+            {
+                Levelcounter.Content = counter;
+
+                Boss.Visibility = Visibility.Visible;
+
+                Enemy1.Visibility = Visibility.Visible;
+                Enemy2.Visibility = Visibility.Hidden;
+
+                Enemy1.Content = "Hundlegs .I.";
+                Position1HP.Content = "235";
+
+                Position1.Source = null;
+                Position2.Source = null;
             }
-            else
+            if (counter < 10)
             {
                 Enemy1.Visibility = Visibility.Visible;
                 Enemy2.Visibility = Visibility.Visible;
 
                 Classes.Enemy_Generator gen = new Classes.Enemy_Generator();
                 gen.EnemyGen(10, 2, Position1, Position2, Position1HP, Position2HP, Enemy1, Enemy2);
-
-                counter += 1;
-
+                
                 Levelcounter.Content = counter;
             }
         }
@@ -62,13 +82,25 @@ namespace EpicQuest_0._1._0.Pages
             increment++;
 
             if (increment % 1 == 0)
-            {
-                Position4.Source = null;
-                Position3.Source = null;
-                Ardyn.Visibility = Visibility.Visible;
+            {   
+                if (counter == 10)
+                {
+                    Position4.Source = null;
+                    Position3.Source = null;
 
-                Position1.Visibility = Visibility.Visible;
-                Position2.Visibility = Visibility.Visible;
+                    Ardyn.Visibility = Visibility.Visible;
+
+                    Boss.Visibility = Visibility.Visible;
+                }
+                else
+                {
+                    Position4.Source = null;
+                    Position3.Source = null;
+                    Ardyn.Visibility = Visibility.Visible;
+
+                    Position1.Visibility = Visibility.Visible;
+                    Position2.Visibility = Visibility.Visible;
+                }
             }
         }
 
@@ -94,7 +126,7 @@ namespace EpicQuest_0._1._0.Pages
         private void StrongAtt_Click(object sender, RoutedEventArgs e)
         {
             Classes.Ardyn_Attack ArdAtt = new Classes.Ardyn_Attack();
-            ArdAtt.StrongAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, HP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, Position1, Position2, Position3, Money);
+            ArdAtt.StrongAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, HP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, Position1, Position2, Position3, Money, Boss);
 
             Classes.MoneyDrop MDrop = new Classes.MoneyDrop();
             Classes.EXPGain EGain = new Classes.EXPGain();
@@ -136,7 +168,7 @@ namespace EpicQuest_0._1._0.Pages
         private void FastAtt_Click(object sender, RoutedEventArgs e)
         {
             Classes.Ardyn_Attack ArdAtt = new Classes.Ardyn_Attack();
-            ArdAtt.FastAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, HP_Bar, Position1, Position2, Position3, Money);
+            ArdAtt.FastAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, HP_Bar, Position1, Position2, Position3, Money, Boss);
 
             Classes.MoneyDrop MDrop = new Classes.MoneyDrop();
             Classes.EXPGain EGain = new Classes.EXPGain();
@@ -178,7 +210,7 @@ namespace EpicQuest_0._1._0.Pages
         private void NormalAtt_Click(object sender, RoutedEventArgs e)
         {
             Classes.Ardyn_Attack ArdAtt = new Classes.Ardyn_Attack();
-            ArdAtt.NormalAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, HP_Bar, Position1, Position2, Position3, Money);
+            ArdAtt.NormalAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, HP_Bar, Position1, Position2, Position3, Money, Boss);
 
             Classes.MoneyDrop MDrop = new Classes.MoneyDrop();
             Classes.EXPGain EGain = new Classes.EXPGain();
@@ -215,6 +247,48 @@ namespace EpicQuest_0._1._0.Pages
 
                 Level();
             }
+        }
+
+        private void Bag_Click(object sender, RoutedEventArgs e)
+        {
+
+            InventoryBG.Visibility = Visibility.Visible;
+
+            int bag = 0;
+
+            if (bag == 0)
+            {
+                
+                InventoryHP.Visibility = Visibility.Visible;
+                InventoryHPCounter.Visibility = Visibility.Visible;
+                InventoryAP.Visibility = Visibility.Visible;
+                InventoryAPCounter.Visibility = Visibility.Visible;
+
+                bag = 1;
+            }
+            if (bag >= 1)
+            {
+                NameOfHero.Visibility = Visibility.Visible;
+
+                InventoryBG.Visibility = Visibility.Hidden;
+                InventoryHP.Visibility = Visibility.Hidden;
+                InventoryHPCounter.Visibility = Visibility.Hidden;
+                InventoryAP.Visibility = Visibility.Hidden;
+                InventoryAPCounter.Visibility = Visibility.Hidden;
+
+                bag = 0;
+            }
+
+        }
+
+        private void HPPotion_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        private void APPotion_Click(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

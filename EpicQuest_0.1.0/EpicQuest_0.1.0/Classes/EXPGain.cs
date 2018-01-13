@@ -34,6 +34,9 @@ namespace EpicQuest_0._1._0.Classes
                 case "Hundlegs":
                     exp += 10;
                     break;
+                case "Hundlegs .I.":
+                    exp += 30;
+                    break;
                 case "Gigantoad":
                     exp += 5;
                     break;
@@ -158,6 +161,9 @@ namespace EpicQuest_0._1._0.Classes
             {
                 case "Hundlegs":
                     exp += 10;
+                    break;
+                case "Hundlegs .I.":
+                    exp += 30;
                     break;
                 case "Gigantoad":
                     exp += 5;

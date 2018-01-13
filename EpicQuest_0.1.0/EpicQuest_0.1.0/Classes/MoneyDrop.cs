@@ -29,6 +29,9 @@ namespace EpicQuest_0._1._0.Classes
                 case "Hundlegs":
                     money += 15;
                     break;
+                case "Hundlegs .I.":
+                    money += 50;
+                    break;
                 case "Gigantoad":
                     money += 10;
                     break;
@@ -115,6 +118,9 @@ namespace EpicQuest_0._1._0.Classes
             {
                 case "Hundlegs":
                     money += 15;
+                    break;
+                case "Hundlegs .I.":
+                    money += 50;
                     break;
                 case "Gigantoad":
                     money += 10;

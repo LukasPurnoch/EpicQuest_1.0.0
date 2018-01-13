@@ -26,7 +26,7 @@ namespace EpicQuest_0._1._0.Classes
         public int fastHitchance = 80;
         public int normalHitchance = 60;
 
-        public void StrongAttack(int vyber, Label DMGEnemy, Label Position1HP, Label Position2HP, ProgressBar AP_Bar, ProgressBar HP_Bar, Image Position4, Image Ardyn, Button Enemy1, Button Enemy2, Label DMGArdyn, Image Position1, Image Position2, Image Position3, Label Money)
+        public void StrongAttack(int vyber, Label DMGEnemy, Label Position1HP, Label Position2HP, ProgressBar AP_Bar, ProgressBar HP_Bar, Image Position4, Image Ardyn, Button Enemy1, Button Enemy2, Label DMGArdyn, Image Position1, Image Position2, Image Position3, Label Money, Image Boss)
         {
             double health = HP_Bar.Value;
 
@@ -55,9 +55,9 @@ namespace EpicQuest_0._1._0.Classes
                             Ardyn.Visibility = Visibility.Hidden;
 
                             Attack_From_Enemy EnemyAttack = new Attack_From_Enemy();
-                            EnemyAttack.LightFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
-                            EnemyAttack.NormalFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
-                            EnemyAttack.StrongFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
+                            EnemyAttack.LightFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
+                            EnemyAttack.NormalFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
+                            EnemyAttack.StrongFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
                         }
                         else
                         {
@@ -67,9 +67,9 @@ namespace EpicQuest_0._1._0.Classes
                             Ardyn.Visibility = Visibility.Hidden;
 
                             Attack_From_Enemy EnemyAttack = new Attack_From_Enemy();
-                            EnemyAttack.LightFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
-                            EnemyAttack.NormalFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
-                            EnemyAttack.StrongFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
+                            EnemyAttack.LightFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
+                            EnemyAttack.NormalFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
+                            EnemyAttack.StrongFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
                         }
                     }
                 }
@@ -90,9 +90,9 @@ namespace EpicQuest_0._1._0.Classes
                             Ardyn.Visibility = Visibility.Hidden;
 
                             Attack_From_Enemy EnemyAttack = new Attack_From_Enemy();
-                            EnemyAttack.LightFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
-                            EnemyAttack.NormalFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
-                            EnemyAttack.StrongFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
+                            EnemyAttack.LightFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
+                            EnemyAttack.NormalFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
+                            EnemyAttack.StrongFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
                         }
                         else
                         {
@@ -102,16 +102,16 @@ namespace EpicQuest_0._1._0.Classes
                             Ardyn.Visibility = Visibility.Hidden;
 
                             Attack_From_Enemy EnemyAttack = new Attack_From_Enemy();
-                            EnemyAttack.LightFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
-                            EnemyAttack.NormalFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
-                            EnemyAttack.StrongFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
+                            EnemyAttack.LightFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
+                            EnemyAttack.NormalFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
+                            EnemyAttack.StrongFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
                         }
                     }
                 }
             }
         }
 
-        public void FastAttack(int vyber, Label DMGEnemy, Label Position1HP, Label Position2HP, ProgressBar AP_Bar, Image Position4, Image Ardyn, Button Enemy1, Button Enemy2, Label DMGArdyn, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Label Money)
+        public void FastAttack(int vyber, Label DMGEnemy, Label Position1HP, Label Position2HP, ProgressBar AP_Bar, Image Position4, Image Ardyn, Button Enemy1, Button Enemy2, Label DMGArdyn, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Label Money, Image Boss)
         {
             double health = HP_Bar.Value;
 
@@ -141,9 +141,9 @@ namespace EpicQuest_0._1._0.Classes
                             Ardyn.Visibility = Visibility.Hidden;
 
                             Attack_From_Enemy EnemyAttack = new Attack_From_Enemy();
-                            EnemyAttack.LightFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
-                            EnemyAttack.NormalFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
-                            EnemyAttack.StrongFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
+                            EnemyAttack.LightFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
+                            EnemyAttack.NormalFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
+                            EnemyAttack.StrongFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
                         }
                         else
                         {
@@ -153,9 +153,9 @@ namespace EpicQuest_0._1._0.Classes
                             Ardyn.Visibility = Visibility.Hidden;
 
                             Attack_From_Enemy EnemyAttack = new Attack_From_Enemy();
-                            EnemyAttack.LightFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
-                            EnemyAttack.NormalFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
-                            EnemyAttack.StrongFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
+                            EnemyAttack.LightFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
+                            EnemyAttack.NormalFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
+                            EnemyAttack.StrongFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
                         }
                     }
                 }
@@ -176,9 +176,9 @@ namespace EpicQuest_0._1._0.Classes
                             Ardyn.Visibility = Visibility.Hidden;
 
                             Attack_From_Enemy EnemyAttack = new Attack_From_Enemy();
-                            EnemyAttack.LightFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
-                            EnemyAttack.NormalFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
-                            EnemyAttack.StrongFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
+                            EnemyAttack.LightFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
+                            EnemyAttack.NormalFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
+                            EnemyAttack.StrongFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
                         }
                         else
                         {
@@ -188,16 +188,16 @@ namespace EpicQuest_0._1._0.Classes
                             Ardyn.Visibility = Visibility.Hidden;
 
                             Attack_From_Enemy EnemyAttack = new Attack_From_Enemy();
-                            EnemyAttack.LightFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
-                            EnemyAttack.NormalFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
-                            EnemyAttack.StrongFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
+                            EnemyAttack.LightFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
+                            EnemyAttack.NormalFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
+                            EnemyAttack.StrongFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
                         }
                     }
                 }
             }
         }
 
-        public void NormalAttack(int vyber, Label DMGEnemy, Label Position1HP, Label Position2HP, ProgressBar AP_Bar, Image Position4, Image Ardyn, Button Enemy1, Button Enemy2, Label DMGArdyn, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Label Money)
+        public void NormalAttack(int vyber, Label DMGEnemy, Label Position1HP, Label Position2HP, ProgressBar AP_Bar, Image Position4, Image Ardyn, Button Enemy1, Button Enemy2, Label DMGArdyn, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Label Money, Image Boss)
         {
             double health = HP_Bar.Value;
 
@@ -227,9 +227,9 @@ namespace EpicQuest_0._1._0.Classes
                             Ardyn.Visibility = Visibility.Hidden;
 
                             Attack_From_Enemy EnemyAttack = new Attack_From_Enemy();
-                            EnemyAttack.LightFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
-                            EnemyAttack.NormalFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
-                            EnemyAttack.StrongFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
+                            EnemyAttack.LightFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
+                            EnemyAttack.NormalFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
+                            EnemyAttack.StrongFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
                         }
                         else
                         {
@@ -239,9 +239,9 @@ namespace EpicQuest_0._1._0.Classes
                             Ardyn.Visibility = Visibility.Hidden;
 
                             Attack_From_Enemy EnemyAttack = new Attack_From_Enemy();
-                            EnemyAttack.LightFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
-                            EnemyAttack.NormalFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
-                            EnemyAttack.StrongFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
+                            EnemyAttack.LightFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
+                            EnemyAttack.NormalFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
+                            EnemyAttack.StrongFromEnemy1(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
                         }
                     }
                 }
@@ -262,9 +262,9 @@ namespace EpicQuest_0._1._0.Classes
                             Ardyn.Visibility = Visibility.Hidden;
 
                             Attack_From_Enemy EnemyAttack = new Attack_From_Enemy();
-                            EnemyAttack.LightFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
-                            EnemyAttack.NormalFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
-                            EnemyAttack.StrongFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
+                            EnemyAttack.LightFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
+                            EnemyAttack.NormalFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
+                            EnemyAttack.StrongFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
                         }
                         else
                         {
@@ -274,9 +274,9 @@ namespace EpicQuest_0._1._0.Classes
                             Ardyn.Visibility = Visibility.Hidden;
 
                             Attack_From_Enemy EnemyAttack = new Attack_From_Enemy();
-                            EnemyAttack.LightFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
-                            EnemyAttack.NormalFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
-                            EnemyAttack.StrongFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money);
+                            EnemyAttack.LightFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
+                            EnemyAttack.NormalFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
+                            EnemyAttack.StrongFromEnemy2(vyber, Enemy1, Enemy2, Position1HP, Position2HP, DMGArdyn, DMGEnemy, HP_Bar, Position1, Position2, Position3, Position4, Money, Boss);
                         }
                     }
                 }

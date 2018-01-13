@@ -158,6 +158,9 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Gifs\Background.gif" />
+    <Resource Include="Addons\Bag.png" />
+    <Resource Include="Addons\Bluepotion.png" />
+    <Resource Include="Addons\Redpotion.png" />
     <Content Include="Sounds\Maintheme1.mp3" />
     <Content Include="Sounds\Maintheme.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

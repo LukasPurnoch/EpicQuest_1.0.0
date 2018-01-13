@@ -19,7 +19,7 @@ namespace EpicQuest_0._1._0.Classes
     public class Attack_From_Enemy
     {
 
-        public void LightFromEnemy1(int vyber, Button Enemy1, Button Enemy2, Label Position1HP, Label Position2HP, Label DMGArdyn, Label DMGEnemy, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Image Position4, Label Money)
+        public void LightFromEnemy1(int vyber, Button Enemy1, Button Enemy2, Label Position1HP, Label Position2HP, Label DMGArdyn, Label DMGEnemy, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Image Position4, Label Money, Image Boss)
         {
             string enemy1 = Enemy1.Content.ToString();
             string enemy2 = Enemy2.Content.ToString();
@@ -134,7 +134,7 @@ namespace EpicQuest_0._1._0.Classes
                 }                
             }
         }
-        public void LightFromEnemy2(int vyber, Button Enemy1, Button Enemy2, Label Position1HP, Label Position2HP, Label DMGArdyn, Label DMGEnemy, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Image Position4, Label Money)
+        public void LightFromEnemy2(int vyber, Button Enemy1, Button Enemy2, Label Position1HP, Label Position2HP, Label DMGArdyn, Label DMGEnemy, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Image Position4, Label Money, Image Boss)
         {
             string enemy1 = Enemy1.Content.ToString();
             string enemy2 = Enemy2.Content.ToString();
@@ -250,7 +250,7 @@ namespace EpicQuest_0._1._0.Classes
             }
         }
 
-        public void NormalFromEnemy1(int vyber, Button Enemy1, Button Enemy2, Label Position1HP, Label Position2HP, Label DMGArdyn, Label DMGEnemy, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Image Position4, Label Money)
+        public void NormalFromEnemy1(int vyber, Button Enemy1, Button Enemy2, Label Position1HP, Label Position2HP, Label DMGArdyn, Label DMGEnemy, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Image Position4, Label Money, Image Boss)
         {
             string enemy1 = Enemy1.Content.ToString();
             string enemy2 = Enemy2.Content.ToString();
@@ -365,7 +365,7 @@ namespace EpicQuest_0._1._0.Classes
                 }
             }
         }
-        public void NormalFromEnemy2(int vyber, Button Enemy1, Button Enemy2, Label Position1HP, Label Position2HP, Label DMGArdyn, Label DMGEnemy, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Image Position4, Label Money)
+        public void NormalFromEnemy2(int vyber, Button Enemy1, Button Enemy2, Label Position1HP, Label Position2HP, Label DMGArdyn, Label DMGEnemy, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Image Position4, Label Money, Image Boss)
         {
             string enemy1 = Enemy1.Content.ToString();
             string enemy2 = Enemy2.Content.ToString();
@@ -481,7 +481,7 @@ namespace EpicQuest_0._1._0.Classes
             }
         }
 
-        public void StrongFromEnemy1(int vyber, Button Enemy1, Button Enemy2, Label Position1HP, Label Position2HP, Label DMGArdyn, Label DMGEnemy, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Image Position4, Label Money)
+        public void StrongFromEnemy1(int vyber, Button Enemy1, Button Enemy2, Label Position1HP, Label Position2HP, Label DMGArdyn, Label DMGEnemy, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Image Position4, Label Money, Image Boss)
         {
             string enemy1 = Enemy1.Content.ToString();
             string enemy2 = Enemy2.Content.ToString();
@@ -492,7 +492,7 @@ namespace EpicQuest_0._1._0.Classes
             int strongHitchance1 = StrongHitchance1.Next(1, 101);
             int strongDamage1 = StrongDamage1.Next(25, 31);
 
-            if (enemy1 == "Hundlegs" || enemy1 == "Blood Flower" || enemy1 == "Ghoul" || enemy1 == "Stone Golem" || enemy1 == "Wicked Mask" || enemy1 == "Trap Door" || enemy1 == "Black Knigh")
+            if (enemy1 == "Hundlegs" || enemy1 == "Blood Flower" || enemy1 == "Ghoul" || enemy1 == "Stone Golem" || enemy1 == "Wicked Mask" || enemy1 == "Trap Door" || enemy1 == "Black Knigh" || enemy1 == "Hundlegs .I.")
             {
                 int.TryParse(Position1HP.Content.ToString(), out int Position1HP_P);
 
@@ -514,6 +514,10 @@ namespace EpicQuest_0._1._0.Classes
                             case "Hundlegs":
                                 Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Hundlegs.png"));
                                 Position1.Visibility = Visibility.Hidden;
+                                break;
+                            case "Hundlegs .I.":
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Hundlegs.png"));
+                                Boss.Visibility = Visibility.Hidden;
                                 break;
                             case "Blood Flower":
                                 Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Blood_Flower.png"));
@@ -551,6 +555,10 @@ namespace EpicQuest_0._1._0.Classes
                                 Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Hundlegs.png"));
                                 Position1.Visibility = Visibility.Hidden;
                                 break;
+                            case "Hundlegs .I.":
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Hundlegs.png"));
+                                Boss.Visibility = Visibility.Hidden;
+                                break;
                             case "Blood Flower":
                                 Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Blood_Flower.png"));
                                 Position1.Visibility = Visibility.Hidden;
@@ -580,7 +588,7 @@ namespace EpicQuest_0._1._0.Classes
                 }
             }
         }
-        public void StrongFromEnemy2(int vyber, Button Enemy1, Button Enemy2, Label Position1HP, Label Position2HP, Label DMGArdyn, Label DMGEnemy, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Image Position4, Label Money)
+        public void StrongFromEnemy2(int vyber, Button Enemy1, Button Enemy2, Label Position1HP, Label Position2HP, Label DMGArdyn, Label DMGEnemy, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Image Position4, Label Money, Image Boss)
         {
             string enemy1 = Enemy1.Content.ToString();
             string enemy2 = Enemy2.Content.ToString();

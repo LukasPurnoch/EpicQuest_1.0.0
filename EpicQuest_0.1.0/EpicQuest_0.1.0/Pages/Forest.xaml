@@ -22,20 +22,25 @@
         <Label x:Name="LevelLabel" Content="Forest" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="1120,-5,0,751"/>
         <Image Source="pack://application:,,,/Addons/Coin.png" Margin="0,0,1145,744" Stretch="Fill"/>
 
-        <Label x:Name="LEVEL" Content="1" Margin="84,511,1153,230" FontSize="40" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
+        <Image Source="pack://application:,,,/Addons/Bag.png" Margin="10,83,1137,634"/>
+        <Button x:Name="Bag" Margin="10,83,1137,634" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Bag_Click" Background="{x:Null}"/>
+
+        <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="497,0,566,751" Stretch="Fill"/>
+
+        <Label x:Name="LEVEL" Content="1" Margin="84,511,1102,230" FontSize="40" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
         <Label Content="LVL" Margin="10,522,1196,210" FontSize="30" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
         <Label x:Name="NameOfHero" Content="A R D Y N" Margin="183,515,918,232" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
         <Label x:Name="HP" Content="H P" Margin="10,576,1166,160" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
         <Label x:Name="AP" Content="A P" Margin="10,635,1166,106" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
         <Label x:Name="EXP" Content="E X P" Margin="10,694,1166,52" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
 
-        <ProgressBar x:Name="HP_Bar" Margin="119,576,861,170" Minimum="0" Maximum="1000" Value="1000" Foreground="#FF8F0000"/>
+        <ProgressBar x:Name="HP_Bar" Margin="119,576,861,170" Minimum="0" Maximum="10000" Value="10000" Foreground="#FF8F0000"/>
         <ProgressBar x:Name="AP_Bar" Margin="119,635,861,111" Minimum="0" Maximum="130" Value="130" Foreground="#FF0047C3"/>
         <ProgressBar x:Name="EXP_Bar" Margin="119,694,861,52" Minimum="0" Maximum="15" Value="0" Foreground="#FFABB400"/>
 
-        <TextBlock Text="{Binding ElementName=HP_Bar, Path=Value, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="45" Margin="134,581,1069,174" Width="77" FontSize="36" />
+        <TextBlock Text="{Binding ElementName=HP_Bar, Path=Value, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="45" Margin="134,581,1028,174" Width="118" FontSize="36" />
         <Label Content="/" HorizontalAlignment="Center" VerticalAlignment="Center" Height="54" Margin="257,576,995,170" Width="28" FontSize="36"/>
-        <Label x:Name="MaxHP" Content="{Binding ElementName=HP_Bar, Path=Maximum, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="54" Margin="323,576,870,170" Width="87" FontSize="36" />
+        <Label x:Name="MaxHP" Content="{Binding ElementName=HP_Bar, Path=Maximum, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="54" Margin="290,576,861,170" Width="129" FontSize="36" />
         <TextBlock Text="{Binding ElementName=AP_Bar, Path=Value, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="45" Margin="134,639,1069,116" Width="77" FontSize="36" />
         <Label Content="/" HorizontalAlignment="Center" VerticalAlignment="Center" Height="54" Margin="257,635,995,111" Width="28" FontSize="36"/>
         <Label x:Name="MaxAP" Content="130" HorizontalAlignment="Center" VerticalAlignment="Center" Height="54" Margin="323,635,870,111" Width="87" FontSize="36" />
@@ -66,9 +71,22 @@
         <Label x:Name="FastHC" Content="80" Visibility="Hidden"/>
         <Label x:Name="NormalHC" Content="60" Visibility="Hidden"/>
 
-        <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="497,0,566,751" Stretch="Fill"/>
-        <Label x:Name="Levelcounter" Content="0" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="586,-5,620,751"/>
+        <Image x:Name="InventoryBG" Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="36,188,848,524" Stretch="Fill"/>
+        <Button x:Name="InventoryHP" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="36,188,1145,524" Click="HPPotion_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="pack://application:,,,/Addons/Redpotion.png"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="InventoryHPCounter" Content="1" FontSize="55" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="140,188,1046,524"/>
+        <Button x:Name="InventoryAP" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="234,188,947,524" Click="APPotion_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="pack://application:,,,/Addons/Bluepotion.png"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="InventoryAPCounter" Content="1" FontSize="55" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="338,188,848,524"/>
 
-        <Image x:Name="BossForest" Source="pack://application:,,,/Enemies/Hundlegs.png" Margin="759,49,77,295" Visibility="Hidden"/>
+        <Label x:Name="Levelcounter" Content="" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="586,-5,620,751"/>
+
+        <Image x:Name="Boss" Source="pack://application:,,,/Enemies/Hundlegs.png" Margin="759,49,77,295" Visibility="Hidden"/>
     </Grid>
 </Page>
