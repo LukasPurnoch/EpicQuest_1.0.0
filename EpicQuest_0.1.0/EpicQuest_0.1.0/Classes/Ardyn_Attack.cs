@@ -18,10 +18,6 @@ namespace EpicQuest_0._1._0.Classes
 {
     class Ardyn_Attack
     {
-        public int strongDamage;
-        public int fastDamage;
-        public int normalDamage;
-
         public int strongHitchance = 30;
         public int fastHitchance = 80;
         public int normalHitchance = 60;
@@ -29,15 +25,16 @@ namespace EpicQuest_0._1._0.Classes
         public void StrongAttack(int vyber, Label DMGEnemy, Label Position1HP, Label Position2HP, ProgressBar AP_Bar, ProgressBar HP_Bar, Image Position4, Image Ardyn, Button Enemy1, Button Enemy2, Label DMGArdyn, Image Position1, Image Position2, Image Position3, Label Money, Image Boss)
         {
             double health = HP_Bar.Value;
+            double ability = AP_Bar.Value;
 
-            if (HP_Bar.Value > 0)
+            if (HP_Bar.Value > 0 && ability >= 3)
             {
-                Random StrongHitchance = new Random(); // Fast Attack -> 80% Chance, 8-13 DMG
+                Random StrongHitchance = new Random();
                 Random StrongDamage = new Random();
 
                 int strongHitchance1 = StrongHitchance.Next(1, 101);
-                int strongDamage1 = StrongDamage.Next(25, 31);
-
+                int strongDamage1 = StrongDamage.Next(25, 31);                
+                
                 if (vyber == 1)
                 {
 
@@ -45,6 +42,8 @@ namespace EpicQuest_0._1._0.Classes
 
                     if (Position1HP_P > 0)
                     {
+                        AP_Bar.Value -= 3;
+
                         if (strongHitchance1 <= strongHitchance)
                         {
                             DMGEnemy.Content = "-" + strongDamage1;
@@ -80,6 +79,8 @@ namespace EpicQuest_0._1._0.Classes
 
                     if (Position2HP_P > 0)
                     {
+                        AP_Bar.Value -= 3;
+
                         if (strongHitchance1 <= strongHitchance)
                         {
                             DMGEnemy.Content = "-" + strongDamage1;
@@ -109,13 +110,18 @@ namespace EpicQuest_0._1._0.Classes
                     }
                 }
             }
+            else
+            {
+                //YOU DIED
+            }
         }
 
         public void FastAttack(int vyber, Label DMGEnemy, Label Position1HP, Label Position2HP, ProgressBar AP_Bar, Image Position4, Image Ardyn, Button Enemy1, Button Enemy2, Label DMGArdyn, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Label Money, Image Boss)
         {
             double health = HP_Bar.Value;
+            double ability = AP_Bar.Value;
 
-            if (HP_Bar.Value > 0)
+            if (HP_Bar.Value > 0 && ability >= 1)
             {
 
                 Random FastHitchance = new Random(); // Fast Attack -> 80% Chance, 8-13 DMG
@@ -123,7 +129,7 @@ namespace EpicQuest_0._1._0.Classes
 
                 int fastHitchance1 = FastHitchance.Next(1, 101);
                 int fastDamage1 = FastDamage.Next(8, 14);
-
+                
                 if (vyber == 1)
                 {
 
@@ -131,6 +137,8 @@ namespace EpicQuest_0._1._0.Classes
 
                     if (Position1HP_P > 0)
                     {
+                        AP_Bar.Value -= 1;
+
                         if (fastHitchance1 <= fastHitchance)
                         {
                             DMGEnemy.Content = "-" + fastDamage1;
@@ -166,6 +174,8 @@ namespace EpicQuest_0._1._0.Classes
 
                     if (Position2HP_P > 0)
                     {
+                        AP_Bar.Value -= 1;
+
                         if (fastHitchance1 <= fastHitchance)
                         {
                             DMGEnemy.Content = "-" + fastDamage1;
@@ -195,13 +205,18 @@ namespace EpicQuest_0._1._0.Classes
                     }
                 }
             }
+            else
+            {
+                //YOU DIED
+            }
         }
 
         public void NormalAttack(int vyber, Label DMGEnemy, Label Position1HP, Label Position2HP, ProgressBar AP_Bar, Image Position4, Image Ardyn, Button Enemy1, Button Enemy2, Label DMGArdyn, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Label Money, Image Boss)
         {
             double health = HP_Bar.Value;
+            double ability = AP_Bar.Value;
 
-            if (HP_Bar.Value > 0)
+            if (HP_Bar.Value > 0 && ability >= 2)
             {
 
                 Random NormalHitchance = new Random(); // Fast Attack -> 80% Chance, 8-13 DMG
@@ -209,7 +224,7 @@ namespace EpicQuest_0._1._0.Classes
 
                 int normalHitchance1 = NormalHitchance.Next(1, 101);
                 int normalDamage1 = NormalDamage.Next(14, 19);
-
+                
                 if (vyber == 1)
                 {
 
@@ -217,6 +232,8 @@ namespace EpicQuest_0._1._0.Classes
 
                     if (Position1HP_P > 0)
                     {
+                        AP_Bar.Value -= 2;
+
                         if (normalHitchance1 <= normalHitchance)
                         {
                             DMGEnemy.Content = "-" + normalDamage1;
@@ -252,6 +269,8 @@ namespace EpicQuest_0._1._0.Classes
 
                     if (Position2HP_P > 0)
                     {
+                        AP_Bar.Value -= 2;
+
                         if (normalHitchance1 <= normalHitchance)
                         {
                             DMGEnemy.Content = "-" + normalDamage1;
@@ -280,6 +299,10 @@ namespace EpicQuest_0._1._0.Classes
                         }
                     }
                 }
+            }
+            else
+            {
+                //YOU DIED
             }
         }
     }

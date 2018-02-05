@@ -22,9 +22,6 @@
         <Label x:Name="LevelLabel" Content="Forest" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="1120,-5,0,751"/>
         <Image Source="pack://application:,,,/Addons/Coin.png" Margin="0,0,1145,744" Stretch="Fill"/>
 
-        <Image Source="pack://application:,,,/Addons/Bag.png" Margin="10,83,1137,634"/>
-        <Button x:Name="Bag" Margin="10,83,1137,634" BorderBrush="{x:Null}" Foreground="{x:Null}" Click="Bag_Click" Background="{x:Null}"/>
-
         <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="497,0,566,751" Stretch="Fill"/>
 
         <Label x:Name="LEVEL" Content="1" Margin="84,511,1102,230" FontSize="40" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
@@ -71,19 +68,19 @@
         <Label x:Name="FastHC" Content="80" Visibility="Hidden"/>
         <Label x:Name="NormalHC" Content="60" Visibility="Hidden"/>
 
-        <Image x:Name="InventoryBG" Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="36,188,848,524" Stretch="Fill"/>
-        <Button x:Name="InventoryHP" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="36,188,1145,524" Click="HPPotion_Click">
+        <Image x:Name="InventoryBG" Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="0,56,974,676" Stretch="Fill"/>
+        <Button x:Name="InventoryHP" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="4,56,1200,676" Click="HPPotion_Click">
             <Button.Background>
                 <ImageBrush ImageSource="pack://application:,,,/Addons/Redpotion.png"/>
             </Button.Background>
         </Button>
-        <Label x:Name="InventoryHPCounter" Content="1" FontSize="55" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="140,188,1046,524"/>
-        <Button x:Name="InventoryAP" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="234,188,947,524" Click="APPotion_Click">
+        <Label x:Name="InventoryHPCounter" Content="1" FontSize="45" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="84,56,1123,676"/>
+        <Button x:Name="InventoryAP" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="157,56,1046,676" Click="APPotion_Click">
             <Button.Background>
                 <ImageBrush ImageSource="pack://application:,,,/Addons/Bluepotion.png"/>
             </Button.Background>
         </Button>
-        <Label x:Name="InventoryAPCounter" Content="1" FontSize="55" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="338,188,848,524"/>
+        <Label x:Name="InventoryAPCounter" Content="1" FontSize="45" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="237,56,970,676"/>
 
         <Label x:Name="Levelcounter" Content="" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="586,-5,620,751"/>
 

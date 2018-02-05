@@ -73,6 +73,7 @@
     <Compile Include="Classes\Enemy_Generator.cs" />
     <Compile Include="Classes\EXPGain.cs" />
     <Compile Include="Classes\MoneyDrop.cs" />
+    <Compile Include="Classes\Potions.cs" />
     <Compile Include="Classes\SmallSave.cs" />
     <Compile Include="Classes\Timer.cs" />
     <Compile Include="MainWindow.xaml.cs">

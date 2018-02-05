@@ -377,7 +377,7 @@ namespace EpicQuest_0._1._0.Classes
 
                 if (enemytype1 == 5)
                 {
-                    Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Catoblepas.png"));
+                    Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Catoblepas.png")); //////////////////////////////////////////////////////////
 
                     health1 = 75 + variable;
                     Position1HP.Content = health1;

@@ -35,22 +35,13 @@ namespace EpicQuest_0._1._0.Pages
             
             Level();
             TimeStart();
-            HideBag();
-        }
-        public void HideBag()
-        {
-            InventoryBG.Visibility = Visibility.Hidden;
-            InventoryHP.Visibility = Visibility.Hidden;
-            InventoryHPCounter.Visibility = Visibility.Hidden;
-            InventoryAP.Visibility = Visibility.Hidden;
-            InventoryAPCounter.Visibility = Visibility.Hidden;
         }
 
         public void Level()
         {
             counter += 1;
 
-            if (counter == 10)
+            if (counter == 3)
             {
                 Levelcounter.Content = counter;
 
@@ -65,7 +56,7 @@ namespace EpicQuest_0._1._0.Pages
                 Position1.Source = null;
                 Position2.Source = null;
             }
-            if (counter < 10)
+            if (counter < 3)
             {
                 Enemy1.Visibility = Visibility.Visible;
                 Enemy2.Visibility = Visibility.Visible;
@@ -74,6 +65,10 @@ namespace EpicQuest_0._1._0.Pages
                 gen.EnemyGen(10, 2, Position1, Position2, Position1HP, Position2HP, Enemy1, Enemy2);
                 
                 Levelcounter.Content = counter;
+            }
+            if (counter > 3)
+            {
+                //Level story
             }
         }
 
@@ -249,46 +244,16 @@ namespace EpicQuest_0._1._0.Pages
             }
         }
 
-        private void Bag_Click(object sender, RoutedEventArgs e)
-        {
-
-            InventoryBG.Visibility = Visibility.Visible;
-
-            int bag = 0;
-
-            if (bag == 0)
-            {
-                
-                InventoryHP.Visibility = Visibility.Visible;
-                InventoryHPCounter.Visibility = Visibility.Visible;
-                InventoryAP.Visibility = Visibility.Visible;
-                InventoryAPCounter.Visibility = Visibility.Visible;
-
-                bag = 1;
-            }
-            if (bag >= 1)
-            {
-                NameOfHero.Visibility = Visibility.Visible;
-
-                InventoryBG.Visibility = Visibility.Hidden;
-                InventoryHP.Visibility = Visibility.Hidden;
-                InventoryHPCounter.Visibility = Visibility.Hidden;
-                InventoryAP.Visibility = Visibility.Hidden;
-                InventoryAPCounter.Visibility = Visibility.Hidden;
-
-                bag = 0;
-            }
-
-        }
-
         private void HPPotion_Click(object sender, RoutedEventArgs e)
         {
-
+            Classes.Potions PotHP = new Classes.Potions();
+            PotHP.HP_Potion(InventoryHPCounter, HP_Bar);
         }
 
         private void APPotion_Click(object sender, RoutedEventArgs e)
         {
-
+            Classes.Potions PotAP = new Classes.Potions();
+            PotAP.AP_Potion(InventoryAPCounter, AP_Bar);
         }
     }
 }
