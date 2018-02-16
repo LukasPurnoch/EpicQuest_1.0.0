@@ -74,7 +74,10 @@
     <Compile Include="Classes\EXPGain.cs" />
     <Compile Include="Classes\MoneyDrop.cs" />
     <Compile Include="Classes\Potions.cs" />
-    <Compile Include="Classes\SmallSave.cs" />
+    <Compile Include="Classes\SavingType_Shop.cs" />
+    <Compile Include="Classes\Saving_Shop.cs" />
+    <Compile Include="Classes\Saving_Stats.cs" />
+    <Compile Include="Classes\SavingType_Stats.cs" />
     <Compile Include="Classes\Timer.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
@@ -84,7 +87,15 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Catacombs_Story.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Cave.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Cave_Story.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -92,11 +103,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Depths_Story.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Dungeon.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Dungeon_Story.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Forest.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Forest_Story.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -113,17 +136,32 @@
     <Compile Include="Pages\Catacombs.xaml.cs">
       <DependentUpon>Catacombs.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Catacombs_Story.xaml.cs">
+      <DependentUpon>Catacombs_Story.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Cave.xaml.cs">
       <DependentUpon>Cave.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Cave_Story.xaml.cs">
+      <DependentUpon>Cave_Story.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Depths.xaml.cs">
       <DependentUpon>Depths.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Depths_Story.xaml.cs">
+      <DependentUpon>Depths_Story.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Dungeon.xaml.cs">
       <DependentUpon>Dungeon.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Dungeon_Story.xaml.cs">
+      <DependentUpon>Dungeon_Story.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Forest.xaml.cs">
       <DependentUpon>Forest.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Forest_Story.xaml.cs">
+      <DependentUpon>Forest_Story.xaml</DependentUpon>
     </Compile>
     <Compile Include="Pages\Map.xaml.cs">
       <DependentUpon>Map.xaml</DependentUpon>
@@ -162,6 +200,8 @@
     <Resource Include="Addons\Bag.png" />
     <Resource Include="Addons\Bluepotion.png" />
     <Resource Include="Addons\Redpotion.png" />
+    <Resource Include="Characters\Cecil.png" />
+    <Resource Include="Characters\Cecil_Victory.png" />
     <Content Include="Sounds\Maintheme1.mp3" />
     <Content Include="Sounds\Maintheme.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
@@ -218,8 +258,6 @@
   <ItemGroup>
     <Resource Include="Addons\Coin.png" />
   </ItemGroup>
-  <ItemGroup>
-    <Resource Include="Characters\Cecil.png" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -359,20 +359,20 @@ namespace EpicQuest_0._1._0.Classes
 
                 if (enemytype1 == 4)
                 {
-                    Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Black_Knigh.png"));
+                    Position1.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Black_Knight.png"));
 
                     health1 = 85 + variable;
                     Position1HP.Content = health1;
-                    Enemy1.Content = "Black Knigh";
+                    Enemy1.Content = "Black Knight";
                 }
 
                 if (enemytype2 == 4)
                 {
-                    Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Black_Knigh.png"));
+                    Position2.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Black_Knight.png"));
 
                     health2 = 85 + variable;
                     Position2HP.Content = health2;
-                    Enemy2.Content = "Black Knigh";
+                    Enemy2.Content = "Black Knight";
                 }
 
                 if (enemytype1 == 5)

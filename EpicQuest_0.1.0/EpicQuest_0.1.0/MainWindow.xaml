@@ -19,7 +19,7 @@
         <Button x:Name="Load" Content="LOAD GAME" HorizontalAlignment="Right" Margin="0,0,10,232" VerticalAlignment="Bottom" Width="453" Height="88" Background="{x:Null}" FontSize="48" FontFamily="Segoe UI Black" BorderBrush="{x:Null}" Foreground="White" Click="Load_Click"/>
         <Button x:Name="New" Content="NEW GAME" HorizontalAlignment="Right" Margin="0,0,10,320" VerticalAlignment="Bottom" Width="453" Height="88" Background="{x:Null}" FontSize="48" FontFamily="Segoe UI Black" BorderBrush="{x:Null}" Foreground="White" Click="New_Click"/>
 
-        <Frame x:Name="Game"/>
+        <Frame x:Name="Game" ContentRendered="myFrame_ContentRendered"/>
 
     </Grid>
 </Window>

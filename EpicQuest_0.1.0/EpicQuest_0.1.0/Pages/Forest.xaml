@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:EpicQuest_0._1._0.Pages"
       mc:Ignorable="d" 
       d:DesignHeight="800" d:DesignWidth="1280"
-      Title="Dungeon">
+      Title="Forest">
 
     <Grid Height="800" Width="1280">
         <Grid.Background>
@@ -32,7 +32,7 @@
         <Label x:Name="EXP" Content="E X P" Margin="10,694,1166,52" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
 
         <ProgressBar x:Name="HP_Bar" Margin="119,576,861,170" Minimum="0" Maximum="10000" Value="10000" Foreground="#FF8F0000"/>
-        <ProgressBar x:Name="AP_Bar" Margin="119,635,861,111" Minimum="0" Maximum="130" Value="130" Foreground="#FF0047C3"/>
+        <ProgressBar x:Name="AP_Bar" Margin="119,635,861,111" Minimum="0" Maximum="300" Value="300" Foreground="#FF0047C3"/>
         <ProgressBar x:Name="EXP_Bar" Margin="119,694,861,52" Minimum="0" Maximum="15" Value="0" Foreground="#FFABB400"/>
 
         <TextBlock Text="{Binding ElementName=HP_Bar, Path=Value, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="45" Margin="134,581,1028,174" Width="118" FontSize="36" />
@@ -40,7 +40,7 @@
         <Label x:Name="MaxHP" Content="{Binding ElementName=HP_Bar, Path=Maximum, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="54" Margin="290,576,861,170" Width="129" FontSize="36" />
         <TextBlock Text="{Binding ElementName=AP_Bar, Path=Value, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="45" Margin="134,639,1069,116" Width="77" FontSize="36" />
         <Label Content="/" HorizontalAlignment="Center" VerticalAlignment="Center" Height="54" Margin="257,635,995,111" Width="28" FontSize="36"/>
-        <Label x:Name="MaxAP" Content="130" HorizontalAlignment="Center" VerticalAlignment="Center" Height="54" Margin="323,635,870,111" Width="87" FontSize="36" />
+        <Label x:Name="MaxAP" Content="300" HorizontalAlignment="Center" VerticalAlignment="Center" Height="54" Margin="323,635,870,111" Width="87" FontSize="36" />
         <TextBlock Text="{Binding ElementName=EXP_Bar, Path=Value, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="45" Margin="134,699,1069,56" Width="77" FontSize="36" />
         <Label Content="/" HorizontalAlignment="Center" VerticalAlignment="Center" Height="54" Margin="257,694,995,52" Width="28" FontSize="36"/>
         <Label x:Name="MaxEXP" Content="{Binding ElementName=EXP_Bar, Path=Maximum, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="54" Margin="323,694,870,52" Width="87" FontSize="36" />
@@ -52,8 +52,8 @@
         <Button x:Name="Enemy1" Margin="856,530,38,170" Content="Enemy 1" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Background="#00000000" BorderBrush="Black" Click="Enemy1_Click"/>
         <Button x:Name="Enemy2" Margin="856,635,38,65" Content="Enemy 2" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Background="#00000000" BorderBrush="Black" Click="Enemy2_Click"/>
 
-        <Image x:Name="Ardyn" Source="pack://application:,,,/Characters/Cecil.png" Margin="134,315,988,321" Stretch="Fill"/>
-        <Image x:Name="Position4" Margin="386,315,728,321" Stretch="Fill"/>
+        <Image x:Name="Ardyn" Source="pack://application:,,,/Characters/Cecil.png" Margin="134,347,1062,321" Stretch="Fill"/>
+        <Image x:Name="Position4" Margin="386,311,810,357" Stretch="Fill"/>
 
         <Image x:Name="Position1" Source="pack://application:,,,/Enemies/Death_Flower.png" Margin="759,96,294,400" Stretch="Fill"/>
         <Label x:Name="Position1HP" Content="100" Foreground="Red" FontSize="48" Margin="1177,98,0,634"/>
@@ -85,5 +85,7 @@
         <Label x:Name="Levelcounter" Content="" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="586,-5,620,751"/>
 
         <Image x:Name="Boss" Source="pack://application:,,,/Enemies/Hundlegs.png" Margin="759,49,77,295" Visibility="Hidden"/>
+
+        <Frame x:Name="Final" Margin="4,0,-4,0"/>
     </Grid>
 </Page>

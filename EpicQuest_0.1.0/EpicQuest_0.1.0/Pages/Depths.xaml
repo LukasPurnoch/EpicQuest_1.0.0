@@ -5,53 +5,87 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:EpicQuest_0._1._0.Pages"
       mc:Ignorable="d" 
-      d:DesignHeight="720" d:DesignWidth="1280"
+      d:DesignHeight="800" d:DesignWidth="1280"
       Title="Dungeon">
 
-    <Grid Height="720" Width="1280">
+    <Grid Height="800" Width="1280">
         <Grid.Background>
             <ImageBrush ImageSource="pack://application:,,,/Levels/Depths.png"/>
         </Grid.Background>
 
-        <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="0,484,472,0" Stretch="Fill"/>
-        <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="813,484,0,0" Stretch="Fill"/>
-        <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="0,0,978,670" Stretch="Fill"/>
-        <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="978,0,0,670" Stretch="Fill"/>
+        <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="0,511,472,0" Stretch="Fill"/>
+        <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="813,511,0,0" Stretch="Fill"/>
+        <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="0,0,1081,744" Stretch="Fill"/>
+        <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="1063,0,0,751" Stretch="Fill"/>
 
-        <Label x:Name="Money" Content="80" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="116,-9,978,670"/>
-        <Label x:Name="LevelLabel" Content="Depths" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="1053,-9,41,670"/>
-        <Image Source="pack://application:,,,/Addons/Coin.png" Margin="10,-5,1106,666" Stretch="Fill"/>
+        <Label x:Name="Money" Content="0" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="93,-5,1081,751"/>
+        <Label x:Name="LevelLabel" Content="Depths" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="1099,-10,10,756"/>
+        <Image Source="pack://application:,,,/Addons/Coin.png" Margin="0,0,1145,744" Stretch="Fill"/>
 
-        <Label x:Name="NameOfHero" Content="A R D Y N" Margin="172,484,926,182" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
-        <Label x:Name="HP" Content="H P" Margin="10,543,1166,123" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
-        <Label x:Name="AP" Content="A P" Margin="10,597,1166,69" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
-        <Label x:Name="EXP" Content="E X P" Margin="10,651,1166,15" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
+        <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="497,0,566,751" Stretch="Fill"/>
 
-        <ProgressBar x:Name="HP_Bar" Margin="119,553,861,123" Minimum="0" Maximum="300" Value="300" Foreground="#FF8F0000"/>
-        <ProgressBar x:Name="AP_Bar" Margin="119,607,861,69" Minimum="0" Maximum="100" Value="60" Foreground="#FF0047C3"/>
-        <ProgressBar x:Name="EXP_Bar" Margin="119,661,861,15" Minimum="0" Maximum="100" Value="80" Foreground="#FFABB400"/>
+        <Label x:Name="LEVEL" Content="1" Margin="84,511,1102,230" FontSize="40" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
+        <Label Content="LVL" Margin="10,522,1196,210" FontSize="30" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
+        <Label x:Name="NameOfHero" Content="A R D Y N" Margin="183,515,918,232" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
+        <Label x:Name="HP" Content="H P" Margin="10,576,1166,160" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
+        <Label x:Name="AP" Content="A P" Margin="10,635,1166,106" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
+        <Label x:Name="EXP" Content="E X P" Margin="10,694,1166,52" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic"/>
 
-        <TextBlock Text="{Binding ElementName=HP_Bar, Path=Value, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="45" Margin="240,552,978,123" Width="62" FontSize="36" />
-        <TextBlock Text="{Binding ElementName=AP_Bar, Path=Value, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="45" Margin="240,607,978,68" Width="62" FontSize="36" />
-        <TextBlock Text="{Binding ElementName=EXP_Bar, Path=Value, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="45" Margin="240,661,926,14" Width="114" FontSize="36" />
+        <ProgressBar x:Name="HP_Bar" Margin="119,576,861,170" Minimum="0" Maximum="10000" Value="10000" Foreground="#FF8F0000"/>
+        <ProgressBar x:Name="AP_Bar" Margin="119,635,861,111" Minimum="0" Maximum="300" Value="300" Foreground="#FF0047C3"/>
+        <ProgressBar x:Name="EXP_Bar" Margin="119,694,861,52" Minimum="0" Maximum="15" Value="0" Foreground="#FFABB400"/>
 
-        <Button x:Name="StrongAtt" Content="Strong Attack" Margin="458,508,498,151" FontSize="36" FontWeight="Bold" FontStyle="Italic" Background="#00000000" Foreground="White" BorderBrush="Black"/>
-        <Button x:Name="FastAtt" Content="Fast Attack" Margin="458,574,498,85" FontSize="36" Background="#00000000" Foreground="White" FontWeight="Bold" FontStyle="Italic" BorderBrush="Black"/>
-        <Button x:Name="NormalAtt" Content="Normal Attack" Margin="458,640,498,19" FontSize="36" Background="#00000000" Foreground="White" FontWeight="Bold" FontStyle="Italic" BorderBrush="Black"/>
+        <TextBlock Text="{Binding ElementName=HP_Bar, Path=Value, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="45" Margin="134,581,1028,174" Width="118" FontSize="36" />
+        <Label Content="/" HorizontalAlignment="Center" VerticalAlignment="Center" Height="54" Margin="257,576,995,170" Width="28" FontSize="36"/>
+        <Label x:Name="MaxHP" Content="{Binding ElementName=HP_Bar, Path=Maximum, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="54" Margin="290,576,861,170" Width="129" FontSize="36" />
+        <TextBlock Text="{Binding ElementName=AP_Bar, Path=Value, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="45" Margin="134,639,1069,116" Width="77" FontSize="36" />
+        <Label Content="/" HorizontalAlignment="Center" VerticalAlignment="Center" Height="54" Margin="257,635,995,111" Width="28" FontSize="36"/>
+        <Label x:Name="MaxAP" Content="300" HorizontalAlignment="Center" VerticalAlignment="Center" Height="54" Margin="323,635,870,111" Width="87" FontSize="36" />
+        <TextBlock Text="{Binding ElementName=EXP_Bar, Path=Value, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="45" Margin="134,699,1069,56" Width="77" FontSize="36" />
+        <Label Content="/" HorizontalAlignment="Center" VerticalAlignment="Center" Height="54" Margin="257,694,995,52" Width="28" FontSize="36"/>
+        <Label x:Name="MaxEXP" Content="{Binding ElementName=EXP_Bar, Path=Maximum, StringFormat={}{0:0}}" HorizontalAlignment="Center" VerticalAlignment="Center" Height="54" Margin="323,694,870,52" Width="87" FontSize="36" />
 
-        <Button x:Name="Enemy1" Margin="853,508,41,127" Content="Enemy 1" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Background="#00000000" BorderBrush="Black"/>
-        <Button x:Name="Enemy2" Margin="853,607,41,28" Content="Enemy 2" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Background="#00000000" BorderBrush="Black"/>
+        <Button x:Name="StrongAtt" Content="Strong Attack" Margin="455,530,501,204" FontSize="36" FontWeight="Bold" FontStyle="Italic" Background="#00000000" Foreground="White" BorderBrush="Black" Click="StrongAtt_Click"/>
+        <Button x:Name="FastAtt" Content="Fast Attack" Margin="455,601,501,133" FontSize="36" Background="#00000000" Foreground="White" FontWeight="Bold" FontStyle="Italic" BorderBrush="Black" Click="FastAtt_Click"/>
+        <Button x:Name="NormalAtt" Content="Normal Attack" Margin="455,672,501,62" FontSize="36" Background="#00000000" Foreground="White" FontWeight="Bold" FontStyle="Italic" BorderBrush="Black" Click="NormalAtt_Click"/>
 
-        <Image Source="pack://application:,,,/Characters/Cecil.png" Margin="150,260,978,324" Stretch="Fill"/>
+        <Button x:Name="Enemy1" Margin="856,530,38,170" Content="Enemy 1" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Background="#00000000" BorderBrush="Black" Click="Enemy1_Click"/>
+        <Button x:Name="Enemy2" Margin="856,635,38,65" Content="Enemy 2" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Background="#00000000" BorderBrush="Black" Click="Enemy2_Click"/>
 
-        <Image x:Name="Position1" Source="pack://application:,,,/Enemies/Death_Puppet.png" Margin="689,98,330,347" Stretch="Fill"/>
-        <Label x:Name="Position1HP" Content="100" Foreground="Red" FontSize="48" Margin="507,203,596,442"/>
-        <Image x:Name="Position2" Source="pack://application:,,,/Enemies/Eukaryote.png" Margin="912,215,102,267" Stretch="Fill"/>
-        <Label x:Name="Position2HP" Content="100" Foreground="Red" FontSize="48" Margin="716,378,387,267"/>
+        <Image x:Name="Ardyn" Source="pack://application:,,,/Characters/Cecil.png" Margin="134,347,1062,321" Stretch="Fill"/>
+        <Image x:Name="Position4" Margin="386,311,810,357" Stretch="Fill"/>
 
-        <Label x:Name="DMGPos1" Content="DAMAGE1" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="716,33,364,627"/>
-        <Label x:Name="DMGPos2" Content="DAMAGE2" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="955,115,125,545"/>
-        <Label x:Name="DMGArdyn" Content="DAMAGE" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="116,171,964,489"/>
+        <Image x:Name="Position1" Source="pack://application:,,,/Enemies/Death_Puppet.png" Margin="730,96,294,400" Stretch="Fill"/>
+        <Label x:Name="Position1HP" Content="100" Foreground="Red" FontSize="48" Margin="1177,98,0,634"/>
+        <Image x:Name="Position2" Source="pack://application:,,,/Enemies/Gorgon.png" Margin="927,202,99,309" Stretch="Fill"/>
+        <Image x:Name="Position3" Margin="586,142,439,319" Stretch="Fill"/>
+        <Label x:Name="Position2HP" Content="100" Foreground="Red" FontSize="48" Margin="1177,229,0,501"/>
 
+        <Label x:Name="DMGEnemy" Content="DAMAGE1" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="641,54,439,684"/>
+        <Label x:Name="DMGArdyn" Content="DAMAGE" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="386,54,694,684"/>
+
+        <Label x:Name="StrongHC" Content="30" Visibility="Hidden"/>
+        <Label x:Name="FastHC" Content="80" Visibility="Hidden"/>
+        <Label x:Name="NormalHC" Content="60" Visibility="Hidden"/>
+
+        <Image x:Name="InventoryBG" Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="0,56,974,676" Stretch="Fill"/>
+        <Button x:Name="InventoryHP" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="4,56,1200,676" Click="HPPotion_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="pack://application:,,,/Addons/Redpotion.png"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="InventoryHPCounter" Content="1" FontSize="45" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="84,56,1123,676"/>
+        <Button x:Name="InventoryAP" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="157,56,1046,676" Click="APPotion_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="pack://application:,,,/Addons/Bluepotion.png"/>
+            </Button.Background>
+        </Button>
+        <Label x:Name="InventoryAPCounter" Content="1" FontSize="45" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="237,56,970,676"/>
+
+        <Label x:Name="Levelcounter" Content="" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="586,-5,620,751"/>
+
+        <Image x:Name="Boss" Source="pack://application:,,,/Enemies/Black_Knight.png" Margin="759,49,77,295" Visibility="Hidden"/>
+
+        <Frame x:Name="Final"/>
     </Grid>
 </Page>

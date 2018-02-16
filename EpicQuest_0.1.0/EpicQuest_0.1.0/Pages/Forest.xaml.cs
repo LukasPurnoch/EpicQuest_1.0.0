@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Threading;
+using FileHelpers;
 
 namespace EpicQuest_0._1._0.Pages
 {
@@ -29,10 +30,34 @@ namespace EpicQuest_0._1._0.Pages
 
         private int counter = 0;
 
+        List<Classes.SavingType_Stats> save_stats = new List<Classes.SavingType_Stats>();
+        List<int> load_stats = new List<int>();
+
+        List<Classes.SavingType_Shop> save_shop = new List<Classes.SavingType_Shop>();
+        List<int> load_shop = new List<int>();
+
         public Forest()
         {
             InitializeComponent();
-            
+
+            Classes.Saving_Stats saving_stats = new Classes.Saving_Stats();
+            saving_stats.CSVRead_Stats(load_stats);
+
+            LEVEL.Content = load_stats[0];
+            HP_Bar.Value = load_stats[1];
+            HP_Bar.Maximum = load_stats[2];
+            AP_Bar.Value = load_stats[3];
+            AP_Bar.Maximum = load_stats[4];
+            EXP_Bar.Value = load_stats[5];
+            EXP_Bar.Maximum = load_stats[6];
+
+            Classes.Saving_Shop saving_shop = new Classes.Saving_Shop();
+            saving_shop.CSVRead_Shop(load_shop);
+
+            Money.Content = load_shop[0];
+            InventoryAPCounter.Content = load_shop[1];
+            InventoryHPCounter.Content = load_shop[2];
+
             Level();
             TimeStart();
         }
@@ -50,11 +75,12 @@ namespace EpicQuest_0._1._0.Pages
                 Enemy1.Visibility = Visibility.Visible;
                 Enemy2.Visibility = Visibility.Hidden;
 
-                Enemy1.Content = "Hundlegs .I.";
-                Position1HP.Content = "235";
+                Enemy1.Content = "Hundlegs The Captain";
+                Position1HP.Content = "200";
 
                 Position1.Source = null;
                 Position2.Source = null;
+                
             }
             if (counter < 3)
             {
@@ -68,7 +94,38 @@ namespace EpicQuest_0._1._0.Pages
             }
             if (counter > 3)
             {
-                //Level story
+                Classes.SavingType_Stats savingType_Stats = new Classes.SavingType_Stats();
+
+                savingType_Stats.Lvl = Convert.ToInt32(LEVEL.Content);
+                savingType_Stats.CurrentHP = Convert.ToInt32(HP_Bar.Value);
+                savingType_Stats.MaxHP = Convert.ToInt32(HP_Bar.Maximum);
+                savingType_Stats.CurrentAP = Convert.ToInt32(AP_Bar.Value);
+                savingType_Stats.MaxAP = Convert.ToInt32(AP_Bar.Maximum);
+                savingType_Stats.CurrentEXP = Convert.ToInt32(EXP_Bar.Value);
+                savingType_Stats.MaxEXP = Convert.ToInt32(EXP_Bar.Maximum);
+                savingType_Stats.FinishedLvls = 1;
+
+                save_stats.Add(savingType_Stats);
+
+                Classes.Saving_Stats saving_stats = new Classes.Saving_Stats();
+                saving_stats.CSVWrite_Stats(save_stats);
+
+
+                Classes.SavingType_Shop savingType_Shop = new Classes.SavingType_Shop();
+
+                savingType_Shop.Money = Convert.ToInt32(Money.Content);
+                savingType_Shop.APPotions = Convert.ToInt32(InventoryAPCounter.Content);
+                savingType_Shop.HPPotions = Convert.ToInt32(InventoryHPCounter.Content);
+
+                save_shop.Add(savingType_Shop);
+
+                Classes.Saving_Shop saving_shop = new Classes.Saving_Shop();
+                saving_shop.CSVWrite_Shop(save_shop);
+
+                counter = 0;
+
+                Final.Content = new Forest_Story();
+                
             }
         }
 
@@ -78,7 +135,7 @@ namespace EpicQuest_0._1._0.Pages
 
             if (increment % 1 == 0)
             {   
-                if (counter == 10)
+                if (counter == 3)
                 {
                     Position4.Source = null;
                     Position3.Source = null;

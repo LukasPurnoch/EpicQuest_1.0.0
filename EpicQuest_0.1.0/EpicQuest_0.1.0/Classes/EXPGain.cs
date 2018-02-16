@@ -31,10 +31,22 @@ namespace EpicQuest_0._1._0.Classes
             
             switch (enemy1)
             {
-                case "Hundlegs":
-                    exp += 10;
+                case "Blacknight Captain":
+                    exp += 200;
                     break;
-                case "Hundlegs .I.":
+                case "Ghostknight Legionaire":
+                    exp += 100;
+                    break;
+                case "Trapdoor Leader":
+                    exp += 75;
+                    break;
+                case "Lilith the Snake Mistress":
+                    exp += 60;
+                    break;
+                case "Hundlegs The Captain":
+                    exp += 45;
+                    break;
+                case "Hundlegs":
                     exp += 30;
                     break;
                 case "Gigantoad":

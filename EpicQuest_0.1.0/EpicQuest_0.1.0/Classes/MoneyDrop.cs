@@ -25,12 +25,24 @@ namespace EpicQuest_0._1._0.Classes
             int.TryParse(Money.Content.ToString(), out int money);
 
             switch (enemy1)
-            {
+                {
+                case "Blacknight Captain":
+                    money += 200;
+                    break;
+                case "Ghostknight Legionaire":
+                    money += 200;
+                    break;
+                case "Trapdoor Leader":
+                    money += 100;
+                    break;
+                case "Lilith the Snake Mistress":
+                    money += 80;
+                    break;
+                case "Hundlegs The Captain":
+                    money += 60;
+                    break;
                 case "Hundlegs":
                     money += 15;
-                    break;
-                case "Hundlegs .I.":
-                    money += 50;
                     break;
                 case "Gigantoad":
                     money += 10;

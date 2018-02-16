@@ -50,5 +50,9 @@ namespace EpicQuest_0._1._0
             Game.Content = new Map();
         }
 
+        private void myFrame_ContentRendered(object sender, EventArgs e)
+        {
+            Game.NavigationUIVisibility = System.Windows.Navigation.NavigationUIVisibility.Hidden;
+        }
     }
 }

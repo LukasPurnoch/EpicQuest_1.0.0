@@ -8,10 +8,10 @@ using FileHelpers;
 namespace EpicQuest_0._1._0.Classes
 {
     [DelimitedRecord(",")]
-    class SmallSave
+    public class SavingType_Shop
     {
-        public int eearned1;
-        public int eearned2;
-        //public int savepom;
+        public int Money;
+        public int APPotions;
+        public int HPPotions;
     }
 }
