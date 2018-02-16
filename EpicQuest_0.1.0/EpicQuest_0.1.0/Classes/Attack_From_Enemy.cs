@@ -50,11 +50,11 @@ namespace EpicQuest_0._1._0.Classes
                         switch (enemy1)
                         {
                             case "Lilith the Snake Mistress":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Hundlegs.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Lilith.png"));
                                 Boss.Visibility = Visibility.Hidden;
                                 break;
                             case "Blacknight Captain":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Hundlegs.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Black_Knight.png"));
                                 Boss.Visibility = Visibility.Hidden;
                                 break;
                             case "Gigantoad":
@@ -102,11 +102,11 @@ namespace EpicQuest_0._1._0.Classes
                         switch (enemy1)
                         {
                             case "Lilith the Snake Mistress":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Hundlegs.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Lilith.png"));
                                 Boss.Visibility = Visibility.Hidden;
                                 break;
                             case "Blacknight Captain":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Hundlegs.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Black_Knight.png"));
                                 Boss.Visibility = Visibility.Hidden;
                                 break;
                             case "Gigantoad":
@@ -297,7 +297,7 @@ namespace EpicQuest_0._1._0.Classes
                         switch (enemy1)
                         {
                             case "Ghostknight Legionaire":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Hundlegs.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Ghost_Knight.png"));
                                 Boss.Visibility = Visibility.Hidden;
                                 break;
                             case "Death Flower":
@@ -345,7 +345,7 @@ namespace EpicQuest_0._1._0.Classes
                         switch (enemy1)
                         {
                             case "Ghostknight Legionaire":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Hundlegs.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Ghost_Knight.png"));
                                 Boss.Visibility = Visibility.Hidden;
                                 break;
                             case "Death Flower":
@@ -536,7 +536,7 @@ namespace EpicQuest_0._1._0.Classes
                         switch (enemy1)
                         {
                             case "Trapdoor Leader":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Hundlegs.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Trapdoor.png"));
                                 Boss.Visibility = Visibility.Hidden;
                                 break;
                             case "Hundlegs The Captain":
@@ -580,7 +580,7 @@ namespace EpicQuest_0._1._0.Classes
                         switch (enemy1)
                         {
                             case "Trapdoor Leader":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Hundlegs.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Trapdoor.png"));
                                 Boss.Visibility = Visibility.Hidden;
                                 break;
                             case "Hundlegs The Captain":
