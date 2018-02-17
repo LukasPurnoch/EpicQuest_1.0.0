@@ -22,7 +22,9 @@ namespace EpicQuest_0._1._0.Classes
         public int fastHitchance = 80;
         public int normalHitchance = 60;
 
-        public void StrongAttack(int vyber, Label DMGEnemy, Label Position1HP, Label Position2HP, ProgressBar AP_Bar, ProgressBar HP_Bar, Image Position4, Image Ardyn, Button Enemy1, Button Enemy2, Label DMGArdyn, Image Position1, Image Position2, Image Position3, Label Money, Image Boss)
+        public int damageFromSword;
+
+        public void StrongAttack(int vyber, Label DMGEnemy, Label Position1HP, Label Position2HP, ProgressBar AP_Bar, ProgressBar HP_Bar, Image Position4, Image Ardyn, Button Enemy1, Button Enemy2, Label DMGArdyn, Image Position1, Image Position2, Image Position3, Label Money, Image Boss, Frame Final)
         {
             double health = HP_Bar.Value;
             double ability = AP_Bar.Value;
@@ -33,7 +35,7 @@ namespace EpicQuest_0._1._0.Classes
                 Random StrongDamage = new Random();
 
                 int strongHitchance1 = StrongHitchance.Next(1, 101);
-                int strongDamage1 = StrongDamage.Next(25, 31);                
+                int strongDamage1 = StrongDamage.Next(25, 31 + damageFromSword);                
                 
                 if (vyber == 1)
                 {
@@ -112,11 +114,11 @@ namespace EpicQuest_0._1._0.Classes
             }
             else
             {
-                //YOU DIED
+                Final.Content = new Pages.Death_Screen();
             }
         }
 
-        public void FastAttack(int vyber, Label DMGEnemy, Label Position1HP, Label Position2HP, ProgressBar AP_Bar, Image Position4, Image Ardyn, Button Enemy1, Button Enemy2, Label DMGArdyn, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Label Money, Image Boss)
+        public void FastAttack(int vyber, Label DMGEnemy, Label Position1HP, Label Position2HP, ProgressBar AP_Bar, Image Position4, Image Ardyn, Button Enemy1, Button Enemy2, Label DMGArdyn, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Label Money, Image Boss, Frame Final)
         {
             double health = HP_Bar.Value;
             double ability = AP_Bar.Value;
@@ -128,7 +130,7 @@ namespace EpicQuest_0._1._0.Classes
                 Random FastDamage = new Random();
 
                 int fastHitchance1 = FastHitchance.Next(1, 101);
-                int fastDamage1 = FastDamage.Next(8, 14);
+                int fastDamage1 = FastDamage.Next(8, 14 + damageFromSword);
                 
                 if (vyber == 1)
                 {
@@ -207,11 +209,11 @@ namespace EpicQuest_0._1._0.Classes
             }
             else
             {
-                //YOU DIED
+                Final.Content = new Pages.Death_Screen();
             }
         }
 
-        public void NormalAttack(int vyber, Label DMGEnemy, Label Position1HP, Label Position2HP, ProgressBar AP_Bar, Image Position4, Image Ardyn, Button Enemy1, Button Enemy2, Label DMGArdyn, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Label Money, Image Boss)
+        public void NormalAttack(int vyber, Label DMGEnemy, Label Position1HP, Label Position2HP, ProgressBar AP_Bar, Image Position4, Image Ardyn, Button Enemy1, Button Enemy2, Label DMGArdyn, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Label Money, Image Boss, Frame Final)
         {
             double health = HP_Bar.Value;
             double ability = AP_Bar.Value;
@@ -223,7 +225,7 @@ namespace EpicQuest_0._1._0.Classes
                 Random NormalDamage = new Random();
 
                 int normalHitchance1 = NormalHitchance.Next(1, 101);
-                int normalDamage1 = NormalDamage.Next(14, 19);
+                int normalDamage1 = NormalDamage.Next(14, 19 + damageFromSword);
                 
                 if (vyber == 1)
                 {
@@ -302,7 +304,7 @@ namespace EpicQuest_0._1._0.Classes
             }
             else
             {
-                //YOU DIED
+                Final.Content = new Pages.Death_Screen();
             }
         }
     }

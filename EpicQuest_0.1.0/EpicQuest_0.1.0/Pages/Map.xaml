@@ -36,7 +36,7 @@
 
         <Button Content="SHOP" x:Name="ShopBT" BorderBrush="Black" Foreground="Black" Margin="570,19,506,723" Background="#FFBF9D62" Click="ShopBT_Click" FontSize="36" FontWeight="Bold"/>
 
-        <Frame x:Name="FromMapLevel" Margin="-1344,-36,1344,36"/>
+        <Frame x:Name="FromMapLevel"/>
 
     </Grid>
 </Page>

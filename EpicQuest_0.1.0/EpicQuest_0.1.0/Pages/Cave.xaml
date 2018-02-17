@@ -13,11 +13,14 @@
             <ImageBrush ImageSource="pack://application:,,,/Levels/Cave.png"/>
         </Grid.Background>
 
+        <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="1064,56,0,692" Stretch="Fill"/>
         <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="0,511,472,0" Stretch="Fill"/>
         <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="813,511,0,0" Stretch="Fill"/>
         <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="0,0,1081,744" Stretch="Fill"/>
         <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="1063,0,0,751" Stretch="Fill"/>
 
+        <Button x:Name="BackToMap" Content="Map" Margin="1064,56,0,692" Background="{x:Null}" Foreground="White" BorderBrush="Black" FontSize="36" FontWeight="Bold" Click="BackToMap_Click"/>
+        
         <Label x:Name="Money" Content="0" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="93,-5,1081,751"/>
         <Label x:Name="LevelLabel" Content="Cave" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="1099,-10,10,756"/>
         <Image Source="pack://application:,,,/Addons/Coin.png" Margin="0,0,1145,744" Stretch="Fill"/>
@@ -86,6 +89,6 @@
 
         <Image x:Name="Boss" Source="pack://application:,,,/Enemies/Lilith.png" Margin="759,49,77,295" Visibility="Hidden"/>
 
-        <Frame x:Name="Final"/>
+        <Frame x:Name="Final" Margin="0,-5,0,5"/>
     </Grid>
 </Page>

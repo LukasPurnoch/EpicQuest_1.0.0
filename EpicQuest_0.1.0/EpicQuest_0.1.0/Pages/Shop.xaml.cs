@@ -26,6 +26,8 @@ namespace EpicQuest_0._1._0.Pages
         public int moneyMapCurrent;
         public int inventoryHPBuyCounter;
         public int inventoryAPBuyCounter;
+        public int inventoryArmorBuyCounter;
+        public int inventorySwordBuyCounter;
 
         public Shop()
         {
@@ -37,10 +39,14 @@ namespace EpicQuest_0._1._0.Pages
             MoneyMap.Content = load_shop[0];
             InventoryAPBuyCounter.Content = load_shop[1];
             InventoryHPBuyCounter.Content = load_shop[2];
+            InventoryArmorBuyCounter.Content = load_shop[3];
+            InventorySwordBuyCounter.Content = load_shop[4];
 
             int.TryParse(MoneyMap.Content.ToString(), out moneyMapCurrent);
             int.TryParse(InventoryHPBuyCounter.Content.ToString(), out inventoryHPBuyCounter);
             int.TryParse(InventoryAPBuyCounter.Content.ToString(), out inventoryAPBuyCounter);
+            int.TryParse(InventoryArmorBuyCounter.Content.ToString(), out inventoryArmorBuyCounter);
+            int.TryParse(InventorySwordBuyCounter.Content.ToString(), out inventorySwordBuyCounter);
         }
 
         private void MenuBT_Click(object sender, RoutedEventArgs e)
@@ -50,6 +56,8 @@ namespace EpicQuest_0._1._0.Pages
             savingType_shop.Money = moneyMapCurrent;
             savingType_shop.HPPotions = inventoryHPBuyCounter;
             savingType_shop.APPotions = inventoryAPBuyCounter;
+            savingType_shop.Armor = inventoryArmorBuyCounter;
+            savingType_shop.Sword = inventorySwordBuyCounter;
 
             save_shop.Add(savingType_shop);
 
@@ -80,6 +88,30 @@ namespace EpicQuest_0._1._0.Pages
 
                 MoneyMap.Content = moneyMapCurrent;
                 InventoryHPBuyCounter.Content = inventoryHPBuyCounter;
+            }
+        }
+
+        private void InventoryArmorBuy_Click(object sender, RoutedEventArgs e)
+        {
+            if (moneyMapCurrent >= 20)
+            {
+                moneyMapCurrent -= 50;
+                inventoryArmorBuyCounter += 1;
+
+                MoneyMap.Content = moneyMapCurrent;
+                InventoryArmorBuyCounter.Content = inventoryArmorBuyCounter;
+            }
+        }
+
+        private void InventorySwordBuy_Click(object sender, RoutedEventArgs e)
+        {
+            if (moneyMapCurrent >= 20)
+            {
+                moneyMapCurrent -= 50;
+                inventorySwordBuyCounter += 1;
+
+                MoneyMap.Content = moneyMapCurrent;
+                InventorySwordBuyCounter.Content = inventorySwordBuyCounter;
             }
         }
     }

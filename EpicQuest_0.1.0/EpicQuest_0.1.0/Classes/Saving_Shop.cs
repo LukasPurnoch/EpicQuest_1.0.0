@@ -23,7 +23,9 @@ namespace EpicQuest_0._1._0.Classes
             {
                 load.Add(points.Money);
                 load.Add(points.APPotions);
-                load.Add(points.HPPotions);                
+                load.Add(points.HPPotions);
+                load.Add(points.Armor);
+                load.Add(points.Sword);
             }
         }
     }

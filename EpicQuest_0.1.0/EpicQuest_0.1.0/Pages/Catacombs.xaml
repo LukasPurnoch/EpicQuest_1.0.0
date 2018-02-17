@@ -12,12 +12,15 @@
         <Grid.Background>
             <ImageBrush ImageSource="pack://application:,,,/Levels/Catacombs.png"/>
         </Grid.Background>
-
+        
+        <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="1064,56,0,692" Stretch="Fill"/>
         <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="0,511,472,0" Stretch="Fill"/>
         <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="813,511,0,0" Stretch="Fill"/>
         <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="0,0,1081,744" Stretch="Fill"/>
         <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="1063,0,0,751" Stretch="Fill"/>
 
+        <Button x:Name="BackToMap" Content="Map" Margin="1064,56,0,692" Background="{x:Null}" Foreground="White" BorderBrush="Black" FontSize="36" FontWeight="Bold" Click="BackToMap_Click"/>
+        
         <Label x:Name="Money" Content="0" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="93,-5,1081,751"/>
         <Label x:Name="LevelLabel" Content="Catacombs" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="1063,-10,10,756"/>
         <Image Source="pack://application:,,,/Addons/Coin.png" Margin="0,0,1145,744" Stretch="Fill"/>
@@ -56,7 +59,7 @@
         <Image x:Name="Position4" Margin="386,311,810,357" Stretch="Fill"/>
 
         <Image x:Name="Position1" Source="pack://application:,,,/Enemies/Chimera.png" Margin="730,96,294,400" Stretch="Fill"/>
-        <Label x:Name="Position1HP" Content="100" Foreground="Red" FontSize="48" Margin="1177,98,0,634"/>
+        <Label x:Name="Position1HP" Content="100" Foreground="Red" FontSize="48" Margin="1177,108,0,624"/>
         <Image x:Name="Position2" Source="pack://application:,,,/Enemies/Fiery_Hound.png" Margin="927,202,99,309" Stretch="Fill"/>
         <Image x:Name="Position3" Margin="586,142,439,319" Stretch="Fill"/>
         <Label x:Name="Position2HP" Content="100" Foreground="Red" FontSize="48" Margin="1177,229,0,501"/>
@@ -86,6 +89,6 @@
 
         <Image x:Name="Boss" Source="pack://application:,,,/Enemies/Ghost_Knight.png" Margin="759,49,77,295" Visibility="Hidden"/>
 
-        <Frame x:Name="Final" Margin="0,-10,0,10"/>
+        <Frame x:Name="Final"/>
     </Grid>
 </Page>

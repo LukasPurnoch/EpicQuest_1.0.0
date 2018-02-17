@@ -13,5 +13,7 @@ namespace EpicQuest_0._1._0.Classes
         public int Money;
         public int APPotions;
         public int HPPotions;
+        public int Armor;
+        public int Sword;
     }
 }

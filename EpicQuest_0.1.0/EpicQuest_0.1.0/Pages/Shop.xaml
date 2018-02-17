@@ -13,7 +13,7 @@
             <ImageBrush ImageSource="pack://application:,,,/Textures/Stone_texture.jpg"/>
         </Grid.Background>
 
-        <Button Content="MENU" x:Name="MenuBT" BorderBrush="Black" Foreground="Black" Margin="10,19,1078,723" Background="#FF8097BF" Click="MenuBT_Click" FontSize="36" FontWeight="Bold"/>
+        <Button Content="MAP" x:Name="MenuBT" BorderBrush="Black" Foreground="Black" Margin="10,19,1078,723" Background="#FF8097BF" Click="MenuBT_Click" FontSize="36" FontWeight="Bold"/>
 
         <Image Source="pack://application:,,,/Addons/Coin.png" Margin="925,19,143,693" Stretch="Fill"/>
         <Label x:Name="MoneyMap" Content="0" FontSize="55" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="1070,19,10,711"/>
@@ -29,6 +29,20 @@
         <Button x:Name="InventoryHPBuy" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="96,390,1003,248" Click="InventoryHPBuy_Click">
             <Button.Background>
                 <ImageBrush ImageSource="pack://application:,,,/Addons/Redpotion.png"/>
+            </Button.Background>
+        </Button>
+
+        <Label x:Name="InventoryArmorBuyCounter" Content="0" FontSize="70" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="826,178,312,512"/>
+        <Button x:Name="InventoryArmorBuy" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="610,148,489,490" Click="InventoryArmorBuy_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="pack://application:,,,/Addons/Armor.png"/>
+            </Button.Background>
+        </Button>
+
+        <Label x:Name="InventorySwordBuyCounter" Content="0" FontSize="70" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="808,442,330,248"/>
+        <Button x:Name="InventorySwordBuy" BorderBrush="{x:Null}" Foreground="{x:Null}" Margin="640,390,523,160" Click="InventorySwordBuy_Click">
+            <Button.Background>
+                <ImageBrush ImageSource="pack://application:,,,/Addons/Sword.png"/>
             </Button.Background>
         </Button>
 

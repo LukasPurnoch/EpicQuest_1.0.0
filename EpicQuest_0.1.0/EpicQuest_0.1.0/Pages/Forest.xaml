@@ -13,10 +13,13 @@
             <ImageBrush ImageSource="pack://application:,,,/Levels/Forest.png"/>
         </Grid.Background>
 
+        <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="1064,56,0,692" Stretch="Fill"/>
         <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="0,511,472,0" Stretch="Fill"/>
         <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="813,511,0,0" Stretch="Fill"/>
         <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="0,0,1081,744" Stretch="Fill"/>
         <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="1063,0,0,751" Stretch="Fill"/>
+
+        <Button x:Name="BackToMap" Content="Map" Margin="1064,56,0,692" Background="{x:Null}" Foreground="White" BorderBrush="Black" FontSize="36" FontWeight="Bold" Click="BackToMap_Click"/>
 
         <Label x:Name="Money" Content="0" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="93,-5,1081,751"/>
         <Label x:Name="LevelLabel" Content="Forest" FontSize="36" Foreground="White" FontWeight="Bold" FontStyle="Italic" Margin="1120,-5,0,751"/>
@@ -86,6 +89,6 @@
 
         <Image x:Name="Boss" Source="pack://application:,,,/Enemies/Hundlegs.png" Margin="759,49,77,295" Visibility="Hidden"/>
 
-        <Frame x:Name="Final" Margin="4,0,-4,0"/>
+        <Frame x:Name="Final"/>
     </Grid>
 </Page>

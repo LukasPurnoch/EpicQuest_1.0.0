@@ -67,6 +67,9 @@ namespace EpicQuest_0._1._0.Pages
         {
             counter += 1;
 
+            Classes.Armor_Heal armorHeal = new Classes.Armor_Heal();
+            armorHeal.HpByArmor(HP_Bar);
+
             if (counter == 3)
             {
                 Levelcounter.Content = counter;
@@ -104,7 +107,7 @@ namespace EpicQuest_0._1._0.Pages
                 savingType_Stats.MaxAP = Convert.ToInt32(AP_Bar.Maximum);
                 savingType_Stats.CurrentEXP = Convert.ToInt32(EXP_Bar.Value);
                 savingType_Stats.MaxEXP = Convert.ToInt32(EXP_Bar.Maximum);
-                savingType_Stats.FinishedLvls = 4;
+                savingType_Stats.FinishedLvls = 2;
 
                 save_stats.Add(savingType_Stats);
 
@@ -179,10 +182,13 @@ namespace EpicQuest_0._1._0.Pages
         private void StrongAtt_Click(object sender, RoutedEventArgs e)
         {
             Classes.Ardyn_Attack ArdAtt = new Classes.Ardyn_Attack();
-            ArdAtt.StrongAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, HP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, Position1, Position2, Position3, Money, Boss);
+            ArdAtt.StrongAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, HP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, Position1, Position2, Position3, Money, Boss, Final);
 
             Classes.MoneyDrop MDrop = new Classes.MoneyDrop();
             Classes.EXPGain EGain = new Classes.EXPGain();
+
+            Classes.Sword_Damage swordDMG = new Classes.Sword_Damage();
+            swordDMG.DamageBySword();
 
             increment = 0;
 
@@ -221,10 +227,13 @@ namespace EpicQuest_0._1._0.Pages
         private void FastAtt_Click(object sender, RoutedEventArgs e)
         {
             Classes.Ardyn_Attack ArdAtt = new Classes.Ardyn_Attack();
-            ArdAtt.FastAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, HP_Bar, Position1, Position2, Position3, Money, Boss);
+            ArdAtt.FastAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, HP_Bar, Position1, Position2, Position3, Money, Boss, Final);
 
             Classes.MoneyDrop MDrop = new Classes.MoneyDrop();
             Classes.EXPGain EGain = new Classes.EXPGain();
+
+            Classes.Sword_Damage swordDMG = new Classes.Sword_Damage();
+            swordDMG.DamageBySword();
 
             increment = 0;
 
@@ -263,10 +272,13 @@ namespace EpicQuest_0._1._0.Pages
         private void NormalAtt_Click(object sender, RoutedEventArgs e)
         {
             Classes.Ardyn_Attack ArdAtt = new Classes.Ardyn_Attack();
-            ArdAtt.NormalAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, HP_Bar, Position1, Position2, Position3, Money, Boss);
+            ArdAtt.NormalAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, HP_Bar, Position1, Position2, Position3, Money, Boss, Final);
 
             Classes.MoneyDrop MDrop = new Classes.MoneyDrop();
             Classes.EXPGain EGain = new Classes.EXPGain();
+
+            Classes.Sword_Damage swordDMG = new Classes.Sword_Damage();
+            swordDMG.DamageBySword();
 
             increment = 0;
 
@@ -312,6 +324,39 @@ namespace EpicQuest_0._1._0.Pages
         {
             Classes.Potions PotAP = new Classes.Potions();
             PotAP.AP_Potion(InventoryAPCounter, AP_Bar);
+        }
+
+        private void BackToMap_Click(object sender, RoutedEventArgs e)
+        {
+            Classes.SavingType_Stats savingType_Stats = new Classes.SavingType_Stats();
+
+            savingType_Stats.Lvl = Convert.ToInt32(LEVEL.Content);
+            savingType_Stats.CurrentHP = Convert.ToInt32(HP_Bar.Value);
+            savingType_Stats.MaxHP = Convert.ToInt32(HP_Bar.Maximum);
+            savingType_Stats.CurrentAP = Convert.ToInt32(AP_Bar.Value);
+            savingType_Stats.MaxAP = Convert.ToInt32(AP_Bar.Maximum);
+            savingType_Stats.CurrentEXP = Convert.ToInt32(EXP_Bar.Value);
+            savingType_Stats.MaxEXP = Convert.ToInt32(EXP_Bar.Maximum);
+            savingType_Stats.FinishedLvls = 1;
+
+            save_stats.Add(savingType_Stats);
+
+            Classes.Saving_Stats saving_stats = new Classes.Saving_Stats();
+            saving_stats.CSVWrite_Stats(save_stats);
+
+
+            Classes.SavingType_Shop savingType_Shop = new Classes.SavingType_Shop();
+
+            savingType_Shop.Money = Convert.ToInt32(Money.Content);
+            savingType_Shop.APPotions = Convert.ToInt32(InventoryAPCounter.Content);
+            savingType_Shop.HPPotions = Convert.ToInt32(InventoryHPCounter.Content);
+
+            save_shop.Add(savingType_Shop);
+
+            Classes.Saving_Shop saving_shop = new Classes.Saving_Shop();
+            saving_shop.CSVWrite_Shop(save_shop);
+
+            Final.Content = new Map();
         }
     }
 }
