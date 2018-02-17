@@ -50,74 +50,26 @@ namespace EpicQuest_0._1._0.Pages
             /*if (locker == 1)
             {
                 DungeonLvl.IsEnabled = false;
-            }*/
-
-            int.TryParse(MoneyMap.Content.ToString(), out moneyMapCurrent);
-            int.TryParse(InventoryHPBuyCounter.Content.ToString(), out inventoryHPBuyCounter);
-            int.TryParse(InventoryAPBuyCounter.Content.ToString(), out inventoryAPBuyCounter);     
+            }*/   
         }
 
         private void DungeonLvl_Click(object sender, RoutedEventArgs e)
         {
-            Classes.SavingType_Shop savingType_shop = new Classes.SavingType_Shop();
-
-            savingType_shop.Money = moneyMapCurrent;
-            savingType_shop.HPPotions = inventoryHPBuyCounter;
-            savingType_shop.APPotions = inventoryAPBuyCounter;
-
-            save_shop.Add(savingType_shop);
-
-            Classes.Saving_Shop saving = new Classes.Saving_Shop();
-            saving.CSVWrite_Shop(save_shop);
-
             FromMapLevel.Content = new Dungeon();
         }
 
         private void ForestLvl_Click(object sender, RoutedEventArgs e)
         {
-            Classes.SavingType_Shop savingType_shop = new Classes.SavingType_Shop();
-
-            savingType_shop.Money = moneyMapCurrent;
-            savingType_shop.HPPotions = inventoryHPBuyCounter;
-            savingType_shop.APPotions = inventoryAPBuyCounter;
-
-            save_shop.Add(savingType_shop);
-
-            Classes.Saving_Shop saving = new Classes.Saving_Shop();
-            saving.CSVWrite_Shop(save_shop);
-
             FromMapLevel.Content = new Forest();
         }
 
         private void CaveLvl_Click(object sender, RoutedEventArgs e)
         {
-            Classes.SavingType_Shop savingType_shop = new Classes.SavingType_Shop();
-
-            savingType_shop.Money = moneyMapCurrent;
-            savingType_shop.HPPotions = inventoryHPBuyCounter;
-            savingType_shop.APPotions = inventoryAPBuyCounter;
-
-            save_shop.Add(savingType_shop);
-
-            Classes.Saving_Shop saving = new Classes.Saving_Shop();
-            saving.CSVWrite_Shop(save_shop);
-
             FromMapLevel.Content = new Cave();
         }
 
         private void DepthsLvl_Click(object sender, RoutedEventArgs e)
         {
-            Classes.SavingType_Shop savingType_shop = new Classes.SavingType_Shop();
-
-            savingType_shop.Money = moneyMapCurrent;
-            savingType_shop.HPPotions = inventoryHPBuyCounter;
-            savingType_shop.APPotions = inventoryAPBuyCounter;
-
-            save_shop.Add(savingType_shop);
-
-            Classes.Saving_Shop saving = new Classes.Saving_Shop();
-            saving.CSVWrite_Shop(save_shop);
-
             FromMapLevel.Content = new Depths();
         }
 
@@ -126,28 +78,19 @@ namespace EpicQuest_0._1._0.Pages
             FromMapLevel.Content = new Catacombs();
         }
 
-        private void HPPotionBuy_Click(object sender, RoutedEventArgs e)
+        private void MenuBT_Click(object sender, RoutedEventArgs e)
         {
-            if (moneyMapCurrent >= 20)
-            {
-                moneyMapCurrent -= 20;
-                inventoryHPBuyCounter += 1;
-
-                MoneyMap.Content = moneyMapCurrent;
-                InventoryHPBuyCounter.Content = inventoryHPBuyCounter;                                
-            }
+            FromMapLevel.Content = new Story_1();
         }
 
-        private void APPotionBuy_Click(object sender, RoutedEventArgs e)
+        private void AchiveBT_Click(object sender, RoutedEventArgs e)
         {
-            if (moneyMapCurrent >= 20)
-            {
-                moneyMapCurrent -= 20;
-                inventoryAPBuyCounter += 1;
 
-                MoneyMap.Content = moneyMapCurrent;
-                InventoryAPBuyCounter.Content = inventoryAPBuyCounter;
-            }
+        }
+
+        private void ShopBT_Click(object sender, RoutedEventArgs e)
+        {
+            FromMapLevel.Content = new Shop();
         }
     }
 }

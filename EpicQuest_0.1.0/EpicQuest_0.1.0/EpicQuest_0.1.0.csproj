@@ -78,7 +78,6 @@
     <Compile Include="Classes\Saving_Shop.cs" />
     <Compile Include="Classes\Saving_Stats.cs" />
     <Compile Include="Classes\SavingType_Stats.cs" />
-    <Compile Include="Classes\Timer.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -123,11 +122,23 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\MainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Map.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Pages\Shop.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Pages\Story_1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Pages\Story_2.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -163,11 +174,20 @@
     <Compile Include="Pages\Forest_Story.xaml.cs">
       <DependentUpon>Forest_Story.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\MainMenu.xaml.cs">
+      <DependentUpon>MainMenu.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Map.xaml.cs">
       <DependentUpon>Map.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Pages\Shop.xaml.cs">
+      <DependentUpon>Shop.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Pages\Story_1.xaml.cs">
       <DependentUpon>Story_1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Pages\Story_2.xaml.cs">
+      <DependentUpon>Story_2.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -202,6 +222,7 @@
     <Resource Include="Addons\Redpotion.png" />
     <Resource Include="Characters\Cecil.png" />
     <Resource Include="Characters\Cecil_Victory.png" />
+    <Resource Include="Backgrounds\EdenClear.jpg" />
     <Content Include="Sounds\Maintheme1.mp3" />
     <Content Include="Sounds\Maintheme.mp3">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

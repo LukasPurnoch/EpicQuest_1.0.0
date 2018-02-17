@@ -192,8 +192,8 @@ namespace EpicQuest_0._1._0.Pages
             {
                 if (earned1 == 1)
                 {
-                    EGain.EXPGain1(Enemy1, EXP_Bar, HP_Bar, LEVEL, MaxHP, NameOfHero, StrongHC, NormalHC, FastHC);
-                    MDrop.DropMoney1(Enemy1, Money);
+                    EGain.EXPGain1(10, Enemy1, EXP_Bar, HP_Bar, LEVEL, MaxHP, NameOfHero, StrongHC, NormalHC, FastHC);
+                    MDrop.DropMoney1(10, Enemy1, Money);
                     earned1 = 2;
                 }
             }
@@ -202,8 +202,8 @@ namespace EpicQuest_0._1._0.Pages
             {
                 if (earned2 == 1)
                 {
-                    EGain.EXPGain2(Enemy2, EXP_Bar, HP_Bar, LEVEL, MaxHP, NameOfHero, StrongHC, NormalHC, FastHC);
-                    MDrop.DropMoney2(Enemy2, Money);
+                    EGain.EXPGain2(10, Enemy2, EXP_Bar, HP_Bar, LEVEL, MaxHP, NameOfHero, StrongHC, NormalHC, FastHC);
+                    MDrop.DropMoney2(10, Enemy2, Money);
                     earned2 = 2;
                 }
             }
@@ -234,8 +234,8 @@ namespace EpicQuest_0._1._0.Pages
             {
                 if (earned1 == 1)
                 {
-                    EGain.EXPGain1(Enemy1, EXP_Bar, HP_Bar, LEVEL, MaxHP, NameOfHero, StrongHC, NormalHC, FastHC);
-                    MDrop.DropMoney1(Enemy1, Money);
+                    EGain.EXPGain1(10, Enemy1, EXP_Bar, HP_Bar, LEVEL, MaxHP, NameOfHero, StrongHC, NormalHC, FastHC);
+                    MDrop.DropMoney1(10, Enemy1, Money);
                     earned1 = 2;
                 }
             }
@@ -244,8 +244,8 @@ namespace EpicQuest_0._1._0.Pages
             {
                 if (earned2 == 1)
                 {
-                    EGain.EXPGain2(Enemy2, EXP_Bar, HP_Bar, LEVEL, MaxHP, NameOfHero, StrongHC, NormalHC, FastHC);
-                    MDrop.DropMoney2(Enemy2, Money);
+                    EGain.EXPGain2(10, Enemy2, EXP_Bar, HP_Bar, LEVEL, MaxHP, NameOfHero, StrongHC, NormalHC, FastHC);
+                    MDrop.DropMoney2(10, Enemy2, Money);
                     earned2 = 2;
                 }
             }
@@ -276,8 +276,8 @@ namespace EpicQuest_0._1._0.Pages
             {
                 if (earned1 == 1)
                 {
-                    EGain.EXPGain1(Enemy1, EXP_Bar, HP_Bar, LEVEL, MaxHP, NameOfHero, StrongHC, NormalHC, FastHC);
-                    MDrop.DropMoney1(Enemy1, Money);
+                    EGain.EXPGain1(10, Enemy1, EXP_Bar, HP_Bar, LEVEL, MaxHP, NameOfHero, StrongHC, NormalHC, FastHC);
+                    MDrop.DropMoney1(10, Enemy1, Money);
                     earned1 = 2;
                 }
             }
@@ -286,8 +286,8 @@ namespace EpicQuest_0._1._0.Pages
             {
                 if (earned2 == 1)
                 {
-                    EGain.EXPGain2(Enemy2, EXP_Bar, HP_Bar, LEVEL, MaxHP, NameOfHero, StrongHC, NormalHC, FastHC);
-                    MDrop.DropMoney2(Enemy2, Money);
+                    EGain.EXPGain2(10, Enemy2, EXP_Bar, HP_Bar, LEVEL, MaxHP, NameOfHero, StrongHC, NormalHC, FastHC);
+                    MDrop.DropMoney2(10, Enemy2, Money);
                     earned2 = 2;
                 }
             }

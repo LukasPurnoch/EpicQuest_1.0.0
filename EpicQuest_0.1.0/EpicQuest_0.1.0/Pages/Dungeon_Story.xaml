@@ -15,8 +15,8 @@
 
         <Label Background="#D8383838" VerticalAlignment="Bottom" Height="208"/>
 
-        <TextBlock x:Name="Text1" TextWrapping="Wrap" Text="Originally.. It was the door that was cursed and Ardyn could die very quickly, but thanks to his quick reactions, he survived." Margin="10,0,10,34" FontSize="36" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1260" Height="136" Visibility="Visible" TextAlignment="Center"/>
-        <TextBlock x:Name="Text2" TextWrapping="Wrap" Text="The fight was long and intense, but Ardyn can't stop, he must kill the last 3 bosses of Myasma. He must hurry, because he is running out of time." Margin="10,0,10,24" FontSize="36" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1260" Height="170" Visibility="Hidden" TextAlignment="Center"/>
+        <TextBlock x:Name="Text1" TextWrapping="Wrap" Text="It was originally a door, but in their astral world, a world beyond human ordinary perception, they were cursed and now they are trying to conquer the underground." Margin="10,0,10,10" FontSize="36" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1260" Height="160" Visibility="Visible" TextAlignment="Center"/>
+        <TextBlock x:Name="Text2" TextWrapping="Wrap" Text="Without a handle, it was not easy, but as the right hero, you have easily counseled this problem. No one will know where they were heading. Now the path leads you to the forgotten catacombs. It is said to be inhabited by the souls of fallen knights, where Ghostknight, The Legionaire of Dead Army." Margin="10,0" FontSize="36" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1260" Height="194" Visibility="Hidden" TextAlignment="Center"/>
 
         <Label x:Name="CLOCK1" Content="" Margin="158,112,566,478" FontSize="72" Visibility="Hidden"/>
 

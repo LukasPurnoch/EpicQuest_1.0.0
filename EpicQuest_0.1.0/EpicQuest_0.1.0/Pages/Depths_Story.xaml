@@ -15,8 +15,8 @@
 
         <Label Background="#D8383838" VerticalAlignment="Bottom" Height="208"/>
 
-        <TextBlock x:Name="Text1" TextWrapping="Wrap" Text="" Margin="10,0,10,34" FontSize="36" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1260" Height="136" Visibility="Visible" TextAlignment="Center"/>
-        <TextBlock x:Name="Text2" TextWrapping="Wrap" Text="" Margin="10,0,10,24" FontSize="36" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1260" Height="170" Visibility="Hidden" TextAlignment="Center"/>
+        <TextBlock x:Name="Text1" TextWrapping="Wrap" Text="These were only human invented legends so people did not go to this cursed place. But this catastrophe, this high release of magical energy, has caused this legend to be born and reflected in real life." Margin="10,0,10,10" FontSize="36" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1260" Height="160" Visibility="Visible" TextAlignment="Center"/>
+        
 
         <Label x:Name="CLOCK1" Content="" Margin="158,112,566,478" FontSize="72" Visibility="Hidden"/>
 

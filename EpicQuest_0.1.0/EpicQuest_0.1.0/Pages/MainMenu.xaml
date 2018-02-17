@@ -1,0 +1,29 @@
+﻿<Page x:Class="EpicQuest_0._1._0.Pages.MainMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:EpicQuest_0._1._0.Pages"
+      xmlns:gif="http://wpfanimatedgif.codeplex.com"
+      mc:Ignorable="d" 
+      d:DesignHeight="800" d:DesignWidth="1280"
+      Title="MainMenu">
+
+    <Grid>
+        <Grid Margin="0,0,0,0" Height="800" Width="1280">
+
+            <MediaElement x:Name="MediaPlayer" Volume="1" Margin="-262,0,1359,601" RenderTransformOrigin="0.5,0.5" LoadedBehavior="Manual"/>
+
+            <Image gif:ImageBehavior.AnimatedSource="pack://application:,,,/Gifs/Background.gif" Margin="-49,-31,-115,-25"/>
+
+            <Image gif:ImageBehavior.AnimatedSource="pack://application:,,,/Gifs/EpiQuest_GIF.gif" Margin="872,60,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="359" Height="236"/>
+
+            <Button x:Name="Exit" Content="EXIT" HorizontalAlignment="Right" Margin="0,0,10,144" VerticalAlignment="Bottom" Width="453" Height="88" Background="{x:Null}" FontSize="48" FontFamily="Segoe UI Black" BorderBrush="{x:Null}" Foreground="White"/>
+            <Button x:Name="Load" Content="LOAD GAME" HorizontalAlignment="Right" Margin="0,0,10,232" VerticalAlignment="Bottom" Width="453" Height="88" Background="{x:Null}" FontSize="48" FontFamily="Segoe UI Black" BorderBrush="{x:Null}" Foreground="White" Click="Load_Click"/>
+            <Button x:Name="New" Content="NEW GAME" HorizontalAlignment="Right" Margin="0,0,10,320" VerticalAlignment="Bottom" Width="453" Height="88" Background="{x:Null}" FontSize="48" FontFamily="Segoe UI Black" BorderBrush="{x:Null}" Foreground="White" Click="New_Click"/>
+
+            <Frame x:Name="Game" ContentRendered="myFrame_ContentRendered"/>
+
+        </Grid>
+    </Grid>
+</Page>

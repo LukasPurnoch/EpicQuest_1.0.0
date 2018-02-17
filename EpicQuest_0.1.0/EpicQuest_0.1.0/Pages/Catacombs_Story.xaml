@@ -15,8 +15,8 @@
 
         <Label Background="#D8383838" VerticalAlignment="Bottom" Height="208"/>
 
-        <TextBlock x:Name="Text1" TextWrapping="Wrap" Text="" Margin="10,0,10,34" FontSize="36" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1260" Height="136" Visibility="Visible" TextAlignment="Center"/>
-        <TextBlock x:Name="Text2" TextWrapping="Wrap" Text="" Margin="10,0,10,24" FontSize="36" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1260" Height="170" Visibility="Hidden" TextAlignment="Center"/>
+        <TextBlock x:Name="Text1" TextWrapping="Wrap" Text="It is the soul of the fallen warrior, in the ancient battles between Eden and Fier. There were countless soldiers here. They were reborn through the astral world and with their desire for blood, they were destined to destroy Eden." Margin="10,0,10,24" FontSize="36" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1260" Height="146" Visibility="Hidden" TextAlignment="Center"/>
+        <TextBlock x:Name="Text2" TextWrapping="Wrap" Text="After this fight, Ardyn felt a great decline of dark power. But as you know, knights never fight alone. Your final exam is coming. The possible last one was Blacknight, The Captain of Mercenaries. One thing is certain. He will fight to the end of his strength." Margin="10,0,10,10" FontSize="36" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1260" Height="198" Visibility="Visible" TextAlignment="Center"/>
 
         <Label x:Name="CLOCK1" Content="" Margin="158,112,566,478" FontSize="72" Visibility="Hidden"/>
 

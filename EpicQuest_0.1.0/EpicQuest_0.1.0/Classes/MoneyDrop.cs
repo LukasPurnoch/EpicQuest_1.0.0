@@ -18,7 +18,7 @@ namespace EpicQuest_0._1._0.Classes
 {
     class MoneyDrop
     {
-        public void DropMoney1(Button Enemy1, Label Money) {
+        public void DropMoney1(int variable, Button Enemy1, Label Money) {
 
             string enemy1 = Enemy1.Content.ToString();
 
@@ -42,85 +42,85 @@ namespace EpicQuest_0._1._0.Classes
                     money += 60;
                     break;
                 case "Hundlegs":
-                    money += 15;
+                    money += 15 + variable;
                     break;
                 case "Gigantoad":
-                    money += 10;
+                    money += 10 + variable;
                     break;
                 case "Death Flower":
-                    money += 10;
+                    money += 10 + variable;
                     break;
                 case "Blood Flower":
-                    money += 10;
+                    money += 10 + variable;
                     break;
                 case "Flying Eyes":
-                    money += 10;
+                    money += 10 + variable;
                     break;
                 case "Ghoul":
-                    money += 20;
+                    money += 20 + variable;
                     break;
                 case "Lilith":
-                    money += 15;
+                    money += 15 + variable;
                     break;
                 case "Hydra":
-                    money += 15;
+                    money += 15 + variable;
                     break;
                 case "Stone Golem":
-                    money += 20;
+                    money += 20 + variable;
                     break;
                 case "Arachne":
-                    money += 15;
+                    money += 15 + variable;
                     break;
                 case "Ghost Knight":
-                    money += 20;
+                    money += 20 + variable;
                     break;
                 case "Chimera":
-                    money += 15;
+                    money += 15 + variable;
                     break;
                 case "Great Malboro":
-                    money += 20;
+                    money += 20 + variable;
                     break;
                 case "Fiery Hound":
-                    money += 20;
+                    money += 20 + variable;
                     break;
                 case "Wicked Mask":
-                    money += 20;
+                    money += 20 + variable;
                     break;
                 case "Behemoth":
-                    money += 15;
+                    money += 15 + variable;
                     break;
                 case "Magic Dragon":
-                    money += 10;
+                    money += 10 + variable;
                     break;
                 case "Brachioraidos":
-                    money += 10;
+                    money += 10 + variable;
                     break;
                 case "Red Dragon":
-                    money += 15;
+                    money += 15 + variable;
                     break;
                 case "Trap Door":
-                    money += 20;
+                    money += 20 + variable;
                     break;
                 case "Death Puppet":
-                    money += 20;
+                    money += 20 + variable;
                     break;
                 case "Eukaryote":
-                    money += 10;
+                    money += 10 + variable;
                     break;
                 case "Gorgon":
-                    money += 15;
+                    money += 15 + variable;
                     break;
                 case "Black Knight":
-                    money += 20;
+                    money += 20 + variable;
                     break;
                 case "Catoblepas":
-                    money += 10;
+                    money += 10 + variable;
                     break;
             }
             Money.Content = money;
         }
 
-        public void DropMoney2(Button Enemy2, Label Money)
+        public void DropMoney2(int variable, Button Enemy2, Label Money)
         {
             string enemy2 = Enemy2.Content.ToString();
 
@@ -129,82 +129,79 @@ namespace EpicQuest_0._1._0.Classes
             switch (enemy2)
             {
                 case "Hundlegs":
-                    money += 15;
-                    break;
-                case "Hundlegs .I.":
-                    money += 50;
+                    money += 15 + variable;
                     break;
                 case "Gigantoad":
-                    money += 10;
+                    money += 10 + variable;
                     break;
                 case "Death Flower":
-                    money += 10;
+                    money += 10 + variable;
                     break;
                 case "Blood Flower":
-                    money += 10;
+                    money += 10 + variable;
                     break;
                 case "Flying Eyes":
-                    money += 10;
+                    money += 10 + variable;
                     break;
                 case "Ghoul":
-                    money += 20;
+                    money += 20 + variable;
                     break;
                 case "Lilith":
-                    money += 15;
+                    money += 15 + variable;
                     break;
                 case "Hydra":
-                    money += 15;
+                    money += 15 + variable;
                     break;
                 case "Stone Golem":
-                    money += 20;
+                    money += 20 + variable;
                     break;
                 case "Arachne":
-                    money += 15;
+                    money += 15 + variable;
                     break;
                 case "Ghost Knight":
-                    money += 20;
+                    money += 20 + variable;
                     break;
                 case "Chimera":
-                    money += 15;
+                    money += 15 + variable;
                     break;
                 case "Great Malboro":
-                    money += 20;
+                    money += 20 + variable;
                     break;
                 case "Fiery Hound":
-                    money += 20;
+                    money += 20 + variable;
                     break;
                 case "Wicked Mask":
-                    money += 20;
+                    money += 20 + variable;
                     break;
                 case "Behemoth":
-                    money += 15;
+                    money += 15 + variable;
                     break;
                 case "Magic Dragon":
-                    money += 10;
+                    money += 10 + variable;
                     break;
                 case "Brachioraidos":
-                    money += 10;
+                    money += 10 + variable;
                     break;
                 case "Red Dragon":
-                    money += 15;
+                    money += 15 + variable;
                     break;
                 case "Trap Door":
-                    money += 20;
+                    money += 20 + variable;
                     break;
                 case "Death Puppet":
-                    money += 20;
+                    money += 20 + variable;
                     break;
                 case "Eukaryote":
-                    money += 10;
+                    money += 10 + variable;
                     break;
                 case "Gorgon":
-                    money += 15;
+                    money += 15 + variable;
                     break;
                 case "Black Knight":
-                    money += 20;
+                    money += 20 + variable;
                     break;
                 case "Catoblepas":
-                    money += 10;
+                    money += 10 + variable;
                     break;
             }
             Money.Content = money;

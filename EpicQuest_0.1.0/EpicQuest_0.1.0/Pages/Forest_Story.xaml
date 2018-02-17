@@ -15,8 +15,8 @@
 
         <Label Background="#D8383838" VerticalAlignment="Bottom" Height="208"/>
 
-        <TextBlock x:Name="Text1" TextWrapping="Wrap" Text="Huge centipede was banished from this world, by Ardyn's sword and power. The centipede was The Captain of 1.st. squad of Myasma from Astral world." Margin="10,0,10,34" FontSize="36" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1260" Height="136" Visibility="Visible" TextAlignment="Center"/>
-        <TextBlock x:Name="Text2" TextWrapping="Wrap" Text="Ardyn felt that the power was a little bit weaker. But still, there were another 4 bosses to beat up. The next is Trapdoor, The Leader of Underworld, who is hidden in Dungeon." Margin="10,0,10,24" FontSize="36" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1260" Height="170" Visibility="Hidden" TextAlignment="Center"/>
+        <TextBlock x:Name="Text1" TextWrapping="Wrap" Text="Giant centipede that leads the position of holding in a forbidden forest. Unfortunately, this forest was known for the fact that people often took their lives, an ideal place for centipedes." Margin="10,0,10,34" FontSize="36" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1260" Height="136" Visibility="Visible" TextAlignment="Center"/>
+        <TextBlock x:Name="Text2" TextWrapping="Wrap" Text="This adversary had something in it. Or to all the unfortunates he took? Now he's crawling in the dust. You are the one who leaves as a winner. But one won battle does not make you a hero. Next in line is Lilith, The Snake Mistress in Caves." Margin="10,0,10,10" FontSize="36" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1260" Height="184" Visibility="Hidden" TextAlignment="Center"/>
 
         <Label x:Name="CLOCK1" Content="" Margin="158,112,566,478" FontSize="72" Visibility="Hidden"/>
 

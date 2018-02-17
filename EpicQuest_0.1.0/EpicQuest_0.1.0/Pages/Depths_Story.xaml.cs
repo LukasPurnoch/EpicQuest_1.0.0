@@ -40,13 +40,11 @@ namespace EpicQuest_0._1._0.Pages
             if (increment3 % 8 == 0)
             {
                 Text1.Visibility = Visibility.Hidden;
-                Text2.Visibility = Visibility.Visible;
-            }
-            if (increment3 % 16 == 0)
-            {
+            
+            
                 if (stop == 0)
                 {
-                    ForestStory.Content = new Map();
+                    ForestStory.Content = new Story_2();
                 }
                 if (stop == 1)
                 {

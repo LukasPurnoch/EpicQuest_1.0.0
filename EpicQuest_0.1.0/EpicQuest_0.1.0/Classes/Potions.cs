@@ -24,7 +24,7 @@ namespace EpicQuest_0._1._0.Classes
             
             if (countHP > 0)
             {
-                HP_Bar.Value += 70;
+                HP_Bar.Value += 100;
                 countHP -= 1;
 
                 InventoryHPCounter.Content = countHP;

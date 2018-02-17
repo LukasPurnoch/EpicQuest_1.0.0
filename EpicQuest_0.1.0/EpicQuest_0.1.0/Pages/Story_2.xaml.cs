@@ -12,20 +12,19 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using EpicQuest_0._1._0.Classes;
 using System.Windows.Threading;
 
 namespace EpicQuest_0._1._0.Pages
 {
     /// <summary>
-    /// Interakční logika pro Story_1.xaml
+    /// Interakční logika pro Story_2.xaml
     /// </summary>
-    public partial class Story_1 : Page
+    public partial class Story_2 : Page
     {
         public int increment;
         public int stop;
 
-        public Story_1()
+        public Story_2()
         {
             InitializeComponent();
 
@@ -45,9 +44,14 @@ namespace EpicQuest_0._1._0.Pages
             }
             if (increment % 20 == 0)
             {
+                Text2.Visibility = Visibility.Hidden;
+                Text3.Visibility = Visibility.Visible;
+            }
+            if (increment % 30 == 0)
+            {
                 if (stop == 0)
                 {
-                    Map.Content = new Map();
+                    Map.Content = new MainMenu();
                 }
                 if (stop == 1)
                 {
