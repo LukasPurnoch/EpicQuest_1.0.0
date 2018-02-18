@@ -69,9 +69,9 @@ namespace EpicQuest_0._1._0.Pages
 
         private void InventoryAPBuy_Click(object sender, RoutedEventArgs e)
         {
-            if (moneyMapCurrent >= 20)
+            if (moneyMapCurrent >= 15)
             {
-                moneyMapCurrent -= 20;
+                moneyMapCurrent -= 15;
                 inventoryAPBuyCounter += 1;
 
                 MoneyMap.Content = moneyMapCurrent;
@@ -81,9 +81,9 @@ namespace EpicQuest_0._1._0.Pages
 
         private void InventoryHPBuy_Click(object sender, RoutedEventArgs e)
         {
-            if (moneyMapCurrent >= 20)
+            if (moneyMapCurrent >= 15)
             {
-                moneyMapCurrent -= 20;
+                moneyMapCurrent -= 15;
                 inventoryHPBuyCounter += 1;
 
                 MoneyMap.Content = moneyMapCurrent;
