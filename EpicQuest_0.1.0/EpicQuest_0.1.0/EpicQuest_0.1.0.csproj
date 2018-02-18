@@ -234,15 +234,16 @@
     <Resource Include="Backgrounds\EdenClear.jpg" />
     <Resource Include="Addons\Armor.png" />
     <Resource Include="Addons\Sword.png" />
-    <Content Include="Sounds\Maintheme1.mp3" />
-    <Content Include="Sounds\Maintheme.mp3">
-      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-    </Content>
+    <Resource Include="Backgrounds\Map_Catacombs.png" />
+    <Resource Include="Backgrounds\Map_Cave.png" />
+    <Resource Include="Backgrounds\Map_Depths.png" />
+    <Resource Include="Backgrounds\Map_Dungeon.png" />
+    <Resource Include="Backgrounds\Map_Forest.png" />
+    <Resource Include="Backgrounds\ForestBackground.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Backgrounds\DarkTheme.jpg" />
     <Resource Include="Backgrounds\GreenTheme.jpg" />
-    <Resource Include="Backgrounds\Map.png" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Enemies\Arachne.png" />
@@ -290,6 +291,18 @@
   <ItemGroup>
     <Resource Include="Addons\Coin.png" />
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Sounds\StoryTelling2.mp3" />
+    <Content Include="Sounds\Map.mp3" />
+    <Content Include="Sounds\MainMenu.mp3" />
+    <Content Include="Sounds\FL1.mp3" />
+    <Content Include="Sounds\Victory.mp3" />
+    <Content Include="Sounds\FL2.mp3" />
+    <Content Include="Sounds\StoryTelling1.mp3" />
+    <Content Include="Sounds\FL4.mp3" />
+    <Content Include="Sounds\FL3.mp3" />
+    <Content Include="Sounds\DeathScreen.mp3" />
+    <Content Include="Sounds\FL5.mp3" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

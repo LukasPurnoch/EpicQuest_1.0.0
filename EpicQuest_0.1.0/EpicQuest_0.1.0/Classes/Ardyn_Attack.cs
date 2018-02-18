@@ -18,13 +18,11 @@ namespace EpicQuest_0._1._0.Classes
 {
     class Ardyn_Attack
     {
-        public int strongHitchance = 30;
-        public int fastHitchance = 80;
+        public int strongHitchance = 50;
+        public int fastHitchance = 70;
         public int normalHitchance = 60;
-
-        public int damageFromSword;
-
-        public void StrongAttack(int vyber, Label DMGEnemy, Label Position1HP, Label Position2HP, ProgressBar AP_Bar, ProgressBar HP_Bar, Image Position4, Image Ardyn, Button Enemy1, Button Enemy2, Label DMGArdyn, Image Position1, Image Position2, Image Position3, Label Money, Image Boss, Frame Final)
+                
+        public void StrongAttack(MediaElement MediaPlayerr, int plusDMG, int vyber, Label DMGEnemy, Label Position1HP, Label Position2HP, ProgressBar AP_Bar, ProgressBar HP_Bar, Image Position4, Image Ardyn, Button Enemy1, Button Enemy2, Label DMGArdyn, Image Position1, Image Position2, Image Position3, Label Money, Image Boss, Frame Final)
         {
             double health = HP_Bar.Value;
             double ability = AP_Bar.Value;
@@ -35,7 +33,7 @@ namespace EpicQuest_0._1._0.Classes
                 Random StrongDamage = new Random();
 
                 int strongHitchance1 = StrongHitchance.Next(1, 101);
-                int strongDamage1 = StrongDamage.Next(25, 31 + damageFromSword);                
+                int strongDamage1 = StrongDamage.Next(20, 25);                
                 
                 if (vyber == 1)
                 {
@@ -48,8 +46,10 @@ namespace EpicQuest_0._1._0.Classes
 
                         if (strongHitchance1 <= strongHitchance)
                         {
-                            DMGEnemy.Content = "-" + strongDamage1;
-                            Position1HP_P -= strongDamage1;
+                            int SSSword = strongDamage1 + plusDMG;
+
+                            DMGEnemy.Content = "-" + SSSword;
+                            Position1HP_P -= SSSword;
                             Position1HP.Content = Position1HP_P;
 
                             Position4.Source = new BitmapImage(new Uri("pack://application:,,,/Characters/Cecil.png"));
@@ -85,8 +85,10 @@ namespace EpicQuest_0._1._0.Classes
 
                         if (strongHitchance1 <= strongHitchance)
                         {
-                            DMGEnemy.Content = "-" + strongDamage1;
-                            Position2HP_P -= strongDamage1;
+                            int SSSword = strongDamage1 + plusDMG;
+
+                            DMGEnemy.Content = "-" + SSSword;
+                            Position2HP_P -= SSSword;
                             Position2HP.Content = Position2HP_P;
 
                             Position4.Source = new BitmapImage(new Uri("pack://application:,,,/Characters/Cecil.png"));
@@ -114,11 +116,12 @@ namespace EpicQuest_0._1._0.Classes
             }
             else
             {
+                MediaPlayerr.Stop();
                 Final.Content = new Pages.Death_Screen();
             }
         }
 
-        public void FastAttack(int vyber, Label DMGEnemy, Label Position1HP, Label Position2HP, ProgressBar AP_Bar, Image Position4, Image Ardyn, Button Enemy1, Button Enemy2, Label DMGArdyn, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Label Money, Image Boss, Frame Final)
+        public void FastAttack(MediaElement MediaPlayerr, int plusDMG, int vyber, Label DMGEnemy, Label Position1HP, Label Position2HP, ProgressBar AP_Bar, Image Position4, Image Ardyn, Button Enemy1, Button Enemy2, Label DMGArdyn, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Label Money, Image Boss, Frame Final)
         {
             double health = HP_Bar.Value;
             double ability = AP_Bar.Value;
@@ -130,7 +133,7 @@ namespace EpicQuest_0._1._0.Classes
                 Random FastDamage = new Random();
 
                 int fastHitchance1 = FastHitchance.Next(1, 101);
-                int fastDamage1 = FastDamage.Next(8, 14 + damageFromSword);
+                int fastDamage1 = FastDamage.Next(5, 10);
                 
                 if (vyber == 1)
                 {
@@ -143,8 +146,10 @@ namespace EpicQuest_0._1._0.Classes
 
                         if (fastHitchance1 <= fastHitchance)
                         {
-                            DMGEnemy.Content = "-" + fastDamage1;
-                            Position1HP_P -= fastDamage1;
+                            int FFSword1 = fastDamage1 + plusDMG;
+
+                            DMGEnemy.Content = "-" + FFSword1;
+                            Position1HP_P -= FFSword1;
                             Position1HP.Content = Position1HP_P;
 
                             Position4.Source = new BitmapImage(new Uri("pack://application:,,,/Characters/Cecil.png"));
@@ -180,8 +185,10 @@ namespace EpicQuest_0._1._0.Classes
 
                         if (fastHitchance1 <= fastHitchance)
                         {
-                            DMGEnemy.Content = "-" + fastDamage1;
-                            Position2HP_P -= fastDamage1;
+                            int FFSword = fastDamage1 + plusDMG;
+
+                            DMGEnemy.Content = "-" + FFSword;
+                            Position2HP_P -= FFSword;
                             Position2HP.Content = Position2HP_P;
 
                             Position4.Source = new BitmapImage(new Uri("pack://application:,,,/Characters/Cecil.png"));
@@ -209,11 +216,12 @@ namespace EpicQuest_0._1._0.Classes
             }
             else
             {
+                MediaPlayerr.Stop();
                 Final.Content = new Pages.Death_Screen();
             }
         }
 
-        public void NormalAttack(int vyber, Label DMGEnemy, Label Position1HP, Label Position2HP, ProgressBar AP_Bar, Image Position4, Image Ardyn, Button Enemy1, Button Enemy2, Label DMGArdyn, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Label Money, Image Boss, Frame Final)
+        public void NormalAttack(MediaElement MediaPlayerr, int plusDMG, int vyber, Label DMGEnemy, Label Position1HP, Label Position2HP, ProgressBar AP_Bar, Image Position4, Image Ardyn, Button Enemy1, Button Enemy2, Label DMGArdyn, ProgressBar HP_Bar, Image Position1, Image Position2, Image Position3, Label Money, Image Boss, Frame Final)
         {
             double health = HP_Bar.Value;
             double ability = AP_Bar.Value;
@@ -225,7 +233,7 @@ namespace EpicQuest_0._1._0.Classes
                 Random NormalDamage = new Random();
 
                 int normalHitchance1 = NormalHitchance.Next(1, 101);
-                int normalDamage1 = NormalDamage.Next(14, 19 + damageFromSword);
+                int normalDamage1 = NormalDamage.Next(11, 16);
                 
                 if (vyber == 1)
                 {
@@ -238,8 +246,10 @@ namespace EpicQuest_0._1._0.Classes
 
                         if (normalHitchance1 <= normalHitchance)
                         {
-                            DMGEnemy.Content = "-" + normalDamage1;
-                            Position1HP_P -= normalDamage1;
+                            int NNSword = normalDamage1 + plusDMG;
+
+                            DMGEnemy.Content = "-" + NNSword;
+                            Position1HP_P -= NNSword;
                             Position1HP.Content = Position1HP_P;
 
                             Position4.Source = new BitmapImage(new Uri("pack://application:,,,/Characters/Cecil.png"));
@@ -275,8 +285,10 @@ namespace EpicQuest_0._1._0.Classes
 
                         if (normalHitchance1 <= normalHitchance)
                         {
-                            DMGEnemy.Content = "-" + normalDamage1;
-                            Position2HP_P -= normalDamage1;
+                            int NNSword = normalDamage1 + plusDMG;
+
+                            DMGEnemy.Content = "-" + NNSword;
+                            Position2HP_P -= NNSword;
                             Position2HP.Content = Position2HP_P;
 
                             Position4.Source = new BitmapImage(new Uri("pack://application:,,,/Characters/Cecil.png"));
@@ -304,6 +316,7 @@ namespace EpicQuest_0._1._0.Classes
             }
             else
             {
+                MediaPlayerr.Stop();
                 Final.Content = new Pages.Death_Screen();
             }
         }

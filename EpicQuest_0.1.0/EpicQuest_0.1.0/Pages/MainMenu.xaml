@@ -14,11 +14,11 @@
 
             <MediaElement x:Name="MediaPlayer" Volume="1" Margin="-262,0,1359,601" RenderTransformOrigin="0.5,0.5" LoadedBehavior="Manual"/>
 
-            <Image gif:ImageBehavior.AnimatedSource="pack://application:,,,/Gifs/Background.gif" Margin="-49,-31,-115,-25"/>
+            <Image Source="pack://application:,,,/Backgrounds/ForestBackground.png" Margin="-142,-85,0,-90"/>
 
             <Image gif:ImageBehavior.AnimatedSource="pack://application:,,,/Gifs/EpiQuest_GIF.gif" Margin="872,60,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Width="359" Height="236"/>
 
-            <Button x:Name="Exit" Content="EXIT" HorizontalAlignment="Right" Margin="0,0,10,144" VerticalAlignment="Bottom" Width="453" Height="88" Background="{x:Null}" FontSize="48" FontFamily="Segoe UI Black" BorderBrush="{x:Null}" Foreground="White"/>
+            <Button x:Name="Exit" Content="EXIT" HorizontalAlignment="Right" Margin="0,0,10,144" VerticalAlignment="Bottom" Width="453" Height="88" Background="{x:Null}" FontSize="48" FontFamily="Segoe UI Black" BorderBrush="{x:Null}" Foreground="White" Click="Exit_Click"/>
             <Button x:Name="Load" Content="LOAD GAME" HorizontalAlignment="Right" Margin="0,0,10,232" VerticalAlignment="Bottom" Width="453" Height="88" Background="{x:Null}" FontSize="48" FontFamily="Segoe UI Black" BorderBrush="{x:Null}" Foreground="White" Click="Load_Click"/>
             <Button x:Name="New" Content="NEW GAME" HorizontalAlignment="Right" Margin="0,0,10,320" VerticalAlignment="Bottom" Width="453" Height="88" Background="{x:Null}" FontSize="48" FontFamily="Segoe UI Black" BorderBrush="{x:Null}" Foreground="White" Click="New_Click"/>
 

@@ -9,9 +9,11 @@
       Title="Death_Screen">
 
     <Grid Background="Black">
+        <MediaElement x:Name="MediaPlayer" Volume="1" Margin="-262,0,1359,601" RenderTransformOrigin="0.5,0.5" LoadedBehavior="Manual"/>
+        
         <Label Content="YOU DIED" Foreground="White" FontSize="200" Background="{x:Null}" Margin="180,174,190,364"/>
-        <Button Content="CONTINUE?" FontSize="80" Margin="382,490,398,194" Background="{x:Null}" Foreground="White" BorderBrush="White" Click="Continue_Click"/>
-        <Button Content="MENU?" FontSize="60" Margin="464,639,468,80" Background="{x:Null}" Foreground="White" BorderBrush="White" Click="Menu_Click"/>
+        <Button Content="CONTINUE" FontSize="80" Margin="382,490,398,194" Background="{x:Null}" Foreground="White" BorderBrush="White" Click="Continue_Click"/>
+        <Button Content="MENU" FontSize="60" Margin="464,639,468,80" Background="{x:Null}" Foreground="White" BorderBrush="White" Click="Menu_Click"/>
         <Frame x:Name="Died"/>
     </Grid>
 </Page>

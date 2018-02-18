@@ -13,6 +13,8 @@
             <ImageBrush ImageSource="pack://application:,,,/Levels/Catacombs.png"/>
         </Grid.Background>
 
+        <MediaElement x:Name="MediaPlayer" Volume="1" Margin="-262,0,1359,601" RenderTransformOrigin="0.5,0.5" LoadedBehavior="Manual"/>
+        
         <Label Background="#D8383838" VerticalAlignment="Bottom" Height="208"/>
 
         <TextBlock x:Name="Text1" TextWrapping="Wrap" Text="It is the soul of the fallen warrior, in the ancient battles between Eden and Fier. There were countless soldiers here. They were reborn through the astral world and with their desire for blood, they were destined to destroy Eden." Margin="10,0,10,24" FontSize="36" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1260" Height="146" Visibility="Hidden" TextAlignment="Center"/>

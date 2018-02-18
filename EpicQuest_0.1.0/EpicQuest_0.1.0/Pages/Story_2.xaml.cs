@@ -28,6 +28,9 @@ namespace EpicQuest_0._1._0.Pages
         {
             InitializeComponent();
 
+            MediaPlayer.Source = new Uri(@"C:\Users\bfoty\Source\Repos\EpicQuest_1.0.0\EpicQuest_0.1.0\EpicQuest_0.1.0\Sounds\StoryTelling2.mp3");
+            MediaPlayer.Play();
+
             TimeStart();
         }
 
@@ -51,6 +54,7 @@ namespace EpicQuest_0._1._0.Pages
             {
                 if (stop == 0)
                 {
+                    MediaPlayer.Stop();
                     Map.Content = new MainMenu();
                 }
                 if (stop == 1)

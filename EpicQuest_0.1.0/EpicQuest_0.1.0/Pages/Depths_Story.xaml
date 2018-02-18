@@ -13,6 +13,8 @@
             <ImageBrush ImageSource="pack://application:,,,/Levels/Depths.png"/>
         </Grid.Background>
 
+        <MediaElement x:Name="MediaPlayer" Volume="1" Margin="-262,0,1359,601" RenderTransformOrigin="0.5,0.5" LoadedBehavior="Manual"/>
+        
         <Label Background="#D8383838" VerticalAlignment="Bottom" Height="208"/>
 
         <TextBlock x:Name="Text1" TextWrapping="Wrap" Text="These were only human invented legends so people did not go to this cursed place. But this catastrophe, this high release of magical energy, has caused this legend to be born and reflected in real life." Margin="10,0,10,10" FontSize="36" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1260" Height="160" Visibility="Visible" TextAlignment="Center"/>

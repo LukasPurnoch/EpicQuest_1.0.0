@@ -13,6 +13,8 @@
             <ImageBrush ImageSource="pack://application:,,,/Backgrounds/Eden_Damaged.jpg"/>
         </Grid.Background>
 
+        <MediaElement x:Name="MediaPlayer" Volume="1" Margin="-262,0,1359,601" RenderTransformOrigin="0.5,0.5" LoadedBehavior="Manual"/>
+        
         <Label Background="#D8383838" VerticalAlignment="Bottom" Height="268"/>
 
         <TextBlock x:Name="Text1" TextWrapping="Wrap" Text="Eden, the city full of happiness, success, majesty.. This all it was.. Judgment day came, the and of great Eden, gods city.. The center hit the plague, darkness, and poverty. Crime has grown, violence too.. The decent people have become quite different people.." Margin="10,0,10,70" FontSize="36" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1260" Height="198" Visibility="Visible" TextAlignment="Center"/>

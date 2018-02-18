@@ -23,14 +23,19 @@ namespace EpicQuest_0._1._0.Pages
         public Death_Screen()
         {
             InitializeComponent();
+
+            MediaPlayer.Source = new Uri(@"C:\Users\bfoty\Source\Repos\EpicQuest_1.0.0\EpicQuest_0.1.0\EpicQuest_0.1.0\Sounds\DeathScreen.mp3");
+            MediaPlayer.Play();
         }
 
         private void Continue_Click(object sender, RoutedEventArgs e)
         {
+            MediaPlayer.Stop();
             Died.Content = new Map();
         }
         private void Menu_Click(object sender, RoutedEventArgs e)
         {
+            MediaPlayer.Stop();
             Died.Content = new MainMenu();
         }
     }

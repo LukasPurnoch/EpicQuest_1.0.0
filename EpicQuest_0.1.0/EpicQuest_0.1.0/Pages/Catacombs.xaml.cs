@@ -30,6 +30,11 @@ namespace EpicQuest_0._1._0.Pages
 
         private int counter = 0;
 
+        private int sword_count;
+        private int armor_count;
+
+        private int levelLevel;
+
         List<Classes.SavingType_Stats> save_stats = new List<Classes.SavingType_Stats>();
         List<int> load_stats = new List<int>();
 
@@ -39,6 +44,9 @@ namespace EpicQuest_0._1._0.Pages
         public Catacombs()
         {
             InitializeComponent();
+
+            MediaPlayer.Source = new Uri(@"C:\Users\bfoty\Source\Repos\EpicQuest_1.0.0\EpicQuest_0.1.0\EpicQuest_0.1.0\Sounds\FL4.mp3");
+            MediaPlayer.Play();
 
             Classes.Saving_Stats saving_stats = new Classes.Saving_Stats();
             saving_stats.CSVRead_Stats(load_stats);
@@ -57,6 +65,8 @@ namespace EpicQuest_0._1._0.Pages
             Money.Content = load_shop[0];
             InventoryAPCounter.Content = load_shop[1];
             InventoryHPCounter.Content = load_shop[2];
+            armor_count = load_shop[3];
+            sword_count = load_shop[4];
 
             Level();
             TimeStart();
@@ -69,7 +79,7 @@ namespace EpicQuest_0._1._0.Pages
             Classes.Armor_Heal armorHeal = new Classes.Armor_Heal();
             armorHeal.HpByArmor(HP_Bar);
 
-            if (counter == 3)
+            if (counter == 10)
             {
                 Levelcounter.Content = counter;
 
@@ -85,17 +95,17 @@ namespace EpicQuest_0._1._0.Pages
                 Position2.Source = null;
 
             }
-            if (counter < 3)
+            if (counter < 10)
             {
                 Enemy1.Visibility = Visibility.Visible;
                 Enemy2.Visibility = Visibility.Visible;
 
                 Classes.Enemy_Generator gen = new Classes.Enemy_Generator();
-                gen.EnemyGen(40, 3, Position1, Position2, Position1HP, Position2HP, Enemy1, Enemy2);
+                gen.EnemyGen(35, 3, Position1, Position2, Position1HP, Position2HP, Enemy1, Enemy2);
 
                 Levelcounter.Content = counter;
             }
-            if (counter > 3)
+            if (counter > 10)
             {
                 Classes.SavingType_Stats savingType_Stats = new Classes.SavingType_Stats();
 
@@ -106,7 +116,15 @@ namespace EpicQuest_0._1._0.Pages
                 savingType_Stats.MaxAP = Convert.ToInt32(AP_Bar.Maximum);
                 savingType_Stats.CurrentEXP = Convert.ToInt32(EXP_Bar.Value);
                 savingType_Stats.MaxEXP = Convert.ToInt32(EXP_Bar.Maximum);
-                savingType_Stats.FinishedLvls = 5;
+
+                if (levelLevel > 4)
+                {
+                    savingType_Stats.FinishedLvls = levelLevel;
+                }
+                else
+                {
+                    savingType_Stats.FinishedLvls = 4;
+                }
 
                 save_stats.Add(savingType_Stats);
 
@@ -119,6 +137,8 @@ namespace EpicQuest_0._1._0.Pages
                 savingType_Shop.Money = Convert.ToInt32(Money.Content);
                 savingType_Shop.APPotions = Convert.ToInt32(InventoryAPCounter.Content);
                 savingType_Shop.HPPotions = Convert.ToInt32(InventoryHPCounter.Content);
+                savingType_Shop.Armor = armor_count;
+                savingType_Shop.Sword = sword_count;
 
                 save_shop.Add(savingType_Shop);
 
@@ -127,7 +147,9 @@ namespace EpicQuest_0._1._0.Pages
 
                 counter = 0;
 
-                Final.Content = new Cave_Story();
+                MediaPlayer.Stop();
+
+                Final.Content = new Catacombs_Story();
 
             }
         }
@@ -138,7 +160,7 @@ namespace EpicQuest_0._1._0.Pages
 
             if (increment % 1 == 0)
             {
-                if (counter == 3)
+                if (counter == 10)
                 {
                     Position4.Source = null;
                     Position3.Source = null;
@@ -180,15 +202,15 @@ namespace EpicQuest_0._1._0.Pages
 
         private void StrongAtt_Click(object sender, RoutedEventArgs e)
         {
+            Classes.Sword_Damage swordDMG = new Classes.Sword_Damage();
+            int plusDMGF = swordDMG.DamageBySword(sword_count);
+
             Classes.Ardyn_Attack ArdAtt = new Classes.Ardyn_Attack();
-            ArdAtt.StrongAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, HP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, Position1, Position2, Position3, Money, Boss, Final);
+            ArdAtt.StrongAttack(MediaPlayer, plusDMGF, vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, HP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, Position1, Position2, Position3, Money, Boss, Final);
 
             Classes.MoneyDrop MDrop = new Classes.MoneyDrop();
             Classes.EXPGain EGain = new Classes.EXPGain();
-
-            Classes.Sword_Damage swordDMG = new Classes.Sword_Damage();
-            swordDMG.DamageBySword();
-
+            
             increment = 0;
 
             int.TryParse(Position1HP.Content.ToString(), out int Position1HP_MM);
@@ -225,14 +247,14 @@ namespace EpicQuest_0._1._0.Pages
 
         private void FastAtt_Click(object sender, RoutedEventArgs e)
         {
+            Classes.Sword_Damage swordDMG = new Classes.Sword_Damage();
+            int plusDMGF = swordDMG.DamageBySword(sword_count);
+
             Classes.Ardyn_Attack ArdAtt = new Classes.Ardyn_Attack();
-            ArdAtt.FastAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, HP_Bar, Position1, Position2, Position3, Money, Boss, Final);
+            ArdAtt.FastAttack(MediaPlayer, plusDMGF, vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, HP_Bar, Position1, Position2, Position3, Money, Boss, Final);
 
             Classes.MoneyDrop MDrop = new Classes.MoneyDrop();
             Classes.EXPGain EGain = new Classes.EXPGain();
-
-            Classes.Sword_Damage swordDMG = new Classes.Sword_Damage();
-            swordDMG.DamageBySword();
 
             increment = 0;
 
@@ -270,14 +292,14 @@ namespace EpicQuest_0._1._0.Pages
 
         private void NormalAtt_Click(object sender, RoutedEventArgs e)
         {
+            Classes.Sword_Damage swordDMG = new Classes.Sword_Damage();
+            int plusDMGF = swordDMG.DamageBySword(sword_count);
+
             Classes.Ardyn_Attack ArdAtt = new Classes.Ardyn_Attack();
-            ArdAtt.NormalAttack(vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, HP_Bar, Position1, Position2, Position3, Money, Boss, Final);
+            ArdAtt.NormalAttack(MediaPlayer, plusDMGF, vyber, DMGEnemy, Position1HP, Position2HP, AP_Bar, Position4, Ardyn, Enemy1, Enemy2, DMGArdyn, HP_Bar, Position1, Position2, Position3, Money, Boss, Final);
 
             Classes.MoneyDrop MDrop = new Classes.MoneyDrop();
             Classes.EXPGain EGain = new Classes.EXPGain();
-
-            Classes.Sword_Damage swordDMG = new Classes.Sword_Damage();
-            swordDMG.DamageBySword();
 
             increment = 0;
 
@@ -316,7 +338,7 @@ namespace EpicQuest_0._1._0.Pages
         private void HPPotion_Click(object sender, RoutedEventArgs e)
         {
             Classes.Potions PotHP = new Classes.Potions();
-            PotHP.HP_Potion(InventoryHPCounter, HP_Bar);
+            PotHP.HP_Potion(LEVEL, InventoryHPCounter, HP_Bar);
         }
 
         private void APPotion_Click(object sender, RoutedEventArgs e)
@@ -336,7 +358,7 @@ namespace EpicQuest_0._1._0.Pages
             savingType_Stats.MaxAP = Convert.ToInt32(AP_Bar.Maximum);
             savingType_Stats.CurrentEXP = Convert.ToInt32(EXP_Bar.Value);
             savingType_Stats.MaxEXP = Convert.ToInt32(EXP_Bar.Maximum);
-            savingType_Stats.FinishedLvls = 4;
+            savingType_Stats.FinishedLvls = 3;
 
             save_stats.Add(savingType_Stats);
 
@@ -349,11 +371,15 @@ namespace EpicQuest_0._1._0.Pages
             savingType_Shop.Money = Convert.ToInt32(Money.Content);
             savingType_Shop.APPotions = Convert.ToInt32(InventoryAPCounter.Content);
             savingType_Shop.HPPotions = Convert.ToInt32(InventoryHPCounter.Content);
+            savingType_Shop.Armor = armor_count;
+            savingType_Shop.Sword = sword_count;
 
             save_shop.Add(savingType_Shop);
 
             Classes.Saving_Shop saving_shop = new Classes.Saving_Shop();
             saving_shop.CSVWrite_Shop(save_shop);
+
+            MediaPlayer.Stop();
 
             Final.Content = new Map();
         }

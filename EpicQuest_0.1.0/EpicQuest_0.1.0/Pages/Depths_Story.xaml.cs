@@ -28,6 +28,9 @@ namespace EpicQuest_0._1._0.Pages
         {
             InitializeComponent();
 
+            MediaPlayer.Source = new Uri(@"C:\Users\bfoty\Source\Repos\EpicQuest_1.0.0\EpicQuest_0.1.0\EpicQuest_0.1.0\Sounds\Victory.mp3");
+            MediaPlayer.Play();
+
             TimeStart3();
         }
 
@@ -44,6 +47,7 @@ namespace EpicQuest_0._1._0.Pages
             
                 if (stop == 0)
                 {
+                    MediaPlayer.Stop();
                     ForestStory.Content = new Story_2();
                 }
                 if (stop == 1)

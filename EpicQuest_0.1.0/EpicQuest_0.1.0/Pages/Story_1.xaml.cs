@@ -30,6 +30,9 @@ namespace EpicQuest_0._1._0.Pages
             InitializeComponent();
 
             TimeStart();
+
+            MediaPlayer.Source = new Uri(@"C:\Users\bfoty\Source\Repos\EpicQuest_1.0.0\EpicQuest_0.1.0\EpicQuest_0.1.0\Sounds\StoryTelling1.mp3");
+            MediaPlayer.Play();
         }
 
         public void Time_Tick(object sender, EventArgs e)
@@ -47,6 +50,7 @@ namespace EpicQuest_0._1._0.Pages
             {
                 if (stop == 0)
                 {
+                    MediaPlayer.Stop();
                     Map.Content = new Map();
                 }
                 if (stop == 1)

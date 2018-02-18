@@ -13,6 +13,8 @@
             <ImageBrush ImageSource="pack://application:,,,/Levels/Forest.png"/>
         </Grid.Background>
 
+        <MediaElement x:Name="MediaPlayer" Volume="1" Margin="-262,0,1359,601" RenderTransformOrigin="0.5,0.5" LoadedBehavior="Manual"/>
+        
         <Label Background="#D8383838" VerticalAlignment="Bottom" Height="208"/>
 
         <TextBlock x:Name="Text1" TextWrapping="Wrap" Text="Giant centipede that leads the position of holding in a forbidden forest. Unfortunately, this forest was known for the fact that people often took their lives, an ideal place for centipedes." Margin="10,0,10,34" FontSize="36" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1260" Height="136" Visibility="Visible" TextAlignment="Center"/>

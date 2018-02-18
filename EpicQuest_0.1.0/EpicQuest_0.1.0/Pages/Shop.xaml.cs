@@ -93,7 +93,7 @@ namespace EpicQuest_0._1._0.Pages
 
         private void InventoryArmorBuy_Click(object sender, RoutedEventArgs e)
         {
-            if (moneyMapCurrent >= 20)
+            if (moneyMapCurrent >= 50)
             {
                 moneyMapCurrent -= 50;
                 inventoryArmorBuyCounter += 1;
@@ -105,7 +105,7 @@ namespace EpicQuest_0._1._0.Pages
 
         private void InventorySwordBuy_Click(object sender, RoutedEventArgs e)
         {
-            if (moneyMapCurrent >= 20)
+            if (moneyMapCurrent >= 50)
             {
                 moneyMapCurrent -= 50;
                 inventorySwordBuyCounter += 1;

@@ -12,7 +12,9 @@
         <Grid.Background>
             <ImageBrush ImageSource="pack://application:,,,/Levels/Catacombs.png"/>
         </Grid.Background>
-        
+
+        <MediaElement x:Name="MediaPlayer" Volume="1" Margin="-262,0,1359,601" RenderTransformOrigin="0.5,0.5" LoadedBehavior="Manual"/>
+
         <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="1064,56,0,692" Stretch="Fill"/>
         <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="0,511,472,0" Stretch="Fill"/>
         <Image Source="pack://application:,,,/Textures/Stone_Texture.jpg" Margin="813,511,0,0" Stretch="Fill"/>

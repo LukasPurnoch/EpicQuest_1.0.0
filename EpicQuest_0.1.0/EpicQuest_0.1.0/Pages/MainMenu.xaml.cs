@@ -30,8 +30,9 @@ namespace EpicQuest_0._1._0.Pages
         {
             InitializeComponent();
 
-            //MediaPlayer.Source = new Uri(@"C:\Users\bfoty\Source\Repos\EpicQuest_1.0.0\EpicQuest_0.1.0\EpicQuest_0.1.0\Sounds\Maintheme1.mp3");
-            //MediaPlayer.Play();
+            MediaPlayer.Source = new Uri(@"C:\Users\bfoty\Source\Repos\EpicQuest_1.0.0\EpicQuest_0.1.0\EpicQuest_0.1.0\Sounds\MainMenu.mp3");
+            MediaPlayer.Play();
+
         }
 
         private void Reapeatable()
@@ -49,11 +50,11 @@ namespace EpicQuest_0._1._0.Pages
             savingType_Stats.Lvl = 0;
             savingType_Stats.CurrentHP = 600;
             savingType_Stats.MaxHP = 600;
-            savingType_Stats.CurrentAP = 250;
-            savingType_Stats.MaxAP = 250;
+            savingType_Stats.CurrentAP = 300;
+            savingType_Stats.MaxAP = 300;
             savingType_Stats.CurrentEXP = 0;
             savingType_Stats.MaxEXP = 15;
-            savingType_Stats.FinishedLvls = 1;
+            savingType_Stats.FinishedLvls = 0;
 
             save_stats.Add(savingType_Stats);
 
@@ -67,6 +68,8 @@ namespace EpicQuest_0._1._0.Pages
             savingType_Shop.Money = 40;
             savingType_Shop.APPotions = 4;
             savingType_Shop.HPPotions = 4;
+            savingType_Shop.Armor = 0;
+            savingType_Shop.Sword = 0;
 
             save_shop.Add(savingType_Shop);
 
@@ -86,6 +89,11 @@ namespace EpicQuest_0._1._0.Pages
         private void myFrame_ContentRendered(object sender, EventArgs e)
         {
             Game.NavigationUIVisibility = NavigationUIVisibility.Hidden;
+        }
+
+        private void Exit_Click(object sender, RoutedEventArgs e)
+        {
+            System.Windows.Application.Current.Shutdown();
         }
     }
 }

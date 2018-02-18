@@ -13,6 +13,8 @@
             <ImageBrush ImageSource="pack://application:,,,/Backgrounds/EdenClear.jpg"/>
         </Grid.Background>
 
+        <MediaElement x:Name="MediaPlayer" Volume="1" Margin="-262,0,1359,601" RenderTransformOrigin="0.5,0.5" LoadedBehavior="Manual"/>
+        
         <Label Background="#D8383838" VerticalAlignment="Bottom" Height="268"/>
 
         <TextBlock x:Name="Text1" TextWrapping="Wrap" Text="The last one was killed, the captain and main magic user, of all of this. But now, you can see the dark magic, that killed so many peoples, destoryed nearly everything in her way. If you look closer, it looks like a dark mist." Margin="10,0,10,32" FontSize="36" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1260" Height="202" Visibility="Visible" TextAlignment="Center"/>

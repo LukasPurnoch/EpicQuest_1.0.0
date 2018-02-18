@@ -13,6 +13,8 @@
             <ImageBrush ImageSource="pack://application:,,,/Levels/Dungeon.png"/>
         </Grid.Background>
 
+        <MediaElement x:Name="MediaPlayer" Volume="1" Margin="-262,0,1359,601" RenderTransformOrigin="0.5,0.5" LoadedBehavior="Manual"/>
+        
         <Label Background="#D8383838" VerticalAlignment="Bottom" Height="208"/>
 
         <TextBlock x:Name="Text1" TextWrapping="Wrap" Text="It was originally a door, but in their astral world, a world beyond human ordinary perception, they were cursed and now they are trying to conquer the underground." Margin="10,0,10,10" FontSize="36" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1260" Height="160" Visibility="Visible" TextAlignment="Center"/>

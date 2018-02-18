@@ -18,13 +18,16 @@ namespace EpicQuest_0._1._0.Classes
 {
     class Potions
     {
-        public void HP_Potion(Label InventoryHPCounter, ProgressBar HP_Bar)
+        public void HP_Potion(Label LEVEL ,Label InventoryHPCounter, ProgressBar HP_Bar)
         {
             int.TryParse(InventoryHPCounter.Content.ToString(), out int countHP);
-            
+            int.TryParse(LEVEL.Content.ToString(), out int level);
+
             if (countHP > 0)
             {
-                HP_Bar.Value += 100;
+                double scaleHP = (level * 10) + 100;
+
+                HP_Bar.Value += scaleHP;
                 countHP -= 1;
 
                 InventoryHPCounter.Content = countHP;

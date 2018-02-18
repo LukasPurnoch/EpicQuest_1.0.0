@@ -536,7 +536,7 @@ namespace EpicQuest_0._1._0.Classes
                         switch (enemy1)
                         {
                             case "Trapdoor Leader":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Trapdoor.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Trap_Door.png"));
                                 Boss.Visibility = Visibility.Hidden;
                                 break;
                             case "Hundlegs The Captain":
@@ -580,7 +580,7 @@ namespace EpicQuest_0._1._0.Classes
                         switch (enemy1)
                         {
                             case "Trapdoor Leader":
-                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Trapdoor.png"));
+                                Position3.Source = new BitmapImage(new Uri("pack://application:,,,/Enemies/Trap_Door.png"));
                                 Boss.Visibility = Visibility.Hidden;
                                 break;
                             case "Hundlegs The Captain":

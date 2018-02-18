@@ -13,6 +13,8 @@
             <ImageBrush ImageSource="pack://application:,,,/Levels/Cave.png"/>
         </Grid.Background>
 
+        <MediaElement x:Name="MediaPlayer" Volume="1" Margin="-262,0,1359,601" RenderTransformOrigin="0.5,0.5" LoadedBehavior="Manual"/>
+        
         <Label Background="#D8383838" VerticalAlignment="Bottom" Height="208"/>
 
         <TextBlock x:Name="Text1" TextWrapping="Wrap" Text="The Astral World was able to cope with it. Forests of the dead, where the lives of women and men were taken. Lilith, her heart was broken, she was hated, totally unreasonable, her soul wanted only peace and revenge. Magic energy allowed her." Margin="10,0" FontSize="36" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1260" Height="194" Visibility="Visible" TextAlignment="Center"/>
