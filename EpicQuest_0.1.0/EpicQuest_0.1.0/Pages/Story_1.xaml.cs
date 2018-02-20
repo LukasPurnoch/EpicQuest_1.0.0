@@ -31,7 +31,7 @@ namespace EpicQuest_0._1._0.Pages
 
             TimeStart();
 
-            MediaPlayer.Source = new Uri(@"C:\Users\bfoty\Source\Repos\EpicQuest_1.0.0\EpicQuest_0.1.0\EpicQuest_0.1.0\Sounds\StoryTelling1.mp3");
+            MediaPlayer.Source = new Uri(@"C:\Users\bfoty\Source\Repos\EpicQuest_1.0.0\EpicQuest_0.1.0\EpicQuest_0.1.0\Cinematics\StoryTell_1.mp4");
             MediaPlayer.Play();
         }
 
@@ -39,14 +39,7 @@ namespace EpicQuest_0._1._0.Pages
         {
             increment++;
 
-            CLOCK.Content = increment;
-
-            if (increment % 10 == 0)
-            {
-                Text1.Visibility = Visibility.Hidden;
-                Text2.Visibility = Visibility.Visible;
-            }
-            if (increment % 20 == 0)
+            if (increment % 41 == 0)
             {
                 if (stop == 0)
                 {

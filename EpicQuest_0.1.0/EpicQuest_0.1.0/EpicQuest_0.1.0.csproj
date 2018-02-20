@@ -292,6 +292,7 @@
     <Resource Include="Addons\Coin.png" />
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Cinematics\StoryTell_1.mp4" />
     <Content Include="Sounds\StoryTelling2.mp3" />
     <Content Include="Sounds\Map.mp3" />
     <Content Include="Sounds\MainMenu.mp3" />

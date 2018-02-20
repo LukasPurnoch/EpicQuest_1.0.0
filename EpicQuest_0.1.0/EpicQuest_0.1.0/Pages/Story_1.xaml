@@ -8,19 +8,9 @@
       d:DesignHeight="800" d:DesignWidth="1280"
       Title="Story_1">
 
-    <Grid Height="800" Width="1280">
-        <Grid.Background>
-            <ImageBrush ImageSource="pack://application:,,,/Backgrounds/Eden_Damaged.jpg"/>
-        </Grid.Background>
+    <Grid>
 
-        <MediaElement x:Name="MediaPlayer" Volume="1" Margin="-262,0,1359,601" RenderTransformOrigin="0.5,0.5" LoadedBehavior="Manual"/>
-        
-        <Label Background="#D8383838" VerticalAlignment="Bottom" Height="268"/>
-
-        <TextBlock x:Name="Text1" TextWrapping="Wrap" Text="Eden, the city full of happiness, success, majesty.. This all it was.. Judgment day came, the and of great Eden, gods city.. The center hit the plague, darkness, and poverty. Crime has grown, violence too.. The decent people have become quite different people.." Margin="10,0,10,70" FontSize="36" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1260" Height="198" Visibility="Visible" TextAlignment="Center"/>
-        <TextBlock x:Name="Text2" TextWrapping="Wrap" Text="That's why Ardyn decided to take the fate of his family, his city into his own hands, and save him." Margin="10,0,10,10" FontSize="36" Foreground="White" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="1260" Height="198" Visibility="Hidden" TextAlignment="Center"/>
-
-        <Label x:Name="CLOCK" Content="" Margin="158,112,566,478" FontSize="72" Visibility="Hidden"/>
+        <MediaElement x:Name="MediaPlayer" Volume="1" Margin="-51,-45,-50,-30" RenderTransformOrigin="0.5,0.5" LoadedBehavior="Manual"/>
 
         <Frame x:Name="Map"/>
 
