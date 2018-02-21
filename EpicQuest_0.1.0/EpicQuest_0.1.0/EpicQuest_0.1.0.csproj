@@ -246,33 +246,6 @@
     <Resource Include="Backgrounds\GreenTheme.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="Enemies\Arachne.png" />
-    <Resource Include="Enemies\Behemoth.png" />
-    <Resource Include="Enemies\Black_Knight.png" />
-    <Resource Include="Enemies\Blood_Flower.png" />
-    <Resource Include="Enemies\Brachioraidos.png" />
-    <Resource Include="Enemies\Catoblepas.png" />
-    <Resource Include="Enemies\Chimera.png" />
-    <Resource Include="Enemies\Death_Flower.png" />
-    <Resource Include="Enemies\Death_Puppet.png" />
-    <Resource Include="Enemies\Eukaryote.png" />
-    <Resource Include="Enemies\Fiery_Hound.png" />
-    <Resource Include="Enemies\Flying_Eyes.png" />
-    <Resource Include="Enemies\Ghost_Knight.png" />
-    <Resource Include="Enemies\Ghoul.png" />
-    <Resource Include="Enemies\Gigantoad.png" />
-    <Resource Include="Enemies\Gorgon.png" />
-    <Resource Include="Enemies\Great_Malboro.png" />
-    <Resource Include="Enemies\Hundlegs.png" />
-    <Resource Include="Enemies\Hydra.png" />
-    <Resource Include="Enemies\Lilith.png" />
-    <Resource Include="Enemies\Magic_Dragon.png" />
-    <Resource Include="Enemies\Red_Dragon.png" />
-    <Resource Include="Enemies\Stone_Golem.png" />
-    <Resource Include="Enemies\Trap_Door.png" />
-    <Resource Include="Enemies\Wicked_Mask.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Gifs\EpiQuest_GIF.gif" />
   </ItemGroup>
   <ItemGroup>
@@ -293,6 +266,56 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Cinematics\StoryTell_1.mp4" />
+    <Resource Include="Enemies\Arachne.png" />
+    <Resource Include="Enemies\Arachne_IDLE.gif" />
+    <Resource Include="Enemies\Behemoth.png" />
+    <Resource Include="Enemies\Behemoth_IDLE.gif" />
+    <Resource Include="Enemies\Black_Knight.png" />
+    <Resource Include="Enemies\Black_Knight_IDLE.gif" />
+    <Resource Include="Enemies\Blood_Flower.png" />
+    <Resource Include="Enemies\Blood_Flower_IDLE.gif" />
+    <Resource Include="Enemies\Brachioraidos.png" />
+    <Resource Include="Enemies\Brachioraidos_IDLE.gif" />
+    <Resource Include="Enemies\Catoblepas.png" />
+    <Resource Include="Enemies\Catoblepas_IDLE.gif" />
+    <Resource Include="Enemies\Chimera.png" />
+    <Resource Include="Enemies\Chimera_IDLE.gif" />
+    <Resource Include="Enemies\Death_Flower.png" />
+    <Resource Include="Enemies\Death_Flower_IDLE.gif" />
+    <Resource Include="Enemies\Death_Puppet.png" />
+    <Resource Include="Enemies\Death_Puppet_IDLE.gif" />
+    <Resource Include="Enemies\Eukaryote.png" />
+    <Resource Include="Enemies\Eukaryote_IDLE.gif" />
+    <Resource Include="Enemies\Fiery_Hound.png" />
+    <Resource Include="Enemies\Fiery_Hound_IDLE.gif" />
+    <Resource Include="Enemies\Flying_Eyes.png" />
+    <Resource Include="Enemies\Flying_Eyes_IDLE.gif" />
+    <Resource Include="Enemies\Ghost_Knight.png" />
+    <Resource Include="Enemies\Ghost_Knight_IDLE.gif" />
+    <Resource Include="Enemies\Ghoul.png" />
+    <Resource Include="Enemies\Ghoul_IDLE.gif" />
+    <Resource Include="Enemies\Gigantoad.png" />
+    <Resource Include="Enemies\Gigantoad_IDLE.gif" />
+    <Resource Include="Enemies\Gorgon.png" />
+    <Resource Include="Enemies\Gorgon_IDLE.gif" />
+    <Resource Include="Enemies\Great_Malboro.png" />
+    <Resource Include="Enemies\Great_Malboro_IDLE.gif" />
+    <Resource Include="Enemies\Hundlegs.png" />
+    <Resource Include="Enemies\Hundlegs_IDLE.gif" />
+    <Resource Include="Enemies\Hydra.png" />
+    <Resource Include="Enemies\Hydra_IDLE.gif" />
+    <Resource Include="Enemies\Lilith.png" />
+    <Resource Include="Enemies\Lilith_IDLE.gif" />
+    <Resource Include="Enemies\Magic_Dragon.png" />
+    <Resource Include="Enemies\Magic_Dragon_IDLE.gif" />
+    <Resource Include="Enemies\Red_Dragon.png" />
+    <Resource Include="Enemies\Red_Dragon_IDLE.gif" />
+    <Resource Include="Enemies\Stone_Golem.png" />
+    <Resource Include="Enemies\Stone_Golem_IDLE.gif" />
+    <Resource Include="Enemies\Trap_Door.png" />
+    <Resource Include="Enemies\Trap_Door_IDLE.gif" />
+    <Resource Include="Enemies\Wicked_Mask.png" />
+    <Resource Include="Enemies\Wicked_Mask_IDLE.gif" />
     <Content Include="Sounds\StoryTelling2.mp3" />
     <Content Include="Sounds\Map.mp3" />
     <Content Include="Sounds\MainMenu.mp3" />
